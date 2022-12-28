@@ -11,9 +11,9 @@
 <body>
     <div class="begin">
        
-        <div class="conteiner-colummn">
+        <div class="container-colummn">
           
-            <div class="conteiner-row">
+            <div class="container-row">
                 <div class="logo">
                     <div class="img">
                         <p>LOGO</p>
@@ -39,18 +39,16 @@
             <h1>Regional Bom Demais</h1>
         </div>
 
-
-       
-        <div class="conteiner-colummn">
+        <div class="container-colummn">
             <div class="card">
                 <h2>Seja bem-vindo!</h2>
                 <img id="img-team" src="images/trio.png">
             </div>
         </div>
     </div>
-
-
-    <div class="conteiner-colummn">
+    
+    
+    <div class="container-carrossel">
         <div class="card">
             <div class="card-text">
                 <h3>Sobre nós</h3>
@@ -60,41 +58,119 @@
             <div class="card-text">
                 <h3>Eventos realizados</h3>
             </div>
-
-            <div class="conteiner-colummn">
-                <div class="carrossel">
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png">
-                    </div>
+            
     
+            <section>
+                <div class="container"> <!--conteiner-colummn-->
+                    <div class="carrossel"> <!--carrossel-->
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+                        <input type="radio" name="slides" id="slide-3">
+                        <input type="radio" name="slides" id="slide-4">
+                        <input type="radio" name="slides" id="slide-5">
+                        <input type="radio" name="slides" id="slide-6">
+                        <ul class="carrossel-photos"> <!--carrossel-photos-->
+                           
+                           
+                            <li class="carrossel-photo"> <!--carrossel-photo-->
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Tim Marshall</span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+        
+                            <li class="carrossel-photo">
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Christian Joudrey</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+        
+                            <li class="carrossel-photo">
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Steve Carter</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+        
+                            <li class="carrossel-photo">
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Aleksandra Boguslawska</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+        
+                            <li class="carrossel-photo">
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Rosan Harmens</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+        
+                            <li class="carrossel-photo">
+                                <figure>
+                                    <div>
+                                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Annie Spratt</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>    
+        
+        
+                        <ul class="carrossel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-2"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-3"><img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-4"><img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-5"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-6"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt=""></label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="carrossel">
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png">
-                    </div>
-                    <div class="photo">
-                        <img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png">
-                    </div>
-
-            </div>
-            </div>
-
+            </section>
         </div>
+
     </div>
 
 </body>

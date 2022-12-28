@@ -36,20 +36,20 @@
             padding: 50px 0;
         }
     
-        .container-carrossel {
+        .container {
             max-width: 1044px;
             margin: 0 auto;
             padding: 0 20px;
         }
     
-        .carrossel {
+        .carousel {
             display: block;
             text-align: left;
             position: relative;
             margin-bottom: 22px;
         }
 
-        .carrossel input{
+        .carousel input{
                 clip: rect(1px, 1px, 1px, 1px);
                 clip-path: inset(50%);
                 height: 1px;
@@ -60,21 +60,21 @@
                 position: absolute;    
         }
 
-        .carrossel input:nth-of-type(6):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -500%; }
-        .carrossel input:nth-of-type(5):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -400%; }
-        .carrossel input:nth-of-type(4):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -300%; }
-        .carrossel input:nth-of-type(3):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -200%; }
-        .carrossel input:nth-of-type(2):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -100%; }
-        .carrossel input:nth-of-type(1):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: 0%; }
+        .carousel input:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+        .carousel input:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+        .carousel input:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+        .carousel input:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+        .carousel input:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+        .carousel input:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
         
-        .carrossel input:nth-of-type(1):checked ~ .carrossel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-        .carrossel input:nth-of-type(2):checked ~ .carrossel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-        .carrossel input:nth-of-type(3):checked ~ .carrossel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-        .carrossel input:nth-of-type(4):checked ~ .carrossel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-        .carrossel input:nth-of-type(5):checked ~ .carrossel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-        .carrossel input:nth-of-type(6):checked ~ .carrossel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        .carousel input:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
     
-        .carrossel-photos {
+        .carousel__slides {
             position: relative;
             z-index: 1;
             padding: 0;
@@ -85,7 +85,7 @@
             display: flex;
         }
     
-        .carrossel-photo {
+        .carousel__slide {
             position: relative;
             display: block;
             flex: 1 0 100%;
@@ -98,23 +98,23 @@
             white-space: normal;
         }
 
-        .carrossel-photo figure {
+        .carousel__slide figure {
             display: flex;
             margin: 0;
         }
         
-        .carrossel-photo div {
+        .carousel__slide div {
             @include aspect-ratio(3, 2);
             width: 100%;
         }
         
-        .carrossel-photo img {
+        .carousel__slide img {
             display: block;
             flex: 1 1 auto;
             object-fit: cover;
         }
         
-        .carrossel-photo figcaption {
+        .carousel__slide figcaption {
             align-self: flex-end;
             padding: 20px 20px 0 20px;
             flex: 0 0 auto;
@@ -122,17 +122,17 @@
             min-width: 150px;
         }
         
-        .carrossel-photo .credit {
+        .carousel__slide .credit {
             margin-top: 1rem;
             color: rgba(0, 0, 0, 0.5);
             display: block;        
         }
         
-        .carrossel-photo .scrollable {
+        .carousel__slide .scrollable {
             overflow-y: scroll;
         }
     
-        .carrossel__thumbnails {
+        .carousel__thumbnails {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -142,37 +142,37 @@
         }
 
 
-        .carrossel__thumbnails .carrossel-photos + .carrossel__thumbnails {
+        .carousel__thumbnails .carousel__slides + .carousel__thumbnails {
                 margin-top: 20px;
         }
             
-        .carrossel__thumbnails li {        
+        .carousel__thumbnails li {        
             flex: 1 1 auto;
             max-width: calc((100% / 6) - 20px);  
             margin: 0 10px;
             transition: all 300ms ease-in-out;
         }
         
-        .carrossel__thumbnails label {
+        .carousel__thumbnails label {
             display: block;
             @include aspect-ratio(1,1);
         }
         
-        .carrossel__thumbnails label:hover,
-            .carrossel__thumbnails label:focus {
+        .carousel__thumbnails label:hover,
+            .carousel__thumbnails label:focus {
                 cursor: pointer;
                 
         }
 
-
-        .carrossel__thumbnails label:hover,
-            .carrossel__thumbnails label:focus img {
+        
+        .carousel__thumbnails label:hover,
+            .carousel__thumbnails label:focus img {
             box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
             transition: all 300ms ease-in-out;
         }
 
 
-        .carrossel__thumbnails img {
+        .carousel__thumbnails img {
             display: block;
             width: 100%;
             height: 100%;
@@ -188,21 +188,19 @@
 
 
     <section>
-        <div class="container-carrossel"> <!--conteiner-colummn-->
-            <div class="carrossel"> <!--carrossel-->
+        <div class="container"> <!--conteiner-colummn-->
+            <div class="carousel"> <!--carrossel-->
                 <input type="radio" name="slides" checked="checked" id="slide-1">
                 <input type="radio" name="slides" id="slide-2">
                 <input type="radio" name="slides" id="slide-3">
                 <input type="radio" name="slides" id="slide-4">
                 <input type="radio" name="slides" id="slide-5">
                 <input type="radio" name="slides" id="slide-6">
-                <ul class="carrossel-photos"> <!--carrossel-photos-->
-                   
-                   
-                    <li class="carrossel-photo"> <!--carrossel-photo-->
+                <ul class="carousel__slides"> <!--carrossel-photos-->
+                    <li class="carousel__slide"> <!--carrossel-photo-->
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt="">
+                                <img src="https://picsum.photos/id/1041/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -210,11 +208,10 @@
                             </figcaption>
                         </figure>
                     </li>
-
-                    <li class="carrossel-photo">
+                    <li class="carousel__slide">
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt="">
+                                <img src="https://picsum.photos/id/1043/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -222,11 +219,10 @@
                             </figcaption>
                         </figure>
                     </li>
-
-                    <li class="carrossel-photo">
+                    <li class="carousel__slide">
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png" alt="">
+                                <img src="https://picsum.photos/id/1044/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -234,11 +230,10 @@
                             </figcaption>
                         </figure>
                     </li>
-
-                    <li class="carrossel-photo">
+                    <li class="carousel__slide">
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png" alt="">
+                                <img src="https://picsum.photos/id/1045/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -246,11 +241,10 @@
                             </figcaption>
                         </figure>
                     </li>
-
-                    <li class="carrossel-photo">
+                    <li class="carousel__slide">
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt="">
+                                <img src="https://picsum.photos/id/1049/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -258,11 +252,10 @@
                             </figcaption>
                         </figure>
                     </li>
-
-                    <li class="carrossel-photo">
+                    <li class="carousel__slide">
                         <figure>
                             <div>
-                                <img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt="">
+                                <img src="https://picsum.photos/id/1052/800/450" alt="">
                             </div>
                             <figcaption>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -271,26 +264,24 @@
                         </figure>
                     </li>
                 </ul>    
-
-
-                <ul class="carrossel__thumbnails">
+                <ul class="carousel__thumbnails">
                     <li>
-                        <label for="slide-1"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt=""></label>
+                        <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
                     </li>
                     <li>
-                        <label for="slide-2"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt=""></label>
+                        <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
                     </li>
                     <li>
-                        <label for="slide-3"><img src="images/temporarias/Screenshot from 2022-12-28 02-59-02.png" alt=""></label>
+                        <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
                     </li>
                     <li>
-                        <label for="slide-4"><img src="images/temporarias/Screenshot from 2022-12-28 02-59-17.png" alt=""></label>
+                        <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
                     </li>
                     <li>
-                        <label for="slide-5"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-07.png" alt=""></label>
+                        <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
                     </li>
                     <li>
-                        <label for="slide-6"><img src="images/temporarias/Screenshot from 2022-12-28 02-58-38.png" alt=""></label>
+                        <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
                     </li>
                 </ul>
             </div>
