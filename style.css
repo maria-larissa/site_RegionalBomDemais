@@ -9,7 +9,7 @@
 }
 
 body{
-    font-size: 1rem;
+    font-size: 16px;
     text-decoration: none;
     color: black;
     /* background-color: #F4F4F4; */
@@ -31,10 +31,29 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+h1{
+    /* font-size: 90px; */
+    font-weight: 100%;
+    font-family: 'xilosa';
+    /* font-size: calc(1rem +3vw); */
+    font-size: clamp(1rem, 2rem + 3vw, 4rem);
+}
+
+h2{
+    font-family: 'xilosa';
+    font-size: 50px;
+}
+
+
+
+/* Header */
+
 header{
     height: 100vh;
     width: 100vw;
     background-image: url("imagens/background1.png");
+    text-align: center;
 }
 
 header .container-row{
@@ -73,8 +92,20 @@ header .container-row{
 }
 
 .botao img{
-    max-height: 2rem;
-    max-width: 2rem;
+    max-height: 3rem;
+    max-width: 3rem;
     width: 100%;
     height: auto;
+}
+
+/* Herda características do container-collummn */
+/* .text-header .container-colummn{
+    padding: auto;
+    margin: 0;
+} */
+
+/* Mudando características de dois elementos simultaneamente */
+#nome-banda, #mensagem-inicial{
+    margin: 0;
+    padding: 0.5rem;
 }
