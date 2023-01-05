@@ -33,16 +33,16 @@ body{
 }
 
 h1{
-    /* font-size: 90px; */
     font-weight: 100%;
     font-family: 'xilosa';
-    /* font-size: calc(1rem +3vw); */
     font-size: clamp(1rem, 2rem + 3vw, 4rem);
 }
 
 h2{
     font-family: 'xilosa';
-    font-size: 50px;
+    /* font-size: 50px; */
+    font-size: clamp(1.5rem, 2.8rem, 6vw);
+
 }
 
 
@@ -84,7 +84,7 @@ header .container-row{
 
 .botao{
     height: auto;
-    max-width: 5%;
+    max-width: 8%;
     padding: 0.5rem;
     text-align: center;
     flex-direction: row;
