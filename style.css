@@ -9,7 +9,6 @@
 }
 
 body{
-    font-size: 16px;
     text-decoration: none;
     color: black;
     /* background-color: #F4F4F4; */
@@ -32,6 +31,26 @@ body{
     flex-direction: row;
 }
 
+b{
+    color: #D44000;
+}
+
+p{
+    font-size: clamp(1vw, 1.5vw, 2vw);
+    text-indent: 4vw;
+}
+
+a{
+    text-decoration:underline;
+    font-size: clamp(1vw, 1.5vw, 2vw);
+    font-family: 'crackvetica';
+    text-align: center;
+}
+
+strong{
+    color: red
+}
+
 h1{
     font-weight: 100%;
     font-family: 'xilosa';
@@ -40,12 +59,36 @@ h1{
 
 h2{
     font-family: 'xilosa';
-    /* font-size: 50px; */
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
     font-size: clamp(1.5rem, 2.8rem, 6vw);
+}
 
+h3{
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(1rem, 6vw, 2rem);
 }
 
 
+h5{
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(0.8rem, 4vw, 1.5rem);
+    opacity: 0.8;
+    color: #864000;
+}
+
+h6{
+    text-align: center;
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    color: #864000;
+}
 
 /* Header */
 
@@ -108,4 +151,39 @@ header .container-row{
 #nome-banda, #mensagem-inicial{
     margin: 0;
     padding: 0.5rem;
+}
+
+
+/* Sobre nós */
+.sobre-nos{
+    height: auto;
+    width: 80vw;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    justify-content: first baseline;
+}
+
+.card-text{
+    height: auto;
+    width: 90vw;
+    text-align: justify;
+    padding: 1vw;
+    margin: 1vw auto 1vw auto;
+    vertical-align: baseline;
+}
+
+figure{
+    height: auto;
+    margin: 0;
+}
+
+figure #mapa-ceara{
+    height: 10vw;
+    max-height: 50%;
+    max-width: 40%;
+    width: 10vw;
+    margin: 2vw 1vw 1vw 1vw ;
+    float: right;
+    vertical-align: baseline;
 }
