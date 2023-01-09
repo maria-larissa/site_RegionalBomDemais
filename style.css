@@ -71,6 +71,7 @@ h3{
     /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
         para não ficar muito pequena ou muito grande. */
     font-size: clamp(1rem, 6vw, 2rem);
+    text-align: center;
 }
 
 h5{
@@ -150,17 +151,12 @@ header .container-row{
     height: auto;
 }
 
-/* Herda características do container-collummn */
-/* .text-header .container-colummn{
-    padding: auto;
-    margin: 0;
-} */
-
 /* Mudando características de dois elementos simultaneamente */
 #nome-banda, #mensagem-inicial{
     margin: 0;
     padding: 0.5rem;
 }
+
 
 
 /* Sobre nós */
@@ -180,6 +176,7 @@ header .container-row{
     margin: 1vw auto 1vw auto;
     vertical-align: baseline;
 }
+
 .container-row .card-text1 {
     width: 90vw;
     height: auto;
@@ -193,7 +190,6 @@ figure{
     height: auto;
     width: auto;
     font-size: clamp(0.5vw, 1rem, 2vw);
-    /* font-size: 2vw;     */
     margin: 0;
 }
 
@@ -202,7 +198,6 @@ figcaption{
     padding:0.5vw;
     text-align: center;
     font-size: clamp(0.5rem, 1.5rem, 2vw);
-
 }
 
 figure #mapa-ceara{
@@ -221,7 +216,7 @@ figure #mapa-ceara{
     justify-content: center;
 }
 
-figure img{
+.foto-integrante img{
     height: 20vw;
     width: 20vw;
     max-height: 50vw;
@@ -230,5 +225,216 @@ figure img{
     padding: 1vw;
     display: flex;
     vertical-align: baseline;
+}
+
+
+
+
+
+
+/* CARROSSEL FOTOS */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    
+    &:before {
+        display: block;
+        content: "";
+        width: 100vw;
+        padding-top: ($height / $width) * 100%;
+    }
+    
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+section {
+/* background: #f4F4F4; */
+background: #faf0a2;
+padding: 50px 0;
+}
+
+.container {
+    height: auto;
+    max-width: 1044px;
+    margin: 1rem auto 1rem auto;
+    padding: 0 1.25rem;
+}
+
+.carrossel {
+    display: block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.carrossel input{
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;    
+}
+
+.carrossel input:nth-of-type(6):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -500%; }
+.carrossel input:nth-of-type(5):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -400%; }
+.carrossel input:nth-of-type(4):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -300%; }
+.carrossel input:nth-of-type(3):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -200%; }
+.carrossel input:nth-of-type(2):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -100%; }
+.carrossel input:nth-of-type(1):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: 0%; }
+
+.carrossel input:nth-of-type(1):checked ~ .carrossel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(2):checked ~ .carrossel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(3):checked ~ .carrossel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(4):checked ~ .carrossel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(5):checked ~ .carrossel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(6):checked ~ .carrossel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 3px #BF9742; }
+
+.carrossel-photos {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carrossel-photo {
+    position: relative;
+    display: block;
+    flex: 1 0 100%;
+    width: 100vw;
+    height: auto;
+    max-height: 80vh;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.carrossel-photo figure {
+    width: 100%;
+    display: flex;
+    margin: 0 ;
+}
+
+.carrossel-photo figure img {
+    max-width: 80%;
+    max-width: 80%;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+.carrossel-photo img {
+    display: block;
+    flex: 1 1 auto;
+    object-fit: cover;
+}
+
+.carrossel-photo figure div {
+    @include aspect-ratio(3, 2);
+    width: 70%;
+    margin: 0 0 1vh 0
+}
+
+.carrossel-photo .text{
+    width: 80%;
+    min-height: 20%;
+    max-height: 60%;
+    margin: 0 auto;
+}
+
+.carrossel-photo figure .container-colummn {
+    @include aspect-ratio(3, 2);
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 0 1vh 0
+}
+
+.carrossel-photo h4{
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    font-family: 'xilosa';
+    text-align: center;
+    padding: auto;
+    margin: 1vh auto;
+}
+
+.carrossel-photo p{
+    margin: 0 auto 5px auto;
+    font-size: clamp(0.2rem, 0.5rem +1vw, 2rem);
+    text-align: justify;
+    text-indent: 2rem;
+}
+.carrossel-photo figcaption {
+    font-size: clamp(1vw, 1.2vw, 1.5rem);
+    align-self: flex-end;
+    padding: 2vh 2vw 0 2vw;
+    flex: 0 0 auto;
+    min-width: 10%;
+    max-width: 50%;
+    max-height: 20%;
+}
+
+.carrossel-photo .credit {
+    margin-top: 1vh;
+    color: #BF9742;
+    display: block;        
+}
+
+.carrossel-photo .scrollable {
+    overflow-y: scroll;
+}
+
+.carrossel__thumbnails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin: 0 -10px;
+}
+
+.carrossel__thumbnails .carrossel-photos + .carrossel__thumbnails {
+    margin-top: 1.25rem;
+}
+
+.carrossel__thumbnails li {        
+    flex: 1 1 auto;
+    max-width: calc((100% / 6) - 2vw);  
+    margin: 0 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.carrossel__thumbnails label {
+    display: block;
+    @include aspect-ratio(1,1);
+}
+
+.carrossel__thumbnails label:hover,
+.carrossel__thumbnails label:focus {
+    cursor: pointer;
+}
+
+.carrossel__thumbnails label:hover,
+.carrossel__thumbnails label:focus img {
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+    transition: all 300ms ease-in-out;
+}
+
+.carrossel__thumbnails img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
