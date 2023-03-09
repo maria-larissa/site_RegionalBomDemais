@@ -9,172 +9,239 @@
 }
 
 body{
-    font-size: 1rem;
     text-decoration: none;
     color: black;
     /* background-color: #F4F4F4; */
     /* background-color: #fdf8d3; */
     background-color: #faf0a2;
-
     margin: 0;
-}
-
-a{
-    text-decoration: none;
-    color: #61481C;
-}
-
-h1{
-    font-size: 6rem;
-    text-align: center;
-    font-family: 'xilosa';
-    margin:0 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-h2{
-    font-size: 4rem;
-    margin: 0;
-    text-align: center;
-    font-family: 'xilosa';
-}
-
-h3{
-    font-size: 40px;
-    text-align: center;
-    font-family: 'xilosa';
-}
-
-
-/* BODY */
-
-.main{
-    width: 100vw;
-    height: 95%;
-}
-
-.button-top{
-    height: 5%;
-    
-}
-
-.begin{
-    height:100%;
-    width: 100vw;
-    margin: 1px;
-    background-image: url("images/background1.png");
 }
 
 .container-colummn{
-    margin: 0;
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 .container-row{
     height: auto;
-    width: 100vw;
+    width: 100%;
+    display: flex;
     flex-direction: row;
-    display: flex;
-    justify-items: center;
-}
-
-.container-row .logo{
-    height: auto;
-    width: 20%;
-    align-items: center;
-    margin: 1rem;
-}
-
-.container-row .contacts{
-    height: auto;
-    width: 80%;
-    flex-direction:  row;
-    display: flex;
-    justify-content: right;
-    margin: 1rem;
-}
-
-.contacts .button{
-    height: auto;
-    width: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-evenly;
-    margin: 5px;
-}
-
-.button a{
-    text-align: center;
-    font-size: 1.25rem;
     margin: 0;
-    padding: 0;
 }
 
-.button #img-contact{
-    height: 1.25rem;
-    width: 30px;
+b{
+    color: #D44000;
 }
 
-.button #img-insta{
-    height: 1.25rem;
-    width: 1.25rem;
+p{
+    font-size: clamp(1vw, 1.5vw, 2vw);
+    text-indent: 4vw;
 }
 
-.button #img-youtube{
-    height: 1.25rem;
-    width: 25px;
+a{
+    text-decoration:underline;
+    font-size: clamp(1vw, 2vw, 2.5vw);
+    font-family: 'xilosa';
+    text-align: center;
+    color:#FF7A00
 }
 
-/* .container-colummn .card{
-    height: auto;
-    width: 100vw;
-    display: inline;
-    justify-content: center;
-    align-content: center;
-} */
+strong{
+    color: red
+}
 
-.container-colummn .card{
+h1{
+    font-weight: 100%;
+    font-family: 'xilosa';
+    font-size: clamp(1rem, 2rem + 3vw, 4rem);
+}
+
+h2{
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(1.5rem, 2.8rem, 6vw);
+}
+
+h3{
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(1rem, 6vw, 2rem);
+    text-align: center;
+}
+
+h5{
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(0.8rem, 4vw, 1.5rem);
+    opacity: 0.8;
+    text-align: left;
+    color: #864000;
+    margin-bottom: 0;
+}
+
+h6{
+    text-align: center;
+    font-family: 'xilosa';
+    /* tamanho da fonte varia de acordo com o tamanho da tela, porém possui máximo e mínimo 
+        para não ficar muito pequena ou muito grande. */
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    color: #864000;
+}
+
+
+
+
+
+
+
+/* Header */
+
+header{
     height: 100vh;
-    width: 100vwvw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    background-image: url("imagens/background1.png");
+    text-align: center;
 }
 
-.container-colummn .card img{
-    height: 435px;
-    width: 465px;
-    opacity: 0.9;
-    display: flex;
-    align-self: center;
+header .container-row{
+    height: auto;
+    max-width: 90%;
+    /* width: 90%; */
+    margin: auto;
+    padding: 1rem;
 }
 
-.container-colummn .card .card-text{
+#logo{
+    height: auto;
+    width: 10%;
+}
+
+#logo img{
+    height: auto;
+    max-width: 100%;
+    min-width: 5vw;
+}
+
+#contatos{
     height: auto;
     width: 90%;
-    margin: 4rem;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: right;
 }
 
-.container-colummn .card-text p{
+.botao{
     height: auto;
-    width: 100vw;
-    font-size: 25px;
+    max-width: 8%;
+    padding: 0.5rem;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botao img{
+    max-height: 3rem;
+    max-width: 3rem;
+    width: 100%;
+    height: auto;
+}
+
+/* Mudando características de dois elementos simultaneamente */
+#nome-banda, #mensagem-inicial{
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#trio{ 
+    height: 80%;
+    max-height: 50vh;
+    width: auto;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+
+
+/* Sobre nós */
+.sobre-nos{
+    height: auto;
+    width: 80vw;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    justify-content: baseline;
+}
+
+.card-text{
+    height: auto;
     text-align: justify;
-    text-indent: 2rem;
+    padding: 1vw;
+    margin: 1vw auto 1vw auto;
+    vertical-align: baseline;
+}
+
+.container-row .card-text1 {
+    width: 90vw;
+    height: auto;
+    text-align: justify;
+    padding: 1vw;
+    margin: 1vw auto 1vw auto;
+    vertical-align: baseline;
+}
+
+figure{
+    height: auto;
+    width: auto;
+    font-size: clamp(0.5vw, 1rem, 2vw);
+    margin: 0;
+}
+
+figcaption{
+    margin: 0;
+    padding:0.5vw;
+    text-align: center;
+    font-size: clamp(0.5rem, 1.5rem, 2vw);
+}
+
+figure #mapa-ceara{
+    height: 10vw;
+    max-height: 50%;
+    max-width: 40%;
+    width: 10vw;
+    margin: 2vw 1vw 1vw 1vw ;
+    float: right;
+    vertical-align: baseline;
+}
+
+.foto-integrante{
+    margin: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-integrante img{
+    height: 20vw;
+    width: 20vw;
+    max-height: 50vw;
+    max-width: 50vw;
+    margin: auto;
+    padding: 1vw;
+    display: flex;
+    vertical-align: baseline;
 }
 
 
 
 
-/* CARROSSEL */
 
+
+/* CARROSSEL FOTOS */
 @mixin aspect-ratio($width, $height) {
     position: relative;
     
@@ -234,12 +301,12 @@ padding: 50px 0;
 .carrossel input:nth-of-type(2):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -100%; }
 .carrossel input:nth-of-type(1):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: 0%; }
 
-.carrossel input:nth-of-type(1):checked ~ .carrossel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px #BF9742; }
-.carrossel input:nth-of-type(2):checked ~ .carrossel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px #BF9742; }
-.carrossel input:nth-of-type(3):checked ~ .carrossel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px #BF9742; }
-.carrossel input:nth-of-type(4):checked ~ .carrossel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px #BF9742; }
-.carrossel input:nth-of-type(5):checked ~ .carrossel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px #BF9742; }
-.carrossel input:nth-of-type(6):checked ~ .carrossel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px #BF9742; }
+.carrossel input:nth-of-type(1):checked ~ .carrossel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(2):checked ~ .carrossel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(3):checked ~ .carrossel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(4):checked ~ .carrossel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(5):checked ~ .carrossel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 3px #BF9742; }
+.carrossel input:nth-of-type(6):checked ~ .carrossel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 3px #BF9742; }
 
 .carrossel-photos {
     position: relative;
@@ -257,7 +324,8 @@ padding: 50px 0;
     display: block;
     flex: 1 0 100%;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    max-height: 80vh;
     overflow: hidden;
     transition: all 300ms ease-out;
     box-sizing: border-box;
@@ -265,14 +333,17 @@ padding: 50px 0;
 }
 
 .carrossel-photo figure {
+    width: 100%;
     display: flex;
     margin: 0 ;
 }
 
-.carrossel-photo div {
-    @include aspect-ratio(3, 2);
-    width: 100vw;
-    margin: 0 0 5px 0
+.carrossel-photo figure img {
+    max-width: 80%;
+    max-width: 80%;
+    min-width: 10%;
+    min-height: 10%;
+    margin: 0  auto;
 }
 
 .carrossel-photo img {
@@ -281,35 +352,52 @@ padding: 50px 0;
     object-fit: cover;
 }
 
+.carrossel-photo figure div {
+    @include aspect-ratio(3, 2);
+    width: 70%;
+    margin: 0 0 1vh 0
+}
+
 .carrossel-photo .text{
     width: 80%;
-    height: 450px;
-    margin: auto auto;
+    min-height: 20%;
+    max-height: 60%;
+    margin: 0 auto;
+}
+
+.carrossel-photo figure .container-colummn {
+    @include aspect-ratio(3, 2);
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 0 1vh 0
 }
 
 .carrossel-photo h4{
-    font-size: 24px;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
     font-family: 'xilosa';
     text-align: center;
-    padding: 0 auto;
+    padding: auto;
+    margin: 1vh auto;
 }
 
 .carrossel-photo p{
     margin: 0 auto 5px auto;
-    
+    font-size: clamp(0.2rem, 0.5rem +1vw, 2rem);
     text-align: justify;
     text-indent: 2rem;
 }
 .carrossel-photo figcaption {
+    font-size: clamp(1vw, 1.2vw, 1.5rem);
     align-self: flex-end;
-    padding: 1.25rem 1.25rem 0 1.25rem;
+    padding: 2vh 2vw 0 2vw;
     flex: 0 0 auto;
-    width: 25%;
-    min-width: 300px;
+    min-width: 10%;
+    max-width: 50%;
+    max-height: 20%;
 }
 
 .carrossel-photo .credit {
-    margin-top: 1rem;
+    margin-top: 1vh;
     color: #BF9742;
     display: block;        
 }
@@ -332,7 +420,7 @@ padding: 50px 0;
 
 .carrossel__thumbnails li {        
     flex: 1 1 auto;
-    max-width: calc((100% / 6) - 1.25rem);  
+    max-width: calc((100% / 6) - 2vw);  
     margin: 0 10px;
     transition: all 300ms ease-in-out;
 }
@@ -359,8 +447,4 @@ padding: 50px 0;
     height: 100%;
     object-fit: cover;
 }
-
-
-
-
 
