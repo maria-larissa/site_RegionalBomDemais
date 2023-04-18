@@ -8,12 +8,12 @@
     src: url(fontes/Crackvetica.ttf);
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 
@@ -22,32 +22,29 @@ body{
     color: black;
     /* background-color: #F4F4F4; */
     /* background-color: #fdf8d3; */
-    background-color: #FFCD29;
     margin: 0;
+    padding: 0;
 }
 
+
+/* MENU */
 
 header{
-    width: 100%;
-    padding: 2%;
-    height: 100px;
-    align-items: center;
-    display: inline-flex;
-    box-sizing: border-box;
-    flex-direction: row;
-}
-
-.card-principal{
+    top: 0;
+    left: 0;
     width: 75%;
-    /* padding: 2%; */
-    height: 100px;
+    padding: 1rem;
+    /* padding: 2rem; */
+    height: 12vh;
+    /* height: 85px; */
+    position: fixed;
     align-items: center;
     display: inline-flex;
     box-sizing: border-box;
     background-color: white;
 }
 
-.card-principal div{
+header div{
     width: auto;
     height: 60px;
     display: flex;
@@ -64,7 +61,6 @@ header{
     background-color: transparent;
 }
 
-
 #logo{
     height: 55px;
     padding: auto;
@@ -74,9 +70,9 @@ header{
 
 .redes-sociais{
     width: auto;
-    height: 90%;
+    height: 60px;
     float: right;
-    margin-left: 50%;
+    margin-left: 52%;
     align-items: center;
     box-sizing: border-box;
 }
@@ -88,15 +84,124 @@ header{
     box-sizing: border-box;
 }
 
-.card-banda{
+
+
+
+/* CARDE BANDA */
+
+.card-foto-banda{
+    height: 95vh;
+    /* height: 585px; */
     width: 25%;
-    height: 95%;
-    position: relative;
-    margin-right: 0;
+    padding: 8rem 1.5%;
+    align-items: center;
+    display: inline-block;
+    justify-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* background-color: #f88b25; */
+    background-color: #FF7A00;
 }
 
 #foto-banda{
-    width: 20%;
-    height: 25%;
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+    padding: 1rem;
     border-radius: 50%;
+    box-sizing: border-box;
+    background-color: #0D99FF;
 }
+
+.card-foto-banda .card-text{
+    height: 20%;
+    width: 300px;
+    padding: 1rem;
+    margin: 12% 0;
+    font-size: 24px;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+
+/* MAIN */
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 75%;
+    height: 83vh;
+    /* height: 500px; */
+    color: black;
+    margin-top: 12vh;
+    margin-bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white; 
+}
+.card-secundary{
+    width: 75%;
+    height: 84vh;
+    color: black;
+    margin-top: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white; 
+}
+
+.card-apresetacao{
+    text-align: center;
+    height: 80vh;
+    background-color: #FFCD29; 
+    padding: 1rem;
+}
+
+
+.card-apresetacao h1{
+    text-align: center;
+    font-family: "xilosa";
+    font-size: 65px;
+}
+
+.card-apresetacao h2{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+}
+
+.verso-apresentacao{
+    width: 40%;  
+    display: inline-block;
+    padding: 1rem auto;
+    margin: auto auto;
+    text-align: justify;
+}
+
+.downArrow{
+    width: 75vw;
+    height: 5vh;
+    padding: 0.3rem 0;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+    /* margin: 0 0 15px 0; */
+
+}
+
+/* footer{
+    height: 8%;
+    width: 75%;
+    text-align: center;
+} */
+
+
+
+
