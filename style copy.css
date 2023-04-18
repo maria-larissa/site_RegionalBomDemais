@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'xilosa';
+    src: url(fontes/xilosa.ttf);
+}
+
+@font-face {
+    font-family: 'crackvetica';
+    src: url(fontes/Crackvetica.ttf);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+
+body{
+    text-decoration: none;
+    color: black;
+    /* background-color: #F4F4F4; */
+    /* background-color: #fdf8d3; */
+    background-color: #FFCD29;
+    margin: 0;
+}
+
+
+header{
+    width: 100%;
+    padding: 2%;
+    height: 100px;
+    align-items: center;
+    display: inline-flex;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.card-principal{
+    width: 75%;
+    /* padding: 2%; */
+    height: 100px;
+    align-items: center;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.card-principal div{
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-content: left;
+    align-items: center; 
+}
+
+/* É do tipo inline-block */
+#menu-hamburguer{
+    border: 0;
+    padding: auto;
+    margin: auto 1rem;  
+    align-items: center;
+    background-color: transparent;
+}
+
+
+#logo{
+    height: 55px;
+    padding: auto;
+    margin-left: 5rem;
+    box-sizing: border-box;
+}
+
+.redes-sociais{
+    width: auto;
+    height: 90%;
+    float: right;
+    margin-left: 50%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.redes-sociais img{
+    height: 28px;
+    padding: auto 2rem;
+    margin: 0 2vw;
+    box-sizing: border-box;
+}
+
+.card-banda{
+    width: 25%;
+    height: 95%;
+    position: relative;
+    margin-right: 0;
+}
+
+#foto-banda{
+    width: 20%;
+    height: 25%;
+    border-radius: 50%;
+}
