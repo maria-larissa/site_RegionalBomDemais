@@ -39,6 +39,7 @@ header{
     height: 12vh;
     /* height: 85px; */
     position: fixed;
+    z-index: 10;
     align-items: center;
     display: inline-flex;
     box-sizing: border-box;
@@ -194,7 +195,9 @@ main{
     width: 75%;
     height: 84vh;
     color: black;
-    margin-top: 0px;
+    /* padding-top: 1rem;
+    box-sizing: border-box; */
+    margin-top: 0;
     text-align: center;
     box-sizing: border-box;
     background-color: white; 
@@ -204,7 +207,8 @@ main{
     font-family: 'xilosa';
     font-size: 28px;
     text-align: center;
-    margin: 1rem;
+    margin: 0.5rem auto 0.3rem auto;
+    /* margin: 1rem 1rem 0 1rem; */
     box-sizing: border-box;
 }
 /* footer{
@@ -216,7 +220,7 @@ main{
 
 
 
-/* CARROSSEL FOTOS */
+/* CARROSSEL EVENTOS */
 @mixin aspect-ratio($width, $height) {
     position: relative;
     
@@ -238,31 +242,23 @@ main{
     }
 }
 
-section {
-/* background: #f4F4F4; */
-background: #F2CD5C;
-padding: 50px 0;
-}
 
 .container {
-    height: 90%;
-    /* height: auto; */
+    height: 100%;
     width: 75vw;
-    /* max-width: 1044px; */
-    /* margin: 0 1rem; */
-    padding: 0 1.25rem;
+    /* padding: 0.5rem 1.25rem 0 1.25rem; */
+    padding: 0.3rem 1rem;
+    background: #F2CD5C;
     box-sizing: border-box;
 }
 
 .carrossel {
     width: 90%;
-    /* height: 90%; */
     display: block;
     text-align: left;
     position: relative;
     margin: 0 auto 22px auto;
     box-sizing: border-box;
-    /* margin-bottom: 22px; */
 }
 
 .carrossel input{
@@ -292,8 +288,8 @@ padding: 50px 0;
 
 .carrossel-photos {
     position: relative;
-    z-index: 1;
-    padding: 0;
+    /* z-index: 1; */
+    padding-bottom: 0.5rem;
     margin: 0 0;
     overflow: hidden;
     white-space: nowrap;
@@ -307,7 +303,6 @@ padding: 50px 0;
     flex: 1 0 100%;
     width: 100%;
     height: 90%;
-    /* max-height: 80vh; */
     overflow: hidden;
     transition: all 300ms ease-out;
     box-sizing: border-box;
@@ -353,7 +348,6 @@ padding: 50px 0;
     @include aspect-ratio(3, 2);
     width: 70%;
     height: 320px;
-    /* height: 60%; */
     justify-content: space-between;
     margin: 0 0 1rem 0
 }
@@ -375,17 +369,10 @@ padding: 50px 0;
 
 .carrossel-photo figcaption {
     font-size: 14px;
-    /* align-self: flex-end; */
-    /* padding: 0.5rem 0 0 0; */
     margin: 1rem auto;
     float: left;
-    /* flex: 0 0 auto; */
     width: 100%;
-    /* height: 10%; */
     box-sizing: border-box;
-    /* min-width: 10%;
-    max-width: 50%; */
-    /* max-height: 20%; */
 }
 
 .carrossel-photo .credit {
@@ -444,3 +431,56 @@ padding: 50px 0;
     object-fit: cover;
 }
 
+
+
+/* INTEGRANTES */
+.card-secundary .integrantes{
+    width: 100%;
+    height: 84vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.integrantes  .integrante{
+    width: 30%;
+    height: 85%;
+    margin: 1rem;
+    box-sizing: border-box;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.integrante figure{
+    height: 100%;
+    width: auto;
+    font-size: clamp(0.5vw, 1rem, 2vw);
+    margin: 0;
+}
+
+.integrante figcaption{
+    margin: 0;
+    padding:0.5vw;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    /* font-size: clamp(0.5rem, 1.5rem, 2vw); */
+}
+
+.foto-integrante{
+    /* margin: 2vw; */
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.foto-integrante img{
+    height: 220px;
+    width: 220px;
+    margin: 0 auto;
+    /* padding: 1vw; */
+    display: flex;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
