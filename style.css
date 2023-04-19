@@ -35,9 +35,7 @@ header{
     left: 0;
     width: 75%;
     padding: 1rem;
-    /* padding: 2rem; */
     height: 12vh;
-    /* height: 85px; */
     position: fixed;
     z-index: 10;
     align-items: center;
@@ -208,7 +206,6 @@ main{
     font-size: 28px;
     text-align: center;
     margin: 0.5rem auto 0.3rem auto;
-    /* margin: 1rem 1rem 0 1rem; */
     box-sizing: border-box;
 }
 /* footer{
@@ -248,13 +245,14 @@ main{
     width: 75vw;
     /* padding: 0.5rem 1.25rem 0 1.25rem; */
     padding: 0.3rem 1rem;
-    background: #F2CD5C;
     box-sizing: border-box;
+    background: #F2CD5C;
 }
+
 
 .carrossel {
     width: 90%;
-    height: 100%;
+    height: 90%;
     display: block;
     text-align: left;
     position: relative;
@@ -273,11 +271,11 @@ main{
     position: absolute;    
 }
 
-.carrossel input:nth-of-type(6):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -500%; }
-.carrossel input:nth-of-type(5):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -400%; }
-.carrossel input:nth-of-type(4):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -300%; }
-.carrossel input:nth-of-type(3):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -200%; }
-.carrossel input:nth-of-type(2):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -100%; }
+.carrossel input:nth-of-type(6):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -504%; }
+.carrossel input:nth-of-type(5):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -404%; }
+.carrossel input:nth-of-type(4):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -304%; }
+.carrossel input:nth-of-type(3):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -204%; }
+.carrossel input:nth-of-type(2):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: -104%; }
 .carrossel input:nth-of-type(1):checked ~ .carrossel-photos .carrossel-photo:first-of-type { margin-left: 0%; }
 
 .carrossel input:nth-of-type(1):checked ~ .carrossel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 3px #BF9742; }
@@ -289,8 +287,8 @@ main{
 
 .carrossel-photos {
     position: relative;
-    height: 60%;
-    margin: 0 0 0.5rem 0;
+    height: 68%;
+    margin: 0 0 1rem 0;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
@@ -319,6 +317,9 @@ main{
     /* align-items: center; */
 }
 
+.carrossel-photo .foto-principal, .carrossel-photo .text{
+    height: 100%;
+}
 
 .carrossel-photo figure img {
     width: 310px;
@@ -326,9 +327,6 @@ main{
     margin: 0  auto;
     padding: 0;
     box-sizing: border-box;
-}
-.carrossel-photo .foto-principal, .carrossel-photo .text-principal{
-    height: 100%;
 }
 
 .carrossel-photo img {
@@ -340,15 +338,15 @@ main{
 .carrossel-photo figure div {
     @include aspect-ratio(3, 2);
     width: 60%;
-    height: auto;
+    height: 0 auto;
     margin: 0 0 1vh 0
 }
 
 
 .carrossel-photo .text{
     width: 90%;
-    height: 100%;
-    margin: 0 auto;
+    /* height: 100%; */
+    margin: auto auto;
     display: flex;
     flex-direction: column;
 }
@@ -358,7 +356,7 @@ main{
     width: 70%;
     height: 320px;
     justify-content: space-between;
-    margin: 0 0 1rem 0
+    margin: 0;
 }
 
 .carrossel-photo h4{
@@ -378,8 +376,7 @@ main{
 
 .carrossel-photo figcaption {
     font-size: 14px;
-    margin: 1rem auto;
-    float: left;
+    margin: auto;
     width: 100%;
     box-sizing: border-box;
 }
@@ -404,6 +401,7 @@ main{
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .carrossel__thumbnails .carrossel-photos + .carrossel__thumbnails {
@@ -444,12 +442,21 @@ main{
 
 
 /* INTEGRANTES */
+
+.container1{
+    height: 90%;
+    width: 75vw;
+    background: #FFCD29;
+
+}
 .card-secundary .integrantes{
     width: 100%;
-    height: 84vh;
+    height: 100%;
     display: flex;
+    align-items: center;
     flex-direction: row;
     box-sizing: border-box;
+    background-color: #FFCD29;
 }
 
 .integrantes  .integrante{
