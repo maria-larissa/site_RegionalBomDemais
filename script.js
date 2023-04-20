@@ -7,10 +7,12 @@ if(menuHamburguerClose){
 }
 
 function fecharMenu(menu1){
+  // menu.style.display = "none";
   menu1.style.display = "none";
 }
 
 function abrirMenu(menu1){
+  // menu.style.display = "block";
   menu1.style.display = "block";
 }
 

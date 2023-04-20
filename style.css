@@ -30,10 +30,18 @@ body{
 
 
 /* MENU */
-.menu{
+/* .menu{
     width: 25vw;
     height: 100vh;
-}
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; */
+    /* display: none; */
+    /* z-index: 100; */
+/* } */
+
 .menu hr{
     margin: 0;
     background-color: white;
@@ -41,22 +49,20 @@ body{
 
 #icone-close{
     color: white;
-    z-index: 100;
     margin-bottom: 4rem;
-    /* position: absolute;
-    top: 50px;
-    left: 50px; */
 }
 
 
 #menu1{
-    /* display: none; */
+    display: none;
     width: 25vw;
     margin: 0;
-    z-index: 100;
+    z-index: 50;
     height: 100vh;
     position: fixed;
-    padding: 1rem;
+    top: 0;
+    left: 0;
+    padding:  1rem;
     box-sizing: border-box;
     background-color: black;
     overflow-y: scroll; /*permite scroll no menu */
