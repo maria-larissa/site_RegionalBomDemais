@@ -30,34 +30,45 @@ body{
 
 
 /* MENU */
-
-.menu nav{
-    width: 30vw;
-    margin: 0;
-    opacity: 1;
-    z-index: 100;
-    display: none;
+.menu{
+    width: 25vw;
     height: 100vh;
-    position: fixed;
-    padding: 1rem 1rem 0 1rem;
-    box-sizing: border-box;
-    background-color: black;
-    overflow-y: scroll; /*permite scroll no menu */
+}
+.menu hr{
+    margin: 0;
+    background-color: white;
 }
 
 #icone-close{
     color: white;
     z-index: 100;
-    
+    margin-bottom: 4rem;
+    /* position: absolute;
+    top: 50px;
+    left: 50px; */
+}
+
+
+#menu1{
+    /* display: none; */
+    width: 25vw;
+    margin: 0;
+    z-index: 100;
+    height: 100vh;
+    position: fixed;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: black;
+    overflow-y: scroll; /*permite scroll no menu */
 }
 
 .menu nav li{
     height: calc((90%  / 6) - 2rem);
     list-style: none;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "xilosa";
     /* margin: 2rem 1rem 1rem 1rem; */
-    margin: 1rem;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -76,7 +87,7 @@ body{
 }
 
 .menu nav li:hover a{
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #icone-menu, #icone-close{
@@ -87,6 +98,7 @@ body{
     align-items: center;
     border: 0 solid transparent;
 }
+
 
 #icone-menu:hover{
     cursor: pointer;
