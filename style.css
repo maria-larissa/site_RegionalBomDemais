@@ -28,7 +28,87 @@ body{
 
 
 
+
 /* MENU */
+
+.menu nav{
+    width: 30vw;
+    margin: 0;
+    opacity: 1;
+    z-index: 100;
+    display: none;
+    height: 100vh;
+    position: fixed;
+    padding: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+    background-color: black;
+    overflow-y: scroll; /*permite scroll no menu */
+}
+
+#icone-close{
+    color: white;
+    z-index: 100;
+    
+}
+
+.menu nav li{
+    height: calc((90%  / 6) - 2rem);
+    list-style: none;
+    font-size: 30px;
+    font-family: "xilosa";
+    /* margin: 2rem 1rem 1rem 1rem; */
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.menu nav li a{
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem ;
+    box-sizing: border-box;
+}
+
+.menu nav li:hover a, #icone-close:hover{
+    color: #FF7A00;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 5ms;
+}
+
+.menu nav li:hover a{
+    font-size: 35px;
+}
+
+#icone-menu, #icone-close{
+    background-color: transparent;
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    align-items: center;
+    border: 0 solid transparent;
+}
+
+#icone-menu:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+/* É do tipo inline-block */
+#menu-hamburguer{
+    border: 0;
+    padding: auto;
+    margin: auto 1rem;  
+    align-items: center;
+    background-color: transparent;
+}
+
+
+
+
+/* HEADER */
 
 header{
     top: 0;
@@ -52,14 +132,6 @@ header div{
     align-items: center; 
 }
 
-/* É do tipo inline-block */
-#menu-hamburguer{
-    border: 0;
-    padding: auto;
-    margin: auto 1rem;  
-    align-items: center;
-    background-color: transparent;
-}
 
 #logo{
     height: 55px;
@@ -201,20 +273,14 @@ main{
     background-color: white; 
 }
 
-.card-secundary h3, .card-secundary h5{
+.card-secundary h3{
     font-family: 'xilosa';
     text-align: center;
     margin: 0.5rem auto 0.3rem auto;
+    font-size: 28px;
     box-sizing: border-box;
 }
 
-h3{
-    font-size: 28px;
-}
-
-h5{
-    font-size: 22px;
-}
 
 
 /* footer{
@@ -490,11 +556,6 @@ h5{
 
 /* GALERIA */
 
-/* .pic-ctn {
-width: 100%;
-height: 90%;
-} */
-
 @keyframes display {
     0% {
         transform: translateX(200px);
@@ -526,34 +587,34 @@ height: 90%;
     margin-top: 0.9rem;
     box-sizing: border-box;
     display: flexcenter;
-  }
-  
-  .pic-ctn img {
-    position: absolute;
-    top: 0;
-    padding: auto;
-    width: 400px;
-    height: 400px;
-    left: calc(50% - (50% / 2) + 3rem);
-    opacity: 0;
-    animation: display 10s infinite;
-  }
-  
-  .pic-ctn img:nth-child(2) {
-    animation-delay: 2s;
-  }
+}
 
-  .pic-ctn img:nth-child(3) {
-    animation-delay: 4s;
-  }
+.pic-ctn img {
+position: absolute;
+top: 0;
+padding: auto;
+width: 400px;
+height: 400px;
+left: calc(50% - (50% / 2) + 3rem);
+opacity: 0;
+animation: display 10s infinite;
+}
 
-  .pic-ctn img:nth-child(4) {
-    animation-delay: 6s;
-  }
+.pic-ctn img:nth-child(2) {
+animation-delay: 2s;
+}
 
-  .pic-ctn img:nth-child(5) {
-    animation-delay: 8s;
-  }
+.pic-ctn img:nth-child(3) {
+animation-delay: 4s;
+}
+
+.pic-ctn img:nth-child(4) {
+animation-delay: 6s;
+}
+
+.pic-ctn img:nth-child(5) {
+animation-delay: 8s;
+}
 
 
 
