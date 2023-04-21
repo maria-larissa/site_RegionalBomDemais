@@ -8,6 +8,51 @@
     src: url(fontes/Crackvetica.ttf);
 }
 
+
+
+/* a{
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+} */
+
+/* nav, */
+/* scroll-container {
+    width: 75vw;
+    height: 84vh;
+    display: block;
+    margin: 0;
+    text-align: center;
+} */
+
+/* nav {
+    width: 339px;
+    padding: 5px;
+    border: 1px solid black;
+} */
+
+scroll-container {
+    display: block;
+    width: 75vw;
+    margin: 12vh 0 0 0;
+    padding: 0;
+    height: 92vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+scroll-page {
+    width: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 60vh;
+    /* font-size: 5em; */
+}
+
+
+
+
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
@@ -30,18 +75,6 @@ body{
 
 
 /* MENU */
-/* .menu{
-    width: 25vw;
-    height: 100vh;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100; */
-    /* display: none; */
-    /* z-index: 100; */
-/* } */
-
 .menu hr{
     margin: 0;
     background-color: white;
@@ -51,7 +84,6 @@ body{
     color: white;
     margin-bottom: 4rem;
 }
-
 
 #menu1{
     display: none;
@@ -83,6 +115,7 @@ body{
     text-decoration: none;
     margin-top: 1rem ;
     box-sizing: border-box;
+    display: inline-block;
 }
 
 .menu nav li:hover a, #icone-close:hover{
@@ -105,14 +138,9 @@ body{
     border: 0 solid transparent;
 }
 
-
 #icone-menu:hover{
     cursor: pointer;
 }
-
-
-
-
 
 /* É do tipo inline-block */
 #menu-hamburguer{
@@ -223,15 +251,16 @@ header div{
 main{
     margin: 0;
     padding: 0;
+    height: 60vh;
 }
 
 .card{
-    width: 75%;
+    width: 100%;
     height: 83vh;
     /* height: 500px; */
     color: black;
-    margin-top: 12vh;
-    margin-bottom: 0;
+    /* margin-top: 0.8rem; */
+    /* margin-bottom: 0; */
     text-align: center;
     box-sizing: border-box;
     background-color: white; 
@@ -243,10 +272,12 @@ main{
     height: 80vh;
     background-color: #FFCD29; 
     padding: 1rem;
+
 }
 
 
 .card-apresetacao h1{
+    margin-top: 2rem;
     text-align: center;
     font-family: "xilosa";
     font-size: 65px;
@@ -279,10 +310,11 @@ main{
 }
 
 
-.card-secundary{
-    width: 75%;
-    height: 84vh;
+scroll-page, .card-secundary{
+    width: 100%;
+    height: 83vh;
     color: black;
+    /* padding-top: 0.6rem; */
     /* padding-top: 1rem;
     box-sizing: border-box; */
     margin-top: 0;
@@ -291,10 +323,15 @@ main{
     background-color: white; 
 }
 
+scroll-page{
+    padding-top: 0.6rem;
+}
+
 .card-secundary h3{
     font-family: 'xilosa';
     text-align: center;
-    margin: 0.5rem auto 0.3rem auto;
+    /* margin: 0.5rem auto 0.3rem auto; */
+    margin: 0 auto 0.3rem auto;
     font-size: 28px;
     box-sizing: border-box;
 }
@@ -544,9 +581,9 @@ main{
 /* SOBRE NÓS */
 
 #mapa-ceara{
-    height: 150px;
-    width: 140px;
-    margin: 2vw 1vw 1vw 1vw ;
+    height: 130px;
+    width: 120px;
+    margin: 1rem ;
     float: right;
     /* top: 0;
     vertical-align: text-top; */
