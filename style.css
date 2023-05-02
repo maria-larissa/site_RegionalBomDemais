@@ -9,52 +9,6 @@
 }
 
 
-
-/* a{
-    display: inline-block;
-    width: 50px;
-    text-decoration: none;
-} */
-
-/* nav, */
-/* scroll-container {
-    width: 75vw;
-    height: 84vh;
-    display: block;
-    margin: 0;
-    text-align: center;
-} */
-/* 
-nav {
-    width: 339px;
-    padding: 5px;
-    border: 1px solid black;
-} */
-
-scroll-container {
-    display: block;
-    width: 75vw;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-padding-top: 1vh;
-}
-
-/* scroll-page { */
-    /* width: 100%; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* height: 82vh; */
-    /* font-size: 5em; */
-/* } */
-
-
-
-
-
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
@@ -67,10 +21,20 @@ scroll-container {
 body{
     text-decoration: none;
     color: black;
-    /* background-color: #F4F4F4; */
-    /* background-color: #fdf8d3; */
     margin: 0;
     padding: 0;
+}
+
+
+scroll-container {
+    display: block;
+    width: 75vw;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1vh;
 }
 
 
@@ -78,13 +42,13 @@ body{
 
 /* MENU */
 .menu hr{
-    margin: 0;
+    margin: 0.5rem auto;
     background-color: white;
 }
 
 #icone-close{
     color: white;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 }
 
 #menu1{
@@ -107,9 +71,11 @@ body{
     list-style: none;
     font-size: 25px;
     font-family: "xilosa";
-    /* margin: 2rem 1rem 1rem 1rem; */
-    padding: 1rem;
+    /* padding: 1rem; */
+    /* margin-bottom: 1rem; */
     box-sizing: border-box;
+    display: flex;
+    align-content: center;
 }
 
 .menu nav li a{
@@ -130,6 +96,7 @@ body{
 .menu nav li:hover a{
     font-size: 30px;
 }
+
 
 #icone-menu, #icone-close{
     background-color: transparent;
@@ -180,7 +147,6 @@ header div{
     align-items: center; 
 }
 
-
 #logo{
     height: 55px;
     padding: auto;
@@ -210,19 +176,17 @@ header div{
 /* CARDE BANDA */
 
 .card-foto-banda{
-    height: 95vh;
-    /* height: 585px; */
+    top: 0;
+    right: 0;
     width: 25%;
+    height: 95vh;
+    position: fixed;
     padding: 8rem 1.5%;
+    text-align: center;
     align-items: center;
     display: inline-block;
     justify-items: center;
     box-sizing: border-box;
-    text-align: center;
-    position: fixed;
-    right: 0;
-    top: 0;
-    /* background-color: #f88b25; */
     background-color: #FF7A00;
 }
 
@@ -260,12 +224,7 @@ main{
 
 .card, .card-secundary{
     width: 100%;
-    /* height: 83vh; */
-    /* height: 82vh; */
-    /* height: 500px; */
     color: black;
-    /* margin-top: 0.8rem; */
-    /* margin-bottom: 0; */
     text-align: center;
     box-sizing: border-box;
     background-color: white; 
@@ -313,20 +272,17 @@ main{
 .downArrow{
     width: 100%;
     height: 5vh;
-    /* height: 6vh; */
     position: relative;
     bottom: 0;
-    /* padding: 0.3rem 0; */
     align-items: center;
     text-align: center;
     background-color: white;
     box-sizing: border-box;
-    /* margin: 0 0 15px 0; */
-
 }
 
 
-/* scroll-page, .card-secundary{ */
+
+
 scroll-page{
     width: 100%;
     height: 88vh;
@@ -339,26 +295,14 @@ scroll-page{
     background-color: white; 
 }
 
-/* scroll-page{
-    padding-top: 0.6rem;
-} */
-
 .card-secundary h3{
     font-family: 'xilosa';
     text-align: center;
-    /* margin: 0.5rem auto 0.3rem auto; */
     margin: 0 auto 0.3rem auto;
     font-size: 28px;
     box-sizing: border-box;
 }
 
-
-
-/* footer{
-    height: 8%;
-    width: 75%;
-    text-align: center;
-} */
 
 
 
@@ -390,7 +334,6 @@ scroll-page{
 .container, .container1 {
     height: 100%;
     width: 75vw;
-    /* padding: 0.3rem 1rem; */
     box-sizing: border-box;
 }
 
@@ -497,7 +440,6 @@ scroll-page{
 
 .carrossel-photo .text{
     width: 90%;
-    /* height: 100%; */
     margin: auto auto;
     display: flex;
     flex-direction: column;
@@ -601,8 +543,6 @@ scroll-page{
     width: 120px;
     margin: 1rem ;
     float: right;
-    /* top: 0;
-    vertical-align: text-top; */
 }
 
 .nossa-trajetoria, .sobre-nos{
@@ -611,7 +551,6 @@ scroll-page{
     text-align: justify;
     font-size: 16px;
     align-items:first baseline
-    /* justify-content: center; */
 }
 
 .nossa-trajetoria .card-text1, .sobre-nos .card-text1{
