@@ -12,6 +12,8 @@ btnFecharMenu.onclick = function() {
   menu1.style.display = "none";
 }
 
+
+// SCROLL sections do site
 // window.scroll({
 //   top: 12vh;
 //   left
