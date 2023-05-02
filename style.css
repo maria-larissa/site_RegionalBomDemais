@@ -24,8 +24,8 @@
     margin: 0;
     text-align: center;
 } */
-
-/* nav {
+/* 
+nav {
     width: 339px;
     padding: 5px;
     border: 1px solid black;
@@ -34,11 +34,12 @@
 scroll-container {
     display: block;
     width: 75vw;
-    margin: 12vh 0 0 0;
+    margin: 10vh 0 0 0;
     padding: 0;
-    height: 92vh;
+    height: 90vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    scroll-padding-top: 1vh;
 }
 
 scroll-page {
@@ -46,7 +47,7 @@ scroll-page {
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
-    height: 60vh;
+    height: 90vh;
     /* font-size: 5em; */
 }
 

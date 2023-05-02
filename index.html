@@ -14,11 +14,17 @@
     <div class="menu">
         
         <nav id="menu1">
-            <button onclick="fecharMenu(menu1)" id="icone-close">
+            <button id="icone-close">
                 <i class="material-symbols-rounded">
                     close
                 </i>
             </button>
+
+            <!-- <button onclick="fecharMenu(menu1)" id="icone-close">
+                <i class="material-symbols-rounded">
+                    close
+                </i>
+            </button> -->
             <li><a href="#page-1">Início</a></li>
             <hr>
             <li><a href="#page-2">Eventos</a></li>
@@ -38,12 +44,18 @@
     
     
     <header>
-        <button onclick="abrirMenu(menu1)" id="icone-menu">
+        <button id="icone-menu">
                 <i class="material-symbols-rounded">
                     menu
                 </i>
-            </button>
-            
+        </button>
+
+        <!-- <button onclick="abrirMenu(menu1)" id="icone-menu">
+                <i class="material-symbols-rounded">
+                    menu
+                </i>
+        </button> -->
+        
             <img id="logo" src="imagens/logo.png" alt="Logo Regional Bom Demais">
             
             <div class="redes-sociais">
@@ -76,7 +88,7 @@
         <scroll-container>
             <!-- APRESENTAÇÃO -->
             <scroll-page id="page-1">
-                <div class="card-secundary">
+                <div class="card">
                     <div class="card-apresetacao">
                         
                         <h1 id="title">Regional Bom demais</h1>
@@ -113,11 +125,11 @@
                 </div>
                 </div>
                 
-                <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div>
             </scroll-page>
+            <div class="downArrow">
+                <i class="material-symbols-rounded"> keyboard_double_arrow_down
+                </i>
+            </div>
             
             
             <!-- EVENTOS -->

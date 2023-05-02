@@ -1,11 +1,22 @@
 // MENU HAMBURGUER
-function fecharMenu(menu1){
+const btnAbrirMenu = document.getElementById("icone-menu");
+const btnFecharMenu = document.getElementById("icone-close");
+
+console.log(btnAbrirMenu);
+
+btnAbrirMenu.onclick = function(){
+  menu1.style.display = "block";
+}
+
+btnFecharMenu.onclick = function() {
   menu1.style.display = "none";
 }
 
-function abrirMenu(menu1){
-  menu1.style.display = "block";
-}
+// window.scroll({
+//   top: 12vh;
+//   left
+// })
+
 
 
 
