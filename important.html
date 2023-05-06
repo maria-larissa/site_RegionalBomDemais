@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas HTML/CSS</title>
+    <style>
+        h1{text-align: center;}
+        ul{padding-left: 2rem;}
+        ul li{margin-top: 1rem;}
+        strong{color:steelblue;}
+        em{text-transform: uppercase;}
+
+        main{
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .principal{margin-top: 5rem;}
+        section{padding: 2rem 1rem;}
+        
+        section b{
+            font-size: 25px;
+            margin-bottom: 1rem;
+        }
+
+        section pre{
+            background-color: rgb(44, 41, 41);
+            border-radius: 3px;
+            width: 500px;
+            height: auto;
+            max-height: 250px;
+            margin: 1rem auto;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+            color: white;
+            overflow-y: scroll;
+            scroll-snap-align: y mandatory;
+            text-align: justify;
+            font-size: 16px;
+        }
+        
+        .code-linha{
+            background-color: rgb(207, 204, 204);
+            border-radius: 10px;
+            padding: 0.2rem;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', serif;
+            font-size: 14px;
+        }
+        
+        .mapa{margin: 3%;}
+
+        .mapa p{
+            margin: 2em 0;
+            text-align: center;
+        }
+
+        .comentario{color: gray;}
+        .link{color: rgb(11, 153, 219);}
+
+    </style>
+</head>
+
+<body style="font-size: 20px;">
+    <main>
+        <h1>Dicas HTML/CSS</h1>
+        <hr>
+    
+        <p>Esse é um <b>guia de pesquisa rápida sobre HTML5, CSS3 e JS</b>, que contém dicas, links de sites e anotações feitos e coletados por mim.</p>
+    
+        <section class="principal">
+            <b><h2>HTML</h2></b>
+            <hr>
+    
+            HyperText Markup Language ou linguagem de marcação de hipertexto define o significado e a estrutura do conteúdo da web.
+            <br>
+            O arquivo principal do HTML é geralmente nomeados com "index.html"
+            
+            <!-- categorias de conteúdos -->
+            <section>
+                <b>CATEGORIAS DE CONTEÚDO</b>
+
+                Existem três tipos de categorias de conteúdo.
+                
+                <p> <strong>Categoria de conteúdo compartilhado</strong>: que descrevem regras comuns de conteúdo compartilhado por vários elementos.</p>
+                        
+                <p> <strong>Categoria de conteúdo relacionado</strong>: que decrevem regras comuns de conteúdo para elementos relacionados.</p>
+                        
+                <p><strong>Categoria de conteúdo específico</strong>: que decrevem regras raras de conteúdo para poucos elementos, muitas vezes em contexto específico.<p>
+               
+
+                <h4>Principais categorias de conteúdo</h4>
+                
+                <ul>
+                    <li><strong>Conteúdo de metadados</strong>: os elementos pertencentes a categoria conteúdo de metadados modificam a apresentação ou o comportamento do resto do documento, define ligações para outros documentos ou transmite outras informações fora da banda.
+                    <br>
+<pre><code>
+< base >
+< command >
+< link >
+< meta >
+< noscript >
+< 'script >
+< 'style >
+< title >
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo de fluxo</strong>:Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém texto ou conteúdo embutido.Eles são:
+<pre><code>
+< a >
+< area > , se for descendente de um elemento < map >
+< abbr >
+< address >
+< article >
+< aside >
+< audio >
+< b >
+< bdo >
+< bdi >
+< blockquote >
+< br >
+< button >
+< canvas >
+< cite >
+< code >
+< command >
+< data >
+< datalist >
+< del >
+< details >
+< dfn >
+< div >
+< dl >
+< em >
+< embed >
+< fieldset >
+< figure >
+< footer >
+< form >
+< h1 >
+< h2 >
+< h3 >
+< h4 >
+< h5 >
+< h6 >
+< header >
+< hgroup >
+< hr >
+< i >
+< iframe >
+< img >
+< input >
+< ins >
+< kbd >
+< keygen >
+< label >
+< link >, se o atributo "itemprop" estiver presente
+< main >
+< map >
+< mark >
+< math >
+< menu >
+< meta >, se o atributo "itemprop" estiver presente
+< meter >
+< nav >
+< noscript >
+< object >
+< ol >
+< output >
+< p >
+< pre >
+< progress >
+< q >
+< ruby >
+< s >
+< samp >
+< 'script >
+< section >
+< select >
+< small >
+< span >
+< strong >
+< 'style >, se o atributo "scoped" estiver presente
+< sub >
+< sup >
+< svg >
+< table >
+< template >
+< textarea >
+< time >
+< ul >
+< var >
+< video >
+< wbr >
+< text >
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo de cabeçalho</strong>: elementos pertencentes a essa categoria definem título de uma seção, se é marcada por um elemento explicito ou é implicitamnete defina pelo próprio conteúdo do cabeçalho.
+<pre><code>
+< h1 >
+< h2 >
+< h3 >
+< h4 >
+< h5 >
+< h6 >
+< hgroup >
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo de seccionamento</strong>: os elementos pertencentes essa categorias criam uma seção no esboço atual que defini o escopo do <text class="code-linha">< header>, < footer ></text>, e conteúdo do cabeçalho.
+<pre><code>
+< article >
+< aside >
+< nav >
+< section >
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo fraseado</strong>: define o texto e a marcação que possui. Serie de conteúdos fraseados compõem parágrafos.
+<pre><code>
+< a >, se contém somente conteúdo fraseado
+< abbr >
+< area >, se for um descendente de um elemento < map >
+< audio >
+< b >
+< bdo >
+< br >
+< button >
+< canvas >
+< cite >
+< code >
+< command >
+< datalist >
+< del >, se contém somente contepudo fraseado
+< dfn >
+< em >
+< embed >
+< i >
+< iframe >
+< img >
+< input >
+< ins >, se contém somente conteúdo faseado
+< kbd >
+< keygen >
+< label >
+< link >, se o atributo "itemprop" estiver presente
+< map >, se contém somente conteúdo fraseado
+< mark >
+< math >
+< meta >, se o atributo "itemprop" estiver presente
+< meter >
+< noscript >
+< object >
+< output >
+< progress >
+< q >
+< ruby >
+< samp >
+< 'script >
+< select >
+< small >
+< span >
+< strong >
+< sub >
+< sup >
+< svg >
+< textarea >
+< time >
+< var >
+< video >
+< wbr >
+
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo embutido</strong>:importa outro recurso ou insere conteúdo de uma outra linguagem de marcação no documento. Os elementos que pertencem a essa categoria incluem:
+<pre><code>
+< audio >
+< canvas >
+< embed >
+< iframe >
+< img >
+< math >
+< object >
+< svg >
+< video >
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo interativo</strong>:nclui elementos que são especificamente desenvolvidos para a interação do usuário. Os elementos que pertencem a essa categoria incluem: 
+<pre><code>
+< a >
+< audio > , se o atributo "controls" estiver present
+< button >
+< details >
+< embed >
+< iframe >
+< img >, se o atributo "usemap" estiver presente
+< input >, se o atributo "type" não estiver hidden
+< keygen >
+< label >
+< menu >, se o atributo "type" estiver no modo "barra de ferramentas"
+< object >, se o atributo "usemap" estiver presente
+< select >
+< textarea >
+< video >, se o atributo "controls" estiver presente
+</code></pre>
+                    </li>
+
+                    <li><strong>Conteúdo associado ao form</strong>:compreende elementos que têm um formulário de proprietário, exposto por um atributo form. Possui várias subcategorias
+                        <ul>
+                            <li><strong>Listed</strong>:
+                            Elementos que estão listados nas coleções IDL e fieldset.elements
+    <pre><code>
+    < button >
+    < fieldset >
+    < input >
+    < keygen >
+    < object >
+    < output >
+    < select >
+    < textarea >
+    </code></pre>
+    
+                        </li>
+    
+                        <li><strong>Labelable</strong>: elemntos associados a <text class="code-linha">< label ></text>
+    <pre><code>
+    < button >
+    < input >
+    < keygen >
+    < meter >
+    < output >
+    < progress >
+    < select >
+    < textarea >
+    </code></pre>
+                        </li>
+    
+                        <li><strong>Submittable</strong>: Elementos que podem ser usados par construir o formulário de dados
+    <pre><code>
+    < button >
+    < input >
+    < keygen >
+    < object >
+    < select >
+    < textarea >
+    </code></pre>
+    
+                        </li>
+    
+                        <li><strong>Resettable</strong>:Elementos que podem ser afetados quando o formularios e reiniciado
+    <pre><code>
+    < input >
+    < keygen >
+    < output >
+    < select >
+    < textarea >
+    </code></pre>
+                        </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Conteúdo transparent</strong>:Se um elemento tem um modelo de conteúdo transparente, então seu conteúdo deve ser estruturado de tal forma que ele seja um HTML5 válido, mesmo se o elemento transparente for removido e substituído pelos elementos filhos, ou seja, se forem removidos, o fragmento continuaria sendo um HTML válido.
+<pre><code>
+< del >
+< ins 
+</code></pre>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <ul>
+    
+                <li><strong>Div</strong>: uso quando quero inserir um espaçamento entre conteúdos não completos.</li>
+    
+    
+                <li><strong>Section</strong>: usamos quando temos um conteúdo que possui título e descrição, ou seja um conteúdo é completo.<li>
+    
+    
+                <li><strong>Div X Section</strong>: a diferença entre ambos é que a "div" é apenas uma divisão visual e a "section" é uma divisão de conteúdos completos.</li> 
+            </ul>    
+
+
+            <!-- Tags -->
+            <section>
+                <b>TAGS</b>
+                <ul>
+
+                    <li> <strong>< header ></header></strong>: tag <em>criada no HTML5</em>  que indica para o navegador que aquilo é o <em>cabeçalho</em>, ou seja a primeira informação que o usuário vai ver.
+    <pre><code>
+    < header >
+        <text class="comentario"> < !-- Elementos que irão compor o header do site -- ></text>
+    < /header>
+    </code></pre>
+                    </li>
+                    
+                    <li> <strong>< main ></header></strong>: tag <em>criada no HTML5</em>  que indica para o navegador que aquilo é o <em>conteúdo principal</em>.
+    <pre><code>
+    < main >
+        <text class="comentario"> < !-- Elementos que irão compor o main do site -- ></text>
+    < /main>
+    </code></pre>
+                    </li>
+                    
+                    <li> <strong>< footer ></header></strong>: tag <em>criada no HTML5</em>  que indica para o navegador que aquilo é o <em>footer</em> do site, ou seja, o conteúdo que encerra.
+    <pre><code>
+    < footer >
+        <text class="comentario"> < !-- Elementos que irão compor o footer do site -- ></text>
+    < /footer>
+    </code></pre>
+                    </li>
+                    
+    
+                    <li> <strong>< a ></strong>: tag ancor utilizamos para tornar realizável a navegação atravez de links.
+    <pre><code>
+    < a href= "<text class="link">link</text>"> "Texto clicável" < /a >
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < em > </strong>: tag atual para texto em itálico, que adiciona semantica. 
+    <pre><code>
+    < em > "texto que ficará em itálico" < /em >
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < i > </strong>: tag defasada para texto em itálico, não adicona sentido. 
+    <pre><code>
+    < i > Texto/Bloco que ficará em itálico < /i > 
+    </code></pre>
+                    </li>
+                    
+                    <li> <strong> < strong > </strong>: tag para texto em negrito, que adicona semantica. 
+    <pre><code>
+    < strong > Texto/Bloco que ficará em negrito < /strong > 
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < b > </strong>: tag defasada para texto em negrito, não adicona semantica. 
+    <pre><code>
+    < b > Texto/Bloco que ficará em negrito < /b > 
+    </code></pre>
+                    </li>
+    
+                    <li><strong>< hr ></strong>: tag horizontal row cria uma linha horizontal. Podemos custumizar espaçamentos interno e externo assim como dimensões
+    <pre><code>
+    < hr >
+    </code></pre>   
+                    </li>
+    
+                    <li><strong>< br ></strong>:tag break row adiciona quebra de linha
+    <pre><code>
+    < br >
+    </code></pre>   
+                    </li>
+    
+    
+                    <li><strong>< img ></strong>:tag para adicionar imagens
+    <pre><code>
+    < img src="<text class="link">link/caminho</text>" alt="mensagem caso a imagem não carregue corretamente ou não seja acessível para o usuário" >
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkpQsVKWyRbUgFxwUn-nmd0-YmWLfF1twxzT_hJ753UAl6bJ5t-BWOrq6mhcZfLdA7CDg&usqp=CAU" alt="Foto fachada da empresa google" width="150px" height="100px">
+    </code></pre>
+    
+                    </li>
+    
+                    <li><strong>< ul ></strong>:tag que cria lista de elementos ordenados ou não
+    <pre><code>
+    <text class="comentario">Lista não ordenada</text>
+    < ul >
+        < li > <text class="comentario">item</text> < /li >
+        < li > <text class="comentario">item</text> < /li >
+    < /ul >
+    
+    <text class="comentario">Lista ordenada</text>
+    < ul >
+        < ol > <text class="comentario">item</text> < /ol >
+        < ol > <text class="comentario">item</text> < /ol >
+    < /ul >
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < nav ></strong>: é uma tag criada no HTML5 para criar um estilo de navegação entre links do site 
+    <pre><code>
+    < nav > 
+        <text class="comentario"> < !-- Elementos que irão compor o menu -- ></text>
+    < /nav > 
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < section ></strong>: é uma tag genérica que indica partes maiores do site. 
+    <pre><code>
+    < section > 
+        <text class="comentario"> < !-- Elementos que irão compor a section -- ></text>
+    < /section > 
+    </code></pre>
+                    </li>
+    
+                    <li> <strong> < div ></strong>: é uma tag genérica de agrupamento para conteúdo de fluxo que indica partes menores do site. Usamos para agrupar elementos e estiliza-los com classes e id's.
+    <pre><code>
+    < section > 
+        <text class="comentario"> < !-- Elementos que irão compor a section -- ></text>
+    < /section > 
+    </code></pre>
+                    </li>
+    
+                    <li><strong>< source ></strong>: tag usada para especificar múltiplos recursos de mídia dos elementos <text class="code-linha">< picture >, < audio > e < video ></text>
+                        <br>
+                        Atributos:
+                        <ul>
+                            <li><strong>src</strong>: endereço da mídia.</li>
+
+                            <li><strong>type</strong>:tipo MIME do arquivo
+                                <ul>
+                                    <li>audio/aac</li>
+                                    <li>audio/mp3</li>
+                                    <li>audio/ogg</li>
+                                    <li>audio/webm</li>
+                                    <li>audio/midi</li>
+                                    <li>video/mp4</li>
+                                    <li>video/ogg</li>
+                                    <li>video/webm</li>
+                                    <li>text/css</li>
+                                    <li>text/csv</li>
+                                    <li>text/html</li>
+                                    <li>text/calendar</li>
+                                    <li>image/png</li>
+                                    <li>image/webp</li>
+                                    <li>image/gif</li>
+                                    <li>image/tiff</li>
+                                    <li>image/x-icon</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>media</strong>: defini o tipo de mídia pretendido</li>
+                        </ul>
+<pre><code>
+< picture >
+  < source src="">
+</ picture >
+
+< video >
+  < source src="">
+</ video >
+
+< audio >
+  < source src="">
+</ audio >
+</code></pre>
+                    </li>
+
+                    <li><strong>< track ></strong>: tag usada para especificar faixas de texto temporizadas, ou dados baseados em tempo. Sempre usado como filho das tag's <text class="code-linha">< audio > e < video ></text></li>
+
+                    <li><strong>< video ></strong>: tag usada para incorporar videos externos e internos nas páginas. Suporta os atributos globais
+                        <br>
+                        <br>
+                        Somente para incorporar videos do dispositivo.
+                        <ul>
+                            <li><strong>autoplay ou autostart</strong>: atributo Booleano, se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
+                                <br>
+                                <br>
+
+                                O atributo "autoplay" tem precedência sobre o atributo "preload", ou seja, só um dos dois atributos por vez.
+                                <br>
+                                <br>
+                                Pois se colocar autoplay o video será obrigatoriamente baixado.
+                            </li>
+                            
+                            <li><strong>autobuffer</strong>: atributo Booleano, se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido.</li>
+                            
+                            <li><strong>buffered</strong>: atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto "TimeRanges"</li>
+
+                            <li><strong>controls</strong>: se esse atributo estiver presente, o Gecko oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação, e pausa/continuação da reprodução.</li>
+
+                            <li><strong>heigth e width</strong>: atributos que permitem definir as dimensões do video</li>
+
+                            <li><strong>loop</strong>: atributo booleano para definir repetição do vídeo.</li>
+
+                            <li><strong>mute</strong>: atributo booleano que permite definir se vídeo será mudo.</li>
+
+                            <li><strong>played</strong>: é um objeto do tipo "TimeRanges" que indica se o video foi reproduzido por completo.</li>
+
+                            <li><strong>preload</strong>: atributo enumerado que permite definir algumas caracteristicas a respeito do download do video pelo browser.
+                            <br>
+                            <br>
+                            Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão).
+                            <br>
+                            <br>
+                            Recomenda-se que seja definido para o "metadata".
+                            
+                                <ul>
+                                    <li><strong>none</strong>: indica que o vídeo não deve ser pré-carregado.</li>
+
+                                    <li><strong>metadata</strong>: embora o usuário não necessitará consultar o vídeo, pegar os meta-dados é interessante (comprimento).</li>
+
+                                    <li><strong>auto ou <i>string vazia</i></strong>:  indica que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.</li>
+
+                                </ul>
+                            </li>
+
+                            <li><strong>poster</strong>: será definida um URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele.
+                            <br>
+                            <br>
+                            Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível. Então o primeiro quadro será exibido como imagem de prévia.</li>
+
+                            <li><strong>src</strong>: URL do vídeo a ser incorporado.
+                            <br>
+                            É opcional, ao invés disso você pode usar o elemento <text class="code-linha">< source ></text> dentro do bloco do vídeo para especificar o vídeo a ser incorporado .</li>
+                        </ul>
+<pre><code>
+< !-- Video com autoplay -- >
+< video autoplay="true/false" autobuffer controls heigth="altura" loop="true/false"  mute poster="<text class="link">link/caminho da imagem</text>" src="<text class="link">caminho do vídeo</text>" width="largura" >
+    < !-- Caso dê erro -- >
+    Desculpa, o seu navegador não supor vídeos incorporados, mas você pode < a href="<text class="link">caminho do vídeo</text>"> e baixá-lo para assitir< /a >.
+< /video >
+
+
+< !-- Video com preload e source -- >
+< video autobuffer controls heigth="altura" loop="true/false"  mute preload="" poster="<text class="link">link/caminho da imagem</text>" src="<text class="link">caminho do vídeo</text>" width="largura" >
+    < source src="<text class="link">caminho do vídeo</text>">
+< /video >
+
+
+< !-- Video com legenda -- >
+< video src="<text class="link">link/caminho do vídeo</text>">
+    < track kind="colacar tipo" src="<text class="link">link/caminho da legenda</text>" srclang="abreveatura lingua" label="lingua respectiva">
+    < !-- Pode-se colocar mais legendas -- >
+< /video >
+</code></pre>
+                    </li>
+
+                    <li><strong>< iframe></strong>: tag que incorpora efetivamente outra página ou mídia para a página atual.
+                    <br>
+                    <br>
+                        Representa um contexto de navegação aninhado.
+                    <br>
+                    <br>
+                    Atributos:
+                    <ul>
+                        <li><strong>align</strong>: alinhamento do elemento em relação ao contexto.</li>
+
+                        <li><strong>allowfullscreen</strong>: atributo booleano que permite ou não a tela cheia</li>
+
+                        <li><strong>frameborder</strong>: desenha um borda.
+                            <br>
+                            <br>
+                            Valor padrão = 1 => navegador desenha borda
+                            <br>
+                            Valor = 0 => navegador não desenha borda
+                        </li>
+                    
+                        <li><strong>heigth e width</strong>: atributo que permite  alterar dimensões do elemento.</li>
+
+                        <li><strong>longdesc</strong>: atributo que indica uma URI de longa descrição de quadro, não é útil para navegadores não visuais</li>
+
+                        <li><strong>marginheigth</strong>: atributo que definte a distância entre o elemento e suas bordas superior e inferior.</li>
+
+                        <li><strong>marginwidth</strong>: atributo que define a distância do elemento as margens da direita e da esquerda.</li>
+
+                        <li><strong>name</strong>:A name for the embedded browsing context (or frame). This can be used as the value of the target attribute</li>
+
+                        <li><strong>scrolling</strong>: atributo que indica para o navegador quando deve prove uma barra de rolagem
+                            <ul>
+                                <li>auto: só quando necessário</li>
+
+                                <li>yes: sempre</li>
+
+                                <li>no: nunca</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>sandbox</strong>: </li>
+
+                        <li><strong>seamless</strong>: </li>
+
+                        <li><strong>src</strong>: URl da página ou mídia</li>
+
+                        <li><strong>srcdoc</strong>: indica o conteúdo dá página a ser incorporado.
+                            <br>
+                            <br>
+                            sobrepõe o atributo "src" se existir.
+                            <br>
+                            <br>
+                            É usado juntamnete com "sandbox".
+                            <br>
+                            <br>
+                            Caso o navegador não suporte ira mostar o que exite no atributo "src".
+                        </li>
+                    </ul>
+<pre><code>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/iUyBzYK7GUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</code></pre>
+                </li>
+
+                </ul>
+
+            </section>
+
+            <ul>
+                <li><strong> Importância das Classes</strong>: As classes criadas no Html tem o intuito de otimizar e reutilizar o stylo definido no css.
+                    <ul>
+                        <li>Sempre que falarmos de estilo usamos classe.</li>
+                        <li>Assim, não iremos criar varios stylos desnecessário dentro do CSS.</li>
+                        <li>Poderemos facilmente fazer a manutenção do código.</li>
+                    </ul>
+                </li>
+    
+    
+                <li><strong>MAPS</strong>: podemos usar o google maps nas nossas páginas
+                
+                    <ol>
+                        <li>Pesquisa o endereço no maps</li>
+                        <li>Acessa a opção de compartilhar ou incorporar o mapa.</li>
+                        <li>Usamos a tag de conteúdo <'iframe'> que delimita espoço na nossa página que ficará reservado para o conteúdo externo.</li>
+                        <li>Podemos redmensionar</li>
+    
+                        <section class="mapa">
+                                <p>ex: mapa da localização da ufca.
+                                
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8610980164963!2d-39.30700638522514!3d-7.256645194761886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a1786b3854e1b7%3A0xd338476d79979708!2sUFCA%20-%20Universidade%20Federal%20do%20Cariri%20-%20Campus%20Juazeiro%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1676239597510!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                            </section>
+    
+                        </p>
+                    </ol>
+                </li>
+    
+                
+    
+    
+            </ul>
+    
+        </section>
+    
+    
+    
+    
+    
+    
+        <section class="principal">
+            <b><h2>CSS</h2></b>
+    
+            <ul>
+                
+                <li><strong>Tranformar stylo da fonte</strong>: usamos o comando 'font-weight:'</li>
+    
+    
+                <li><strong>Medida proporcinal para pixel</strong>: uso a medida "em".
+                    <p>Ex: font-size: 2em, significa que terá o dobro do tamanho padrão da fonte do projeto.</p>
+                </li>
+    
+    
+                <li><strong>Fontes externas</strong>
+                    <ul>
+                        <li>Fontes abertas e gratuitas: <a href="https://fonts.google.com/">Google fontes</a></li>
+                    </ul>
+                </li>
+    
+    
+                <li><strong>Leitura no CSS</strong>: é feita de cima para baixo, ou seja, se tivermos mais de um item igual a ultimá sobrescreve todas as anteriores.
+                    <ul>
+                        <li>Caso queira mais de um item igual basta adiciona-los na mesma linha com espç=aço separando.</li>
+                        <p>Ex: tranform: scale(1.2) rotate(70deg)
+                        </p>
+                        <p>Estamos aplicando um aumento de 20% e uma rotação em 70° no elemento.</p>
+                    </ul>
+                </li>
+    
+    
+                <section>
+                    <b>Comportamento de elementos</b>
+                    
+                    <li><strong>Comportamento block</strong>: são tags que <em>bloqueiam o conteúdo</em> da linha inteira como li, lo.
+                        <ul>
+                            <li>Não permitem que alterem dimensões</li>
+                            
+                            <li>Permite alterar espaçamento interno e externo</li>
+        
+                            <li>uso "display:block"</li>
+                        </ul>
+                    </li>
+        
+        
+                    <li> <strong>Comportamento inline</strong> São tags que <em>não bloqueiam o conteúdo</em> tod da linha, com img.
+                        <ul>
+                            <li>Permitem alterar dimensões</li>
+                            <li>Não permitem alterar espaçamento interno e externo</li>
+                            <li>uso "display:inline"</li>
+                        </ul>
+                    </li>
+        
+        
+                    <li> <strong>Comportamento inline-block</strong> 
+                        <ul>
+                            <li>Ocupa somente o espaço do conteúdo.</li>
+                            <li>Permitem alterar dimensões</li>
+                            <li>Permitem alterar espaçamento interno e externo</li>
+                            <li>uso "display:inline-block"</li>
+                            <li>Interprete até o espçao vazio deixado entre os elementos no HTML.
+                                <p>EX: <'div'></'div'></p>
+                                <p>          </p>
+                                <p><'img'><'/img'></p> 
+                                <ul>
+                                    <li>será contabilizado o espaço em branco deixado </li>
+    
+                                    <li>vai aparecer como white space no dev tools</li>
+                                </ul>
+    
+                            </li>
+                        </ul>
+                    </li>
+    
+                </section>
+    
+    
+                
+                <li> <strong>Alinhamento de elementos no CSS</strong>: por <em>padrão</em>  todos os elementos no css <em>são alinhados pela linha de baixo.</em> 
+                    <ul>
+                        <li>Podemos alterar o formato do alinhamento</li>
+                        <li>Uso "vertical-align:"</li>
+                    </ul>
+                </li>
+    
+    
+                <li><strong>Espaço entre elementos</strong>: colocamos no item e não no texto ou link.</li>
+    
+    
+                <li><strong>Navegador interferindo</strong>: É normal que o navegador mexa nas tags do HTM e nos stylos do CSS. Poŕem, na maioria das vezes <em>atrapalha o controle do programador em relação ao site</em>.
+                    <p>Para resolvermos utilizamos um arquivo que resta todas essas interferências do navegador <em>criado pela comunidade</em>. </p>
+                    <ul>
+                        <li>Utilizamos o arquivo reset.css</li>
+                        <li>Sempre antes de importar o meu CSS.</li>
+                    </ul>
+                </li>
+    
+    
+                <section>
+                    <b>Posicionamento de elementos</b>
+    
+                    <li><strong>Posição fixa </strong>: é a opção padrão do CSS.
+                        <ul>
+                            <li>É a posição natural quando cada elemento é criado.</li>
+                            <li>Não pode mudar o ponto inicial</li>
+                            <li>uso "position: static"</li>
+                        </ul>
+                    </li>
+        
+        
+                    <li><strong>Posição Relativa</strong>: é uma das opções oferecidas pelo CSS.
+                        <ul>
+                            <li>O referêncial e a posição inicial/natural do objeto.</li>
+                            <li>Podemos mudar a posição, de acordo com o referêncial.</li>
+                            <li>Uso "position: relative"</li>
+                        </ul>
+                    </li>
+        
+        
+                    <li><strong>Posição absoluta</strong>: é uma das opções oferecidas pelo CSS.
+                        <ul>
+                            <li>Conseguimos mudar o objeto de posição sem ele ele estar preso a uma posição inicial do proprio objeto.</li>
+                            <li>O referencial será outro elemento.</li>
+                            <li>Uso "position: absolute"</li>
+        
+                        </ul>
+                    </li>
+    
+    
+                    <li><strong>Posição flutuando</strong>: usamos quando queremos que o elemento "levante/flutue", mas o espaço da "sombra" dele não pode ser ocupado.
+                        <ul>
+                            <li>Uso "float: 'lado onde deve flutuar'.</li>
+                            <li>A estrutura da página inteira a baixo do elemento é afetada.</li>
+                            <li>Todos os elementos abaixo irão subir.</li>
+                            <li>uso "clear: 'lado onde objeto está flutuando'" no objeto que não deve sofre mais interferência do float.
+                                <p> Assim, criamos uma <em>barreira até onde o float pode afetar</em>.</p>
+                            </li>
+                            <li>É possível formatar espaçamento interno e externo do elemento flutuante</li>
+                        </ul>
+                        <p>Ex: colocar uma imagem no canto superior direito do espaço desiginado para o texto.</p>
+                    </li>
+                </section>
+    
+    
+                <li><strong>Espaçamento Interno x Espaço reservado</strong>: por padrão o navagador <em>soma o espaço ocupado</em> pelo objeto <em>com seu espaçamento interno</em>, "padding".
+                    <p>Geralmento esse formato de calculo <em>quebra a formatação  desejada.</em></p>
+                    <ul>
+                        <li>É muito comum trabalhar com unidades diferentes de dimensão e espaçamento.</li>
+                        <li>Usamos  <em>"box-sizing: border-box"</em>, para garantir que o espaçamento interno seja calculado dentro do espaço reservado para o objeto.
+                        </li>
+    
+                    </ul>
+                </li>
+    
+    
+                <li><strong>Bordas</strong>: a borda tem 3 aspectos importantes
+                    <p>Podemos declará-los separadamente ou juntos em uma só linha de código</p>
+    
+                    <ul>
+                        <li>
+                            <h3>Juntos</h3>
+                            <p>Uso "border: <i>'tamanho' 'tipo' 'cor'</i>"</p>
+                        </li>
+                        <li>
+                            <h4>Tamanho</h4>
+                            <p>Podemos definir um tamanho só, ou definir o tamanho de lado da borda</p>
+                            <ul>
+                                <li>"border-width" - tamanho em todos os lados</li>
+                                <li>"border-top-width" - tamanho no topo</li>
+                                <li>"border-left-width" - tamanho na esquerda</li>
+                                <li>"border-right-width" - tamanho na direita</li>
+                                <li>"border-bottom-width" - tamanho em baixo</li>
+                            </ul>
+                            <h3>Podemos arredondar as bordas</h3>
+                            <p>Antes do CSS3 era muito trabalhoso, usava-se uma imagem com as informações desejadas e adicionava borda a essa imagem</p>
+                            <p><em>Com o CSS3</em> é possível realizar cálculos para arredondar a borda, através de angulo</p>
+                            <ul>
+                                <li>A medida que colocamos é o raio do circulo desenhado nos cantos</li>
+                                <li>"border-radius" - em todos os cantos</li>
+                                <li>"border-top-left-radius" - canto superior esquerdo </li>
+                                <li>"border-top-right-radius" - canto superior direito </li>
+                                <li>"border-bottom-left-radius" - canto inferior esquerdo </li>
+                                <li>"border-bottom-right-radius" - canto inferior esquerdo </li>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <h4>Tipo</h4>
+                            <p>Temos varios stylos</p>
+                            <ul>
+                                <li>"border-style: solid" - totalmente preenchido</li>
+                                <li>"border-style: dashed" - tracejado</li>
+                                <li>"border-style: dotted" - pontilhado</li>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <h4>Cor</h4>
+                        </li>
+                    </ul>
+                </li>
+    
+    
+                <li><strong>Comportamento de objetos com CSS</strong>: podemos utilizar o CSS para mapear o que o usuários está fazendo e definir um determinado comportamento para um determinado objeto.
+                    <p>É definido também para todos os filhos, netos, etc... desse elemento</p>
+    
+                    <h4>Ações possíveis para o usuario ou pseudo elementos</h4>
+                    <ul>
+                        <li><strong>Hover</strong>: mouse em cima
+                            <p>usamos "epecificação do objeto:hover{}" e depois definimos o que será feito.</p>
+                            <h5>Mudar características do elemento</h5>
+                            <p>Uso "especificação do elemento:hover nome característica"</p>
+                        </li>
+    
+                        <li><strong>Active</strong>: click com mouse precionado
+                        <p>usamos "especificação do objeto:active{}" </p></li>
+    
+    
+                        <li><strong>Viseted</strong>: uso quando quero definir um comportamento ou característica quando o <em>link for visitado</em>. </li>
+    
+                        
+                        <li><strong>first-child</strong>:Uso para destacar primeiro elemento de lista.
+                            <ul>
+                                <li>uso "especificação do objeto:first-child { }</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li><strong>last-child</strong>:Uso para destacar ultimo elemento de lista.
+                            <ul>
+                                <li>uso "especificação do objeto:last-child { }"</li>
+                            </ul>
+                        </li>
+    
+    
+                        <li><strong>nth-child(*)</strong>:Uso para destacar todos os elemento da lista.
+                            <ul>
+                                <li>uso "especificação do objeto:nth-child('nº do elemento') { }"</li>
+                            </ul>
+                        </li>
+    
+    
+                        <li><strong>nth-child()</strong>:Uso para destacar um elemento específico  da lista.
+                            <ul>
+                                <li>uso "especificação do objeto:nth-child('nº do elemento') { }"</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li><strong>nth-child(2n)</strong>:Uso para destacar todos os elementos pares da lista.
+                            <ul>
+                                <li>uso "especificação do objeto:nth-child(2n) { }"</li>
+                            </ul>
+                        </li>
+                    
+                    
+                        
+                        
+                        <li><strong>nth-child(2n + 1)</strong>:Uso para destacar todos os elementos impares da lista.
+                            <ul>
+                                <li>uso "especificação do objeto:nth-child('nº do elemento') { }"</li>
+                            </ul>
+                        </li>
+                    
+                    
+                    
+                    </ul>
+                </li>
+    
+    
+                <li><strong>Transição</strong>: utilizamos para suavizar mudanças estabelecidas por comportamentos.
+                    <ul>
+                        <li>Antes do CSS3 era feito só com o java script.</li>
+                        <li>uso no CSS "transition: 'tempo de delay' e 'qual parte será realizada a transição'"</li>
+                        <li>Se colocarmos "all" na parte que será realizada a transição, então aplicaremos a transição para todos. </li>
+    
+                    </ul>
+                </li>
+    
+            
+                <li><strong>Imagem como fundo</strong>: podemos definir uma imagem para ser o fundo de um elemento.
+                    <ul>
+                        <li>Se a imagem for pequena em relação a área do fundo, por padrão o CSS vai copiar e colar a imagem até ocupar todo o espaço.</li>
+                        <li>uso "background: url('caminho da imagem');"</li>
+                    </ul>
+    
+                </li>
+    
+    
+                <section>
+                    <b>Hierarquia no CSS</b>
+                    <p>Os marcadores dentro do CSS seguem essa ordem de "força/prioridade".</p> 
+                    <ol>
+                        <li><em>CSS in line</em></li>
+                        <li><em>id</em> - stronger
+                            <ul>
+                            <li>Sempre que falarmos de comportamento usamos id.</li>
+                            </ul>
+                        </li>
+                        <li><em>class</em> - intermediate</li>
+                        <li><em>tag</em> - weaker</li>
+                        <p>Ou seja:</p>
+                        <ul>
+                            <li>Nenhum style sobrepõe o style do css in line.</li>
+                            <li>Caso esteja utilizando CSS externo, nada sobrepõe ao style do id.</li>
+                            <li>É <em>recomendável utilizar classes nos elementos</em> pois, não é tão genérico a ponto de sempre ter que mudar, quando muda a tag, e nem é tão específico a ponto de funcionar somente em um elemento.</li>
+                        </ul>
+                    </ol>   
+                </section>
+    
+                <section>
+                    <b>Transformções com CSS3</b>
+                    <p>Podemos fazer algumas transformações apenas com CSS3.</p>
+                    <ul>
+                        <li>uso "transform: "</li>
+                        <li>uso "transform: scale('escala')" para aumentar ou diminuir um elemento usando escala. 
+                            <p>Mais fácil do que definir um before com todas as características do novo tamanho.</p>
+                        </li>
+                        <li>uso "transform: rotate('graus'deg)" para rotacionar um elemento usando graus. 
+                            <p></p>
+                        </li>
+                    </ul>
+                </section>
+    
+    
+    
+            </ul>
+        </section>
+        
+    
+    
+       
+    
+        <section class="principal">
+            <b><h2>Formulários</h2></b> 
+    
+            <p>Usamos formulários quando precisamos coletar informações do usuário e enviá-las para um banco de dados, um email, etc.</p>
+            
+    
+            <ul>
+                <li>
+                    <h5>Todos os campos de um formulário , input's label's, são <em>INLINE</em>, então não dá pra alterar espaçamentos interno e externos.</h5>
+                </li>
+    
+                <li><strong>Tag's "p" e "div"</strong>: não é profissional usar tag "p" e "div", pois prejudica a semântica do formulário. 
+                    <ul>
+                        <li>"div" substitui por "fieldset"</li>
+                        <li>"p" substitui por "legend"</li>
+                    </ul>
+                </li>
+    
+                <li><strong>Campos obrigatórios</strong>: utilizamos quando queremos que aquele campo seja obrigatoriamente preenchido pelo usuário.
+                    <ul>
+                        <li>uso na tag do "input" a palavra resevada  required.</li>
+                        <li>valido para todos os tipos de input's e textarea.</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Sugestão de preenchimento / exemplo</strong>: usamos para mostra ao usuário o que e como deve ser preenchido aquele campo do formulário.
+                    <ul>
+                        <li>uso dentro da tag input 'placeholder = ""' </li>
+                    </ul>
+                </li>
+    
+                <li><strong>Opção padrão</strong>: podemos definir uma opção padrão pra ser marcada adicionando dentro da tag a palavra reservada "checked"
+                    <ul>
+                        <li>Funciona no input do tipo radio, checkbox.</li>
+                    </ul>
+                </li>
+    
+                <li> <strong>Label e input</strong>: um para interligado que anda sempre junto.
+                    
+                    <ul>
+                        <li><em>Label</em>: tag usada para indicar quais informações devem ser colocadas em cada input.
+                            <ul>
+                                <li>uso "for='id do input'" para estabelecer a conexão input<---->label </li>
+                            </ul>
+                        </li>
+            
+            
+                        <li><em>Input</em>: tag usada para colocar caixinha de input.
+                            <ul>
+                                <li>Geralmente é único.</li>
+                                <li>Sempre tem identificador, "id=".</li>
+                                <li>Todo formulário tem um input do tipo "submit", não precisa de label. </li>
+                                
+                                
+                                <h4>Tipos input</h4>
+    
+                                <a href="http://mobileinputtypes.com/">Site com dicas de como o mobile se comporta com cada tipo de input do HTML5</a>
+                                <ol>
+                                    <li>type="text" - usado para caixa de texto</li>
+    
+                                    <li>type="radio" - usado para mostrar opções selecionaveis.
+                                        <ul>
+                                            <li>Por padrão podem ser selecionados todos os radios de uma vez.</li>
+                                            <li>Para obrigatoriamente  <em>selecionar apenas um </em> precisamos adiconar "name=' '" em todos os radios do grupo.</li>
+                                        </ul>
+                                    </li>
+    
+                                    <li>type="checkbox" - usado para opções selecionaveis, formato caixa.
+                                    </li>
+                                    
+                                    <li>OUTROS</li>
+    
+                                    <li>type="submit" - usado para enviar as informações coletadas nos outros input.
+                                        <ul>
+                                            <li>Obrigatório em todo formulário.</li>
+                                            <li>"submit" será traduzido para a lingua que o usuário está utilizando.</li>
+                                            <li>Usamos type="submit" value="label fixa" se quisermos que o "submit" não seja traduzido.</li>
+                                        </ul>
+                                        
+                                        
+                                    </li>
+
+    
+                                </ol>
+    
+                            </ul>
+                        </li>
+    
+                        <li><em>Input e label</em>: para criar ambos <em>juntos</em>  basta colocar o 'input' dentro do 'label'</li>
+                    </ul>
+                
+                
+                </li>
+                
+                <li><strong>caixa de mensagem</strong>: Utilizada para designar uma espaço específico para texto maior.
+                    <ul>
+                        <li>uso a tag de conteúdo<'textarea'> </li>
+                        <li>Pode ser acompanhada la tag 'label'.</li>
+                        <li>cols="" - defini quanta colunas terá a caixa de texto, equivalente a quantas letras cabe em cada linha.</li>
+                        <li>rows="" - defini quantas linhas terá a caixa de texto.</li>
+                        <li>Para <em>definir o tamanho</em> da caixa de <em>forma mais profissional</em> usamos o CSS e não 'cols' e 'rols'.</li>
+                    </ul>
+                </li>
+    
+                <li><strong>Lista opções embutida</strong>: oferece varias opções pro usuário escolher, em formato de lista embutida.
+                    <ul>
+                        <li>uso a tag de conteúdo <'select'></li>
+                        <li>uso a tag de conteúdo <'option'> dentro do "select" para inserir cada opção.</li>
+                    </ul>
+                </li>
+        
+        </section>
+        
+    
+        <section class="principal">
+            <b><h2>Listas</h2></b>
+            <p>Usamos lista para vários fins.
+                <ul>
+                    <li>Compor uma "nav" de um menu.</li>
+                    <li>Disposr caracteristicas.</li>
+                </ul>
+            </p>
+    
+            <p>Podemos alterar o identificador de cada item.
+                <ul>
+                    <li></li>
+                </ul>
+            </p>
+    
+            <p>Ex.:</p>
+            <strong>Listas ordenadas</strong>
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+            <strong>Listas não ordenadas</strong>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </section>
+    
+    
+        
+        <section class="principal">
+            <b><h2>Tabelas</h2></b>
+    
+            É um conjunto de linha e colunas.
+            <ul>
+                <p> No HTML</p>
+                <li><strong>Linhas</strong>: uso a tag de conteúdo "<'tr'>".</li>
+                <li><strong>Colunas/células</strong>: uso a tag de conteúdo "<'td'>".</li>
+                
+                <li><strong>Cabeçalho</strong>: uso a tag de conteúdo <'thead'>.</li>
+    
+                <li><strong>Título do cabeçalho</strong>: uso a tag de conteúdo <'th'></li>
+    
+                <li><strong>Corpo da tabela</strong>: uso a tag de conteúdo <'tbody'></li>
+                
+                <li>Para um código mais profissional invista na semântica da tabela, para torná-la mais intuitiva e estilizada.</li>
+    
+                <p>Exemplo:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>Segunda-feira</td>
+                            <td>8h às 18h</td>
+                        </tr>
+        
+                        <tr>
+                            <td>Quarta-feira</td>
+                            <td>8h às 18h</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Sexta-feira</td>
+                            <td>8h às 18h</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <p>No CSS</p>
+                <ul>
+                    <li></li>
+                </ul>
+    
+            </ul>
+        </section>
+                 
+    </main>
+
+
+</body>
+</html>

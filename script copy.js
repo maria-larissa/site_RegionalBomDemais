@@ -89,5 +89,30 @@ menuItens.forEach((link) => {
 )
 
 
+// ANIMAÇÃO card banda
+
+// Pegando todos os elementos que terma animação
+const elementosAnimar = document.querySelectorAll('[data-cardAnime]');
+console.log(elementosAnimar);
+const classeAnimacao = "animar";
+
+function animarScroll(){
+  const windowTopo = window.pageYOffset;
+  // console.log(windowTopo);
+  
+  // Pegando os elementos
+  elementosAnimar.forEach(function(element){
+    // Comparando a distancia página ao topo com a distancia do elemento ao topo
+    opacidade = element.getAttribute("opacity");
+    if(windowTopo > element.offsetTop){
+      // Adicionando a classe de animação aos elemento
+      element.classList.add(classeAnimacao);
+    }
+    else{
+      element.classList.remove(classeAnimacao);
+    }
+  })
+
+}
 
 window.addEventListener('scroll', function(){ animarScroll(); })

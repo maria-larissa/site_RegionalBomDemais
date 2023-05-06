@@ -25,7 +25,7 @@ body{
     padding: 0;
 }
 
-
+/* 
 scroll-container {
     display: block;
     width: 75vw;
@@ -35,7 +35,7 @@ scroll-container {
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-padding-top: 1vh;
-}
+} */
 
 
 
@@ -51,7 +51,8 @@ scroll-container {
     margin-bottom: 0rem;
 }
 
-#menu1{
+/* #menu1{ */
+.menu nav{
     display: none;
     width: 25vw;
     margin: 0;
@@ -194,10 +195,10 @@ header div{
     display: inline-block;
     width: 280px;
     height: 280px;
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 50%;
     box-sizing: border-box;
-    background-color: #0D99FF;
+    /* background-color: #0D99FF; */
 }
 
 .card-foto-banda .card-text{
@@ -211,6 +212,9 @@ header div{
 }
 
 
+/* animação */
+
+
 
 /* MAIN */
 
@@ -222,21 +226,18 @@ main{
     box-sizing: border-box;
 }
 
-.card, .card-secundary{
-    width: 100%;
+
+/* .card, .card-secundary{ */
+.card{
+    /* width: 100%; */
     color: black;
     text-align: center;
     box-sizing: border-box;
     background-color: white; 
-}
-
-.card{
     height: 83vh;
 }
 
-.card-secundary{
-    height: 82vh;
-}
+
 
 
 .card-apresetacao{
@@ -283,19 +284,19 @@ main{
 
 
 
-scroll-page{
+/* scroll-page{ */
+section{
     width: 100%;
     height: 88vh;
-    /* height: 83vh; */
     display: inline-block;
     color: black;
     position: relative;
-    /* margin-top: 0; */
     text-align: center;
     background-color: white; 
 }
 
-.card-secundary h3{
+/* .card-secundary h3{ */
+.card h3{
     font-family: 'xilosa';
     text-align: center;
     margin: 0 auto 0.3rem auto;
@@ -337,11 +338,13 @@ scroll-page{
     box-sizing: border-box;
 }
 
-.card-secundary .container{
+/* .card-secundary .container{ */
+.card .container{
     background: #F2CD5C;
 }
 
-.card-secundary .container1{
+/* .card-secundary .container1{ */
+.card .container1{
     background: #FFCD29;
 }
 
@@ -632,7 +635,8 @@ animation-delay: 8s;
 
 
 /* INTEGRANTES */
-.card-secundary .integrantes{
+/* .card-secundary .integrantes{ */
+.card .integrantes{
     width: 100%;
     height: 90%;
     display: flex;
