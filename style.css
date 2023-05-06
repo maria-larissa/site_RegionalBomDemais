@@ -23,19 +23,8 @@ body{
     color: black;
     margin: 0;
     padding: 0;
+    background-color: #FBFFB1;
 }
-
-/* 
-scroll-container {
-    display: block;
-    width: 75vw;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-padding-top: 1vh;
-} */
 
 
 
@@ -49,6 +38,7 @@ scroll-container {
 #icone-close{
     color: white;
     margin-bottom: 0rem;
+
 }
 
 /* #menu1{ */
@@ -61,7 +51,7 @@ scroll-container {
     position: fixed;
     top: 0;
     left: 0;
-    padding:  1rem;
+    padding:  0.2rem 1rem 1rem 1rem;
     box-sizing: border-box;
     background-color: black;
     overflow-y: scroll; /*permite scroll no menu */
@@ -105,6 +95,7 @@ scroll-container {
     height: 55px;
     text-align: center;
     align-items: center;
+    /* margin: 0 1rem; */
     border: 0 solid transparent;
 }
 
@@ -129,37 +120,58 @@ scroll-container {
 header{
     top: 0;
     left: 0;
-    width: 75%;
+    width: 100%;
     padding: 1rem;
-    height: 12vh;
+    /* height: 12vh; */
     position: fixed;
     z-index: 10;
     align-items: center;
     display: inline-flex;
     box-sizing: border-box;
     background-color: white;
+    
+    
+    height: 10vh;
+    box-shadow: 0px 2px 5px gray;
 }
 
-header div{
+.icones-header{
+    width: 75%;
+    height: 60px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    /* margin: 0 auto 0 0; */
+    margin: 0 auto;
+}
+/* header div{
     width: auto;
     height: 60px;
     display: flex;
     align-content: left;
     align-items: center; 
-}
+} */
 
 #logo{
-    height: 55px;
+    /* height: 55px; */
     padding: auto;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     box-sizing: border-box;
+    
+    /* margin-left: 4.5rem; */
+    height: 45px;
 }
 
 .redes-sociais{
-    width: auto;
-    height: 60px;
-    float: right;
-    margin-left: 52%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    /* float: right; */
+    float: left;
+    /* margin-left: 52%; */
+    /* margin-left: 60%; */
+    display: inline-flex;
     align-items: center;
     box-sizing: border-box;
 }
@@ -219,11 +231,13 @@ header div{
 /* MAIN */
 
 main{
-    width: 75vw;
-    margin: 12vh 0 0 0;
+    width: 100vw;
+    /* margin: 12vh 0 0 0; */
     padding: 0;   
-    height: 88vh;
+    height: 90vh;
     box-sizing: border-box;
+    
+    margin: 10vh 0 0 0;
 }
 
 
@@ -233,17 +247,21 @@ main{
     color: black;
     text-align: center;
     box-sizing: border-box;
-    background-color: white; 
-    height: 83vh;
+    /* background-color: white;  */
+    /* height: 83vh; */
+    height: 95%;
+    margin: 0 10%;
 }
 
 
 
 
 .card-apresetacao{
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
     height: 100%;
-    background-color: #FFCD29; 
+    /* background-color: #FFCD29;  */
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -272,12 +290,12 @@ main{
 
 .downArrow{
     width: 100%;
-    height: 5vh;
+    height: 3vh;
     position: relative;
     bottom: 0;
     align-items: center;
     text-align: center;
-    background-color: white;
+    /* background-color: white; */
     box-sizing: border-box;
 }
 
@@ -287,12 +305,14 @@ main{
 /* scroll-page{ */
 section{
     width: 100%;
-    height: 88vh;
+    height: 90vh;
     display: inline-block;
     color: black;
     position: relative;
     text-align: center;
-    background-color: white; 
+    /* background-color: white;  */
+
+    /* background-color: #FFD93D; */
 }
 
 /* .card-secundary h3{ */
@@ -300,6 +320,7 @@ section{
     font-family: 'xilosa';
     text-align: center;
     margin: 0 auto 0.3rem auto;
+    padding-top: 1rem;
     font-size: 28px;
     box-sizing: border-box;
 }
@@ -334,19 +355,21 @@ section{
 
 .container, .container1 {
     height: 100%;
-    width: 75vw;
+    /* width: 75vw; */
+    width: 80%;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
 /* .card-secundary .container{ */
-.card .container{
+/* .card .container{
     background: #F2CD5C;
-}
+} */
 
 /* .card-secundary .container1{ */
-.card .container1{
+/* .card .container1{
     background: #FFCD29;
-}
+} */
 
 
 .carrossel {
