@@ -38,10 +38,8 @@ body{
 #icone-close{
     color: white;
     margin-bottom: 0rem;
-
 }
 
-/* #menu1{ */
 .menu nav{
     display: none;
     width: 25vw;
@@ -99,7 +97,7 @@ body{
     border: 0 solid transparent;
 }
 
-#icone-menu:hover{
+#icone-menu:hover, #icone-close-card-banda{
     cursor: pointer;
 }
 
@@ -145,13 +143,6 @@ header{
     /* margin: 0 auto 0 0; */
     margin: 0 auto;
 }
-/* header div{
-    width: auto;
-    height: 60px;
-    display: flex;
-    align-content: left;
-    align-items: center; 
-} */
 
 #logo{
     /* height: 55px; */
@@ -185,10 +176,9 @@ header{
 
 
 
-
 /* CARDE BANDA */
 
-.card-foto-banda{
+/* .card-foto-banda{
     top: 0;
     right: 0;
     width: 25%;
@@ -200,7 +190,53 @@ header{
     display: inline-block;
     justify-items: center;
     box-sizing: border-box;
+    background-color: #FF7A00; 
+} */
+
+.card-conteudo-principal{
+    /* filter: blur(10px); */
+}
+
+.card-banda{
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    z-index: 30;
+    position: relative;
+    align-items: center;
+    /* background-color: #FF7A00; */
+    
+    
+    /* margin-top: 10vh; */
+}
+
+.card-foto-banda{
+    width: 60%;
+    height: 450px;
+    /* position: absolute; */
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    display: block;
+    justify-items: center;
+    box-sizing: border-box;
+    border: 2px solid black;
     background-color: #FF7A00;
+}
+
+#icone-close-card-banda{
+    background-color: transparent;
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    /* top: 50px; */
+    top: 150px;
+    right: 200px;
+    /* margin: 0 1rem; */
+    border: 0 solid transparent;
 }
 
 #foto-banda{
@@ -224,7 +260,6 @@ header{
 }
 
 
-/* animação */
 
 
 
@@ -232,7 +267,6 @@ header{
 
 main{
     width: 100vw;
-    /* margin: 12vh 0 0 0; */
     padding: 0;   
     height: 90vh;
     box-sizing: border-box;
@@ -241,7 +275,6 @@ main{
 }
 
 
-/* .card, .card-secundary{ */
 .card{
     /* width: 100%; */
     color: black;
@@ -252,7 +285,6 @@ main{
     height: 95%;
     margin: 0 10%;
 }
-
 
 
 
@@ -302,7 +334,6 @@ main{
 
 
 
-/* scroll-page{ */
 section{
     width: 100%;
     height: 90vh;
@@ -315,7 +346,6 @@ section{
     /* background-color: #FFD93D; */
 }
 
-/* .card-secundary h3{ */
 .card h3{
     font-family: 'xilosa';
     text-align: center;
@@ -658,7 +688,6 @@ animation-delay: 8s;
 
 
 /* INTEGRANTES */
-/* .card-secundary .integrantes{ */
 .card .integrantes{
     width: 100%;
     height: 90%;
