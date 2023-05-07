@@ -1,6 +1,38 @@
 // Página sempre começa na primeira secção
-window.scroll(0, 0);
+// Faz aparecer banner banda só uma vez
+var contShowCardBanda = 0;
+window.onload = (event) => {
+  console.log("page is fully loaded");
+  window.scroll(0, 0);
 
+  if(contShowCardBanda == 0){
+    // const cardBanda = document.querySelector(".card-banda");
+    const cardFotoBanda = document.querySelector(".card-foto-banda");
+    const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
+    const main = document.querySelector("main");
+    
+    cardConteudoPrincipal.classList.add("card-blur");
+    cardFotoBanda.style.display = "flex";
+    main.style.marginTop = "0vh";
+    contShowCardBanda++;
+    
+    
+    // Se clicar no botão para fechar o card-banda
+    const btnFecharCardBanda = document.getElementById("icone-close-card-banda");
+    btnFecharCardBanda.onclick = function(){
+      //display block para card banda e card foto banda 
+    
+      console.log("Apertou no botão fechar");
+      cardFotoBanda.style.display = "none";
+      cardConteudoPrincipal.classList.remove("card-blur");
+    
+    }
+  }
+  
+};
+
+
+  
 
 // MENU HAMBURGUER
 const menuNav = document.querySelector(".menu nav") 
