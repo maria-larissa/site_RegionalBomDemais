@@ -1,37 +1,41 @@
 // Página sempre começa na primeira secção
 // Faz aparecer banner banda só uma vez
-var contShowCardBanda = 0;
+const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
+// var contShowCardBanda = 0;
+const cardFotoBanda = document.querySelector(".card-foto-banda");
+
+
 window.onload = (event) => {
   console.log("page is fully loaded");
   window.scroll(0, 0);
+  setTimeout(mostrarCardBanda, 1500);
 
-  if(contShowCardBanda == 0){
-    // const cardBanda = document.querySelector(".card-banda");
-    const cardFotoBanda = document.querySelector(".card-foto-banda");
-    const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
-    const main = document.querySelector("main");
-    
-    cardConteudoPrincipal.classList.add("card-blur");
-    cardFotoBanda.style.display = "flex";
-    main.style.marginTop = "0vh";
-    contShowCardBanda++;
-    
-    
-    // Se clicar no botão para fechar o card-banda
-    const btnFecharCardBanda = document.getElementById("icone-close-card-banda");
-    btnFecharCardBanda.onclick = function(){
-      //display block para card banda e card foto banda 
-    
-      console.log("Apertou no botão fechar");
-      cardFotoBanda.style.display = "none";
-      cardConteudoPrincipal.classList.remove("card-blur");
-    
-    }
-  }
+  // if(contShowCardBanda == 0){
+  //   // Mostrar carda banda após 2 segundos
+  //   setTimeout(mostrarCardBanda, 1500);
+  // };
+}
+
+function mostrarCardBanda(){
+  // const cardBanda = document.querySelector(".card-banda");
+  cardConteudoPrincipal.classList.add("card-blur");
+  cardFotoBanda.style.display = "flex";
+  // contShowCardBanda++;
+}
+
+function esconderCardBanda(){
+  cardFotoBanda.style.display = "none";
+  cardConteudoPrincipal.classList.remove("card-blur");
+}
+
+// Se clicar no botão para fechar o card-banda
+const btnFecharCardBanda = document.getElementById("icone-close-card-banda");
+btnFecharCardBanda.onclick = function(){
+  //display block para card banda e card foto banda 
   
-};
-
-
+  console.log("Apertou no botão fechar");
+  esconderCardBanda();
+}
   
 
 // MENU HAMBURGUER
@@ -41,12 +45,18 @@ const btnFecharMenu = document.getElementById("icone-close");
 
 btnAbrirMenu.onclick = function(){
   // menu1.style.display = "block";
-  menuNav.style.display = "block";
+  console.log(cardConteudoPrincipal.classList.contains("card-blur"));
+
+  if(!cardConteudoPrincipal.classList.contains("card-blur")){
+    menuNav.style.display = "block";
+  }
 }
 
 btnFecharMenu.onclick = function() {
   // menu1.style.display = "none";
-  menuNav.style.display = "none";
+  if(!cardConteudoPrincipal.classList.contains("card-blur")){
+    menuNav.style.display = "none";
+  }
 }
 
 
