@@ -1,4 +1,3 @@
-// Página sempre começa na primeira secção
 // Faz aparecer banner banda só uma vez
 const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
 // var contShowCardBanda = 0;
@@ -7,13 +6,10 @@ const cardFotoBanda = document.querySelector(".card-foto-banda");
 
 window.onload = (event) => {
   console.log("page is fully loaded");
+  // Página sempre começa na primeira secção
   window.scroll(0, 0);
-  setTimeout(mostrarCardBanda, 1500);
-
-  // if(contShowCardBanda == 0){
-  //   // Mostrar carda banda após 2 segundos
-  //   setTimeout(mostrarCardBanda, 1500);
-  // };
+  // delay para mostrar o card da banda
+  setTimeout(mostrarCardBanda, 500);
 }
 
 function mostrarCardBanda(){
@@ -28,11 +24,11 @@ function esconderCardBanda(){
   cardConteudoPrincipal.classList.remove("card-blur");
 }
 
+
 // Se clicar no botão para fechar o card-banda
 const btnFecharCardBanda = document.getElementById("icone-close-card-banda");
 btnFecharCardBanda.onclick = function(){
-  //display block para card banda e card foto banda 
-  
+  //display block para card foto banda 
   console.log("Apertou no botão fechar");
   esconderCardBanda();
 }
@@ -44,9 +40,6 @@ const btnAbrirMenu = document.getElementById("icone-menu");
 const btnFecharMenu = document.getElementById("icone-close");
 
 btnAbrirMenu.onclick = function(){
-  // menu1.style.display = "block";
-  console.log(cardConteudoPrincipal.classList.contains("card-blur"));
-
   if(!cardConteudoPrincipal.classList.contains("card-blur")){
     menuNav.style.display = "block";
   }
