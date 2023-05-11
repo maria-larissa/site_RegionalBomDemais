@@ -4,9 +4,10 @@ const main = document.querySelector("main");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const menu = document.querySelector(".menu");
-var listElementosBlur = [main, header, footer, menu];
 const cardFotoBanda = document.querySelector(".card-foto-banda");
-const body = document.querySelector("body");
+
+// Vetor com todos os elementos que irão ter filtro blur
+var listElementosBlur = [main, header, footer, menu];
 
 
 window.onload = (event) => {
@@ -51,14 +52,25 @@ const btnAbrirMenu = document.getElementById("icone-menu");
 const btnFecharMenu = document.getElementById("icone-close");
 
 btnAbrirMenu.onclick = function(){
-  if(!cardConteudoPrincipal.classList.contains("card-blur")){
+  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+  //   menuNav.style.display = "block";
+  // }
+  if(! (listElementosBlur.forEach(function(element){
+    element.classList.contains("card-blur");
+  }))){
     menuNav.style.display = "block";
   }
 }
 
 btnFecharMenu.onclick = function() {
   // menu1.style.display = "none";
-  if(!cardConteudoPrincipal.classList.contains("card-blur")){
+  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+  //   menuNav.style.display = "none";
+  // }
+
+  if(! (listElementosBlur.forEach(function(element){
+      element.classList.contains("card-blur");
+  }  ))){
     menuNav.style.display = "none";
   }
 }

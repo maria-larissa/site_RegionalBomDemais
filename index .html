@@ -25,61 +25,88 @@
         </div>
     </div>
    
-    <div class="menu">
     
-        <!-- <nav id="menu1"> -->
-        <nav>
-            <button id="icone-close">
-                <i class="material-symbols-rounded">
-                    close
-                </i>
-            </button>
-
-            <li><a href="#page-1">Início</a></li>
-            <hr>
-            <li><a href="#page-2">Eventos</a></li>
-            <hr>
-            <li><a href="">Músicas</a></li>
-            <hr>
-            <li><a href="#page-4">Sobre nós</a></li>
-            <hr>
-            <li><a href="#page-5">Nossa trajetória</a></li>
-            <hr>
-            <li><a href="#page-6">Galeria de fotos</a></li>
-            <hr>
-            <li><a href="#page-7">Integrantes da banda</a></li>
-            <hr>
-            <!-- podem ser adicionados mais elementos -->
-        </nav>
-    </div>
     
     <header>
-        
-        <button id="icone-menu">
-                <i class="material-symbols-rounded">
-                    menu
-                </i>
-        </button>
-    
         <div class="icones-header">
-                <img id="logo" src="CSS/imagens/logo.png" alt="Logo Regional Bom Demais">
+                <img id="logo" src="CSS/imagens/logos/logo.png" alt="Logo Regional Bom Demais">
                 
-                <div class="redes-sociais">
+
+                <!-- <div class="menu"> -->
+    
+                    <nav class="menu">
+                        <li><a href="#page-1">Início</a></li>
+                        <li><a href="#page-2">Eventos</a></li>
+                        <li><a href="">Músicas</a></li>
+                        <li><a href="#page-4">Galeria</a></li>
+                        <li><a href="#page-5">Sobre nós</a>
+                            <nav class="submenu">
+                                <li><a href="#page-6">Nossa trajetória</a></li>
+                                
+                                <li><a href="#page-7">Integrantes da banda</a></li>
+                            </nav>
+                        </li>
+                        <!-- podem ser adicionados mais elementos -->
+                    </nav>
+                <!-- </div> -->
+
+                <!-- .menu{
+    width: 80%;
+    display: inline-flex;
+    margin: 0;
+    /* padding:  0.2rem 1rem 1rem 1rem; */
+    box-sizing: border-box;
+    /* background-color: black; */
+    /* overflow-y: scroll; permite scroll no menu */
+}
+
+.menu li{
+    width: calc((80%  / 6) - 2rem);
+    list-style: none;
+    font-size: 24px;
+    font-family: "xilosa";
+    /* padding: 1rem; */
+    /* margin-bottom: 1rem; */
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+}
+
+.menu nav li a{
+    color: black;
+    text-decoration: none;
+    margin-top: 1rem ;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.menu nav li:hover a, #icone-close:hover{
+    color: #FF7A00;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 5ms;
+}
+
+.menu nav li:hover a{
+    font-size: 30px;
+} -->
+
+                <!-- <div class="redes-sociais">
                     <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
                         
-                        <img src="CSS/imagens/logos/insta-color2.png" alt="Logo Instagram">
+                        <img src="CSS/imagens/logos/instagram1.png" alt="Logo Instagram">
                     </a>
         
                     <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
                         
-                        <img src="CSS/imagens/logos/whatsapp.png" alt="Logo WhatsApp">
+                        <img src="CSS/imagens/logos/whatsapp1.png" alt="Logo WhatsApp">
                     </a>
                     
                     <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
                         
                         <img src="CSS/imagens/logos/youtube1.png" alt="Logo Youtube">
                     </a>
-                </div>
+                </div> -->
         </div>
     </header>
     
@@ -346,9 +373,36 @@
                 </div>
             </section>
             
+
+            <!-- GALERIA DE FOTOS -->
+            <section id="page-4">
+                <!-- <div class="card-secundary"> -->
+                <div class="card" >
+                    <div class="container1">
+                        <h3>Galeria</h3>
+                        
+                        <!-- Fotos -->
+                        <div class="pic-ctn">
+                            <img src="CSS/imagens/temporarias/foto1.png" alt="foto" class="pic">
+                            <img src="CSS/imagens/temporarias/foto2.png" alt="foto" class="pic">
+                            <img src="CSS/imagens/temporarias/foto3.png" alt="foto" class="pic">
+                            <img src="CSS/imagens/temporarias/foto5.png" alt="foto" class="pic">
+                            <img src="CSS/imagens/temporarias/foto6.png" alt="foto" class="pic">
+                            <img src="CSS/imagens/temporarias/foto1.png">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="downArrow">
+                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
+                    </i>
+                </div>
+            </section>
+
     
             <!-- SOBRE NÓS -->
-            <section id="page-4">
+            <section id="page-5">
                 <!-- <div class="card-secundary"> -->
                 <div class="card" >
                     <div class="container1">
@@ -391,10 +445,9 @@
                 </div>
             </section>
             
-            
-            
+        
             <!-- NOSSA TRAJETÓRIA -->
-            <section id="page-5">
+            <section id="page-6">
                 <!-- <div class="card-secundary"> -->
                 <div class="card" >
                     <div class="container">
@@ -450,36 +503,7 @@
                     </i>
                 </div>
             </section>
-            
-    
-    
-            <!-- GALERIA DE FOTOS -->
-            <section id="page-6">
-                <!-- <div class="card-secundary"> -->
-                <div class="card" >
-                    <div class="container1">
-                        <h3>Galeria</h3>
-                        
-                        <!-- Fotos -->
-                        <div class="pic-ctn">
-                            <img src="CSS/imagens/temporarias/foto1.png" alt="foto" class="pic">
-                            <img src="CSS/imagens/temporarias/foto2.png" alt="foto" class="pic">
-                            <img src="CSS/imagens/temporarias/foto3.png" alt="foto" class="pic">
-                            <img src="CSS/imagens/temporarias/foto5.png" alt="foto" class="pic">
-                            <img src="CSS/imagens/temporarias/foto6.png" alt="foto" class="pic">
-                            <img src="CSS/imagens/temporarias/foto1.png">
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div>
-            </section>
-            
-            
+        
             
             <!-- INTEGRANTES -->
             <section id="page-7">
@@ -518,19 +542,87 @@
                             </div>
                     </div>
                 </div>
-        
+<!--         
                 <div class="downArrow">
                     <i class="material-symbols-rounded"> keyboard_double_arrow_down
                     </i>
-                </div>
+                </div> -->
             </section>
+    
+
+            
+            
+            
 
     </main>
         
         
         
     <footer>
-        <div class="footer-container"></div>
+        <div class="container">
+            <div class="row">
+                <div class="sections-footer">
+                    <div class="footer-info">
+                    <h3>Regional Bom Demais</h3>
+                    <p>
+                        Rua xxxx xxxx xxx<br>
+                        Fortaleza - Ceará, BR<br><br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+                    <div class="redes-sociais-footer">
+                            <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
+                                
+                                <img src="CSS/imagens/logos/instagram2.png" alt="Logo Instagram">
+                            </a>
+                
+                            <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
+                                
+                                <img src="CSS/imagens/logos/whatsapp2.png" alt="Logo WhatsApp">
+                            </a>
+                            
+                            <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
+                                
+                                <img src="CSS/imagens/logos/youtube2.png" alt="Logo Youtube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                
+                <div class="footer-links">
+                    <h4>Nossos Serviços</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="form-footer">
+                    <!-- <form action="mailto:larissaandradesilva22@gmail.com?subject=Mensagem enviada do site Regional bom demais" method="post"> -->
+                    <form action="mailto:emaildo regional?subject=Mensagem enviada do site Regional bom demais" method="post">
+                        <div class="campo-input">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Ex: Maria Larissa" autocomplete="off">
+                        </div>
+                        
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem aqui" autocomplete="off"></textarea><br>
+                        <input id="btn-enviar" type="submit" value="Enviar" >
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="container">
+
+        <div class="credits">
+            Designed by <a href="https://www.instagram.com/webdev.larissa/">Web developer Maria Larissa</a>
+        </div>
+        </div>
     </footer>
     
     <script src="script.js"></script>
