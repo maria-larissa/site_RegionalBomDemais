@@ -1,7 +1,12 @@
 // Faz aparecer banner banda só uma vez
-const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
-// var contShowCardBanda = 0;
+// const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
+const main = document.querySelector("main");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+const menu = document.querySelector(".menu");
+var listElementosBlur = [main, header, footer, menu];
 const cardFotoBanda = document.querySelector(".card-foto-banda");
+const body = document.querySelector("body");
 
 
 window.onload = (event) => {
@@ -13,15 +18,21 @@ window.onload = (event) => {
 }
 
 function mostrarCardBanda(){
-  // const cardBanda = document.querySelector(".card-banda");
-  cardConteudoPrincipal.classList.add("card-blur");
+  // cardConteudoPrincipal.classList.add("card-blur");
+  listElementosBlur.forEach(function(element){
+    element.classList.add("card-blur");
+  })
   cardFotoBanda.style.display = "flex";
   // contShowCardBanda++;
 }
 
 function esconderCardBanda(){
   cardFotoBanda.style.display = "none";
-  cardConteudoPrincipal.classList.remove("card-blur");
+  // cardConteudoPrincipal.classList.remove("card-blur");
+  listElementosBlur.forEach(function(element){
+    element.classList.remove("card-blur");
+  })
+
 }
 
 
