@@ -1,5 +1,13 @@
-// Faz aparecer banner banda só uma vez
-// const cardConteudoPrincipal = document.querySelector(".card-conteudo-principal");
+window.onload = (event) => {
+  console.log("page is fully loaded");
+  // Página sempre começa na primeira secção
+  window.scroll(0, 0);
+  // delay para mostrar o card da banda
+  setTimeout(mostrarCardBanda, 3000);
+}
+
+
+// CARD BANDA
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
@@ -10,13 +18,6 @@ const cardFotoBanda = document.querySelector(".card-foto-banda");
 var listElementosBlur = [main, header, footer, menu];
 
 
-window.onload = (event) => {
-  console.log("page is fully loaded");
-  // Página sempre começa na primeira secção
-  window.scroll(0, 0);
-  // delay para mostrar o card da banda
-  setTimeout(mostrarCardBanda, 3000);
-}
 
 function mostrarCardBanda(){
   // cardConteudoPrincipal.classList.add("card-blur");
@@ -47,34 +48,36 @@ btnFecharCardBanda.onclick = function(){
   
 
 // MENU HAMBURGUER
-const menuNav = document.querySelector(".menu nav") 
-const btnAbrirMenu = document.getElementById("icone-menu");
-const btnFecharMenu = document.getElementById("icone-close");
+// const menuNav = document.querySelector(".menu nav") 
+// const btnAbrirMenu = document.getElementById("icone-menu");
+// const btnFecharMenu = document.getElementById("icone-close");
 
-btnAbrirMenu.onclick = function(){
-  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
-  //   menuNav.style.display = "block";
-  // }
-  if(! (listElementosBlur.forEach(function(element){
-    element.classList.contains("card-blur");
-  }))){
-    menuNav.style.display = "block";
-  }
-}
+// btnAbrirMenu.onclick = function(){
+//   // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+//   //   menuNav.style.display = "block";
+//   // }
+//   if(! (listElementosBlur.forEach(function(element){
+//     element.classList.contains("card-blur");
+//   }))){
+//     menuNav.style.display = "block";
+//   }
+// }
 
-btnFecharMenu.onclick = function() {
-  // menu1.style.display = "none";
-  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
-  //   menuNav.style.display = "none";
-  // }
+// btnFecharMenu.onclick = function() {
+//   // menu1.style.display = "none";
+//   // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+//   //   menuNav.style.display = "none";
+//   // }
 
-  if(! (listElementosBlur.forEach(function(element){
-      element.classList.contains("card-blur");
-  }  ))){
-    menuNav.style.display = "none";
-  }
-}
+//   if(! (listElementosBlur.forEach(function(element){
+//       element.classList.contains("card-blur");
+//   }  ))){
+//     menuNav.style.display = "none";
+//   }
+// }
 
+
+// MENU
 
 // SCROLL sections do site
 
