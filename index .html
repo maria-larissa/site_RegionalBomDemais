@@ -7,21 +7,43 @@
     <title>Regional Bom Demais</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  />
 </head>
 
 <body>
     
-    <div class="card-foto-banda" >
+    <div class="card-foto-banda">
         <button id="icone-close-card-banda">
             <i class="material-symbols-rounded">
                 close
             </i>
         </button>
         
-        <img id="foto-banda" src="CSS/imagens/fotos oficiais/IMG_6733(cortada).jpg" alt="">
+        <img id="foto-banda" src="CSS/imagens/fotos oficiais/IMG_6733(cortada).jpg" alt="" loading="eager">
         <div class="card-text"  >
             <h3>Regional Bom demais e você juntinhos!</h3>
             <h5>Confirar as nossas redes sociais.</h5>
+            <div class="redes-sociais-card-banda">
+                <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
+                    
+                    <img src="CSS/imagens/logos/instagram2.png" alt="Logo Instagram">
+                </a>
+    
+                <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
+                    
+                    <img src="CSS/imagens/logos/whatsapp2.png" alt="Logo WhatsApp">
+                </a>
+                
+                <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
+                    
+                    <img src="CSS/imagens/logos/youtube2.png" alt="Logo Youtube">
+                </a>
+            </div>
+        </div>
         </div>
     </div>
    
@@ -489,7 +511,7 @@
                                         entre tantos outros grandes cantores e grandes compositores do baião, forró e xoté.
                                     </p>
                                     
-                                    <img id="mapa-ceara" src="CSS/imagens/mapa.png">
+                                    <img id="mapa-ceara" src="CSS/imagens/diversas/mapa.png">
                                     
                     
                             </div>
@@ -514,7 +536,7 @@
                         <div class="integrantes">
                             <div class="integrante">
                                 <figure class="foto-integrante">
-                                    <img src="CSS/imagens/messias.jpg">
+                                    <img src="CSS/imagens/fotos oficiais/messias.jpg">
                                     <figcaption><b>Messias Mateus</b></figcaption>
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
                                         Se possível colocar como começou a relaçao com o forró pé de serra
@@ -523,7 +545,7 @@
                         
                                 <div class="integrante">
                                     <figure class="foto-integrante">
-                                        <img src="CSS/imagens/emanuel.jpg">
+                                        <img src="CSS/imagens/fotos oficiais/emanuel.jpg">
                                         <figcaption><b>Emanuel Patrício</b></figcaption>
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
                                         Se possível colocar como começou a relaçao com o forró pé de serra
@@ -532,7 +554,7 @@
                                     
                                 <div class="integrante">
                                     <figure class="foto-integrante">
-                                        <img src="CSS/imagens/beto.jpg">
+                                        <img src="CSS/imagens/fotos oficiais/beto.jpg">
                                         <figcaption><b>Beto Lourinho</b></figcaption>
                                         
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
@@ -602,11 +624,13 @@
 
                 
                 <div class="form-footer">
+                    <h4>Enviar uma mensagem</h4>
                     <!-- <form action="mailto:larissaandradesilva22@gmail.com?subject=Mensagem enviada do site Regional bom demais" method="post"> -->
                     <form action="mailto:emaildo regional?subject=Mensagem enviada do site Regional bom demais" method="post">
                         <div class="campo-input">
-                            <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" placeholder="Ex: Maria Larissa" autocomplete="off">
+                            <!-- <label for="nome">Nome</label> -->
+                            <!-- <input id="nome" type="text" name="nome" placeholder="Ex: Maria Larissa" autocomplete="off"> -->
+                            <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
                         </div>
                         
                         <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem aqui" autocomplete="off"></textarea><br>

@@ -15,7 +15,7 @@ window.onload = (event) => {
   // Página sempre começa na primeira secção
   window.scroll(0, 0);
   // delay para mostrar o card da banda
-  setTimeout(mostrarCardBanda, 500);
+  setTimeout(mostrarCardBanda, 3000);
 }
 
 function mostrarCardBanda(){
