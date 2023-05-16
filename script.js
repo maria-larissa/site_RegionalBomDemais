@@ -1,5 +1,5 @@
 window.onload = (event) => {
-  console.log("page is fully loaded");
+  // console.log("page is fully loaded");
   // Página sempre começa na primeira secção
   window.scroll(0, 0);
   // delay para mostrar o card da banda
@@ -20,17 +20,14 @@ var listElementosBlur = [main, header, footer, menu];
 
 
 function mostrarCardBanda(){
-  // cardConteudoPrincipal.classList.add("card-blur");
   listElementosBlur.forEach(function(element){
     element.classList.add("card-blur");
   })
   cardFotoBanda.style.display = "flex";
-  // contShowCardBanda++;
 }
 
 function esconderCardBanda(){
   cardFotoBanda.style.display = "none";
-  // cardConteudoPrincipal.classList.remove("card-blur");
   listElementosBlur.forEach(function(element){
     element.classList.remove("card-blur");
   })
@@ -42,42 +39,64 @@ function esconderCardBanda(){
 const btnFecharCardBanda = document.getElementById("icone-close-card-banda");
 btnFecharCardBanda.onclick = function(){
   //display block para card foto banda 
-  console.log("Apertou no botão fechar");
+  // console.log("Apertou no botão fechar");
   esconderCardBanda();
 }
   
 
 // MENU HAMBURGUER
-// const menuNav = document.querySelector(".menu nav") 
-// const btnAbrirMenu = document.getElementById("icone-menu");
-// const btnFecharMenu = document.getElementById("icone-close");
+const menuNav = document.querySelector(".nav-bar .menu-mobile") 
+const btnAbrirMenu = document.getElementById("icone-menu");
+const btnFecharMenu = document.getElementById("icone-close");
 
-// btnAbrirMenu.onclick = function(){
-//   // if(!cardConteudoPrincipal.classList.contains("card-blur")){
-//   //   menuNav.style.display = "block";
-//   // }
-//   if(! (listElementosBlur.forEach(function(element){
-//     element.classList.contains("card-blur");
-//   }))){
-//     menuNav.style.display = "block";
-//   }
-// }
+btnAbrirMenu.onclick = function(){
+  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+    // console.log("Clicou botão menu");
+    // menuNav.style.display = "block";
+  // }
+  
+  if(! (listElementosBlur.forEach(function(element){
+    element.classList.contains("card-blur");
+  }))){
+    menuNav.style.display = "flex";
+    // main.style.display = "none";
+  }
+}
 
-// btnFecharMenu.onclick = function() {
-//   // menu1.style.display = "none";
-//   // if(!cardConteudoPrincipal.classList.contains("card-blur")){
-//   //   menuNav.style.display = "none";
-//   // }
+btnFecharMenu.onclick = function() {
+  // menuNav.style.display = "none";
+  // if(!cardConteudoPrincipal.classList.contains("card-blur")){
+  //   menuNav.style.display = "none";
+  // }
 
-//   if(! (listElementosBlur.forEach(function(element){
-//       element.classList.contains("card-blur");
-//   }  ))){
-//     menuNav.style.display = "none";
-//   }
-// }
+  if(! (listElementosBlur.forEach(function(element){
+      element.classList.contains("card-blur");
+  }  ))){
+    menuNav.style.display = "none";
+    // main.style.display = "block";
+
+  }
+}
 
 
-// MENU
+
+// botão submenu
+const btnSubmenu = document.getElementById("btn-abrir-submenu");
+const submenu = document.querySelector(".submenu");
+var visivel = false;
+
+btnSubmenu.addEventListener("click", function(){
+  console.log(visivel);
+  console.log("Clicou no botao do submenu");
+  if(!visivel){
+    submenu.style.visibility = "visible"
+    visivel = true;
+  }else{
+    submenu.style.visibility = "hidden"
+    visivel = false;
+  }
+})
+
 
 // SCROLL sections do site
 
@@ -116,11 +135,9 @@ function smoothScrollTo(endX, endY, duration) {
 } 
 
 function getDistanciaTop(element){
-
   // Calculando a distância de cada section ao top da tela, medida em pixels
   const distanciaTopo = element.offsetTop;
-  console.log(distanciaTopo);
-
+  // console.log(distanciaTopo);
   return distanciaTopo;
 }
 
@@ -151,4 +168,20 @@ menuItens.forEach((link) => {
 
 
 
-window.addEventListener('scroll', function(){ animarScroll(); })
+
+// DownArrow
+const btnDownArrow = document.getElementById("btn-descer");
+btnDownArrow.onclick = function(){
+  console.log("Apertou no botão DownArrow");
+  down.style.display = "none";
+}
+// function esconderDownArrow(){
+// }
+
+// window.addEventListener("wheel", function() {
+
+// });
+
+// onwheel = (event) => {};
+
+// window.addEventListener('scroll', function(){ animarScroll(); })

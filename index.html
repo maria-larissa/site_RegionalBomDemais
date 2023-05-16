@@ -7,10 +7,7 @@
     <title>Regional Bom Demais</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 </head>
 
 <body>
@@ -46,103 +43,92 @@
         </div>
     </div>
    
+    <!-- <div class="menu-hamburguer">
+        <nav >
+            <button id="icone-close">
+                <i class="material-symbols-rounded">
+                    close
+                </i>
+            </button>
     
+            <li><a href="#inicio">Início</a></li>
+            <hr>
+            <li><a href="#eventos">Eventos</a></li>
+            <hr>
+            <li><a href="#musicas">Músicas</a></li>
+            <hr>
+            <li><a href="#galeria">Galeria de fotos</a></li>
+            <hr>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+            <hr>
+            <li><a href="#nossa-trajetoria">Nossa trajetória</a></li>
+            <hr>
+            <li><a href="#integrantes">Integrantes da banda</a></li>
+        </nav> 
+    </div> -->
+    <!-- podem ser adicionados mais elementos -->
     
     <header>
         <div class="icones-header">
-                <img id="logo" src="CSS/imagens/logos/logo.png" alt="Logo Regional Bom Demais">
-                
 
-                <!-- <div class="menu"> -->
+            <button id="icone-menu">
+                <i class="material-symbols-rounded">
+                    menu
+                </i>
+            </button>
+
+            <img id="logo" src="CSS/imagens/logos/logo.png" alt="Logo Regional Bom Demais">
+            
+            <nav class="nav-bar">
+                <div class="menu-mobile">
+                    <button id="icone-close">
+                        <i class="material-symbols-rounded">
+                            close
+                        </i>
+                    </button>
     
-                    <nav class="menu">
-                        <li><a href="#page-1">Início</a></li>
-                        <li><a href="#page-2">Eventos</a></li>
-                        <li><a href="">Músicas</a></li>
-                        <li><a href="#page-4">Galeria</a></li>
-                        <li><a href="#page-5">Sobre nós</a>
-                            <nav class="submenu">
-                                <li><a href="#page-6">Nossa trajetória</a></li>
-                                
-                                <li><a href="#page-7">Integrantes da banda</a></li>
-                            </nav>
-                        </li>
-                        <!-- podem ser adicionados mais elementos -->
-                    </nav>
-                <!-- </div> -->
+                    <li><a href="#inicio" class="link-menu">Início</a></li>
+                    <hr>
+                    <li><a href="#eventos" class="link-menu">Eventos</a></li>
+                    <hr>
+                    <li><a href="#musicas" class="link-menu">Músicas</a></li>
+                    <hr>
+                    <li><a href="#galeria" class="link-menu">Galeria</a></li>
+                    <hr>
+                    <li><a href="#sobre-nos" class="link-menu" >Sobre nós</a></li>
+                    <hr>
+                    <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
+                    <hr>
+                    <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
+                </div>
 
-                <!-- .menu{
-    width: 80%;
-    display: inline-flex;
-    margin: 0;
-    /* padding:  0.2rem 1rem 1rem 1rem; */
-    box-sizing: border-box;
-    /* background-color: black; */
-    /* overflow-y: scroll; permite scroll no menu */
-}
-
-.menu li{
-    width: calc((80%  / 6) - 2rem);
-    list-style: none;
-    font-size: 24px;
-    font-family: "xilosa";
-    /* padding: 1rem; */
-    /* margin-bottom: 1rem; */
-    box-sizing: border-box;
-    display: flex;
-    align-content: center;
-}
-
-.menu nav li a{
-    color: black;
-    text-decoration: none;
-    margin-top: 1rem ;
-    box-sizing: border-box;
-    display: inline-block;
-}
-
-.menu nav li:hover a, #icone-close:hover{
-    color: #FF7A00;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 5ms;
-}
-
-.menu nav li:hover a{
-    font-size: 30px;
-} -->
-
-                <!-- <div class="redes-sociais">
-                    <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
+                <div class="menu">
+                    <li><a href="#inicio" class="link-menu">Início</a></li>
+                    <li><a href="#eventos" class="link-menu">Eventos</a></li>
+                    <li><a href="#musicas" class="link-menu">Músicas</a></li>
+                    <li><a href="#galeria" class="link-menu">Galeria</a></li>
+                    <li><a href="#sobre-nos" class="link-menu" >Sobre nós</a>
                         
-                        <img src="CSS/imagens/logos/instagram1.png" alt="Logo Instagram">
-                    </a>
-        
-                    <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
-                        
-                        <img src="CSS/imagens/logos/whatsapp1.png" alt="Logo WhatsApp">
-                    </a>
+                        <nav class="submenu">
+                            <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
+                            <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
+                        </nav>
+                    </li>
+                    <button id="btn-abrir-submenu">
+                        <i class="material-symbols-rounded">arrow_drop_down</i>
+                    </button>
+                </div>
                     
-                    <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
-                        
-                        <img src="CSS/imagens/logos/youtube1.png" alt="Logo Youtube">
-                    </a>
-                </div> -->
+            </nav>
+
         </div>
     </header>
     
-    
-    <div class="downArrow">
-        <button id="btn-descer" type="button">
-            <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
-        </button>
-    </div>
-    
+
     <main>
             
             <!-- APRESENTAÇÃO -->
-            <section id="page-1">
-                <!-- <div class="cards-principais"> -->
+            <section id="inicio">
                 <div class="card">
                     <div class="card-apresetacao-texto">
                         
@@ -180,18 +166,21 @@
                     <div class="card-apresetacao-foto">
                         <img id="foto-abertura" src="CSS/imagens/trio.png" alt="">
                     </div>
-                    <!-- <div class="downArrow">
-                        <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                        </i>
-                    </div> -->
+
+                    <div class="downArrow">
+                        <button id="btn-descer" type="button">
+                            <a href="#eventos">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                            </a>
+                        </button>
+                    </div>
                 </div>
                 
             </section>
             
             
             <!-- EVENTOS -->
-            <section id="page-2">
-                <!-- <div  class = "card-secundary"> -->
+            <section id="eventos">
                 <div  class="card" >
                     <div class="container"> <!--conteiner-colummn-->
                         <h3 >Nossos eventos</h3>
@@ -393,15 +382,20 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="downArrow">
+                        <button id="btn-descer" type="button">
+                            <a href="#">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                
                 
             </section>
             
 
             <!-- GALERIA DE FOTOS -->
-            <section id="page-4">
-                <!-- <div class="card-secundary"> -->
+            <section id="galeria">
                 <div class="card" >
                     <div class="container1">
                         <h3>Galeria</h3>
@@ -417,18 +411,21 @@
                         </div>
                         
                     </div>
+
+                    <div class="downArrow">
+                        <button id="btn-descer" type="button">
+                            <a href="#sobre-nos">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                            </a>
+                        </button>
+                    </div>
                 </div>
                 
-                <!-- <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div> -->
             </section>
 
     
             <!-- SOBRE NÓS -->
-            <section id="page-5">
-                <!-- <div class="card-secundary"> -->
+            <section id="sobre-nos">
                 <div class="card" >
                     <div class="container1">
                         
@@ -462,18 +459,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="downArrow">
+                        <button id="btn-descer" type="button">
+                            <a href="#nossa-trajetoria">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div> -->
             </section>
             
         
             <!-- NOSSA TRAJETÓRIA -->
-            <section id="page-6">
-                <!-- <div class="card-secundary"> -->
+            <section id="nossa-trajetoria">
                 <div class="card" >
                     <div class="container">
                         
@@ -521,18 +520,20 @@
                         </div>
                         
                     </div>
+
+                    <div class="downArrow">
+                        <button id="btn-descer" type="button">
+                            <a href="#integrantes">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div> -->
             </section>
         
             
             <!-- INTEGRANTES -->
-            <section id="page-7">
-                <!-- <div class="card-secundary"> -->
+            <section id="integrantes">
                 <div class="card" >
                     <div class="container1">
                         <h3>Integrantes da Regional Bom Demais</h3>
@@ -567,11 +568,6 @@
                             </div>
                     </div>
                 </div>
-<!--         
-                <div class="downArrow">
-                    <i class="material-symbols-rounded"> keyboard_double_arrow_down
-                    </i>
-                </div> -->
             </section>
     
 
