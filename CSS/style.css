@@ -34,26 +34,26 @@ body{
     font-stretch: expanded;
 }
 
-/* Parte responsiva */
+
+/* Parte responsiva breakpoints */
 
 /* Small devices (landscape phones, 576px and up) */
-/* @media (min-width:360px) and (max-width: 576px) { */
 @media (max-width: 600px) {
+    .nav-bar .menu, .nav-bar .submenu{display: none;}
+
+    /* Header */
     header{
-        height: 8vh;
+        height: 50px;
     }
-
-    #logo{
-        height: 25px;
-        margin-left:calc(50% - 5px);
-    }
-
     .icones-header{
         width: 100%;
         height: 100%;
         padding: 0 1rem;
     }
-
+    #logo{
+        height: 35px;
+        margin: 0 auto;
+    }
     .nav-bar{
         width: 100vw;
         height: 100vh;
@@ -62,79 +62,178 @@ body{
         left: 0;
         visibility: hidden;
     }
+
+
+    /* Card foto banda */
+    .card-foto-banda{
+        width: 70%;
+        height: 50%;
+        flex-direction: column;
+        margin-left: calc((100vw - 70% )/ 2);
+        /* margin-right: calc((100vw - 45% )/ 2); */
+        margin-top: calc((100vh - 50%) /2);
+        /* margin-bottom: auto; */
+    }
+    #foto-banda{
+        width: auto;
+        height: 60%;
+        margin: auto;
+    }
+    .card-foto-banda .card-text{
+        height: 30%;
+        width: 80%;
+        margin:auto;
+    }
+    .card-foto-banda .card-text h3{
+        font-size: 25px;
+    }
+    .card-foto-banda .card-text h5{
+        font-size: 15px;
+    }
+    .redes-sociais-card-banda img{
+        width: 30px;
+    }
+    #icone-close-card-banda{
+        width: 35px;
+        height: 35px;
+        top: 5px;
+        right: 5px;
+    }
+    
+
+
+
 }
 
 @media (min-width: 600px)  and (max-width: 800px){
+   /* Desativando os botões e o menu mobile */
     #icone-close, #icone-menu,.menu-mobile{
         display: none;
     }
 
+    /* Header */
     header{
-        height: 8vh;
+        height: 60px;
     }
-
+    .icones-header{
+        width: 60%;
+        height: 40px;
+    }
     #logo{
         height: 30px;
         margin: 0;
     }    
-
-    .icones-header{
-        width: 70%;
-        height: 40px;
-        /* margin: 0 auto; */
+    .menu li{
+        width: 5% ;
+    }
+    #btn-abrir-submenu{
+        height: 35px;
+        /* right: -25px ; */
+    }
+    .submenu{
+        padding: 0.5rem 0;
+        top: 40px;
+        left: 0;
+        width: 150%;    
+        visibility: hidden;
+    }
+    .submenu li{
+        width: 90%;
+        margin: 8px auto;
+        /* height: 25px; */
+    }
+    .menu li, .submenu li{
+        width: 90%;
+        font-size: 16px;
     }
 
-    .menu li{
-        width: calc(100% / 5);
-        font-size: 16px;
+
+
+    /* Card foto banda */
+    .card-foto-banda{
+        width: 70%;
+        height: 50%;
+        flex-direction: row;
+        margin-left: calc((100vw - 70% )/ 2);
+        margin-top: calc((100vh - 50%)/2);
+    }
+    #foto-banda{
+        width: 40%;
+        height: auto;
+        margin: auto;
+    }
+    .card-foto-banda .card-text{
+        height: auto;
+        width: 50%;
+        margin:auto;
+
+    }
+    .card-foto-banda .card-text h3{
+        font-size: 25px;
+    }
+    .card-foto-banda .card-text h5{
+        font-size: 15px;
+    }
+    .redes-sociais-card-banda img{
+        width: 30px;
+    }
+    #icone-close-card-banda{
+        width: 35px;
+        height: 35px;
+        top: 5px;
+        right: 5px;
     }
 
 }
 
-/* Medium devices (tablets, 768px and up) */
 
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 800px) and (max-width: 1000px){ 
     #icone-close, #icone-menu, .menu-hamburguer{
         display: none;
     }
+
+    /* Header */
     header{
-        height: 10vh;
+        height: 60px;
     }
-
-    #logo{
-        height: 45px;
-        margin: 0;
-    }
-
     .icones-header{
         width: 80%;
         height: 40px;
         margin: 0 auto;
-
     }
-
-    
-    .menu li{
-        width: calc(100% / 5);
-        font-size: 20px;
-    }
-}
-/* @media (min-width: 577px) and (max-width: 991px){
-    #icone-close, #icone-menu, .menu-hamburguer{
-        display: none;
-    }
-    
     #logo{
-        height: 35px;
+        height: 45px;
         margin: 0;
     }
-
-    .icones-header{
-        width: 80%;
-        height: 40px;
+    .menu li{
+        width: calc(100% / 5);
+    }
+    #btn-abrir-submenu{
+        height: 35px;
+        right: -5px ;
+    }
+    .submenu{
+        padding: 0.5rem 0;
+        top: 45px;
+        left: 0;
+        width: 140%;    
+        visibility: hidden;
+    }
+    .submenu li{
+        width: 90%;
+        margin: 8px auto;
+        /* height: 25px; */
+    }
+    .menu li, .submenu li{
+        width: 90%;
+        font-size: 20px;
     }
 
-}     */
+
+    /* Card foto banda */
+    
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 1000px) and (max-width: 1200px) { 
@@ -142,57 +241,15 @@ body{
         display: none;
     }
 
+    /* Header */
     header{
-        padding: 1rem;
         height: 10vh;
     }
-
     .icones-header{
         width: 80%;
         height: 60px;
         margin: 0 auto;
     }
-
-    .nav-bar{
-        width: 75%;
-        height: 100%;
-    }
-
-    #logo{
-        height: 45px;
-        margin: 0 2rem;
-    }
-
-    
-    .menu li{
-        width: calc(100% / 5);
-        font-size: 20px;
-    }
-
-    /* MENU */
-    #btn-abrir-submenu{
-        /* margin-left: 1rem ; */
-        background: none;
-        border: none;
-        height: 35px;
-    }
-    
-    #btn-abrir-submenu:hover, .link-menu:hover, .link-submenu:hover{
-        color: #FF7A00;
-        cursor: pointer;
-        transition: all 5ms;
-    }
-
-
-    .link-menu:hover, .link-submenu:hover{
-        font-size: 25px;
-    }
-    
-    .link-submenu:hover{
-        font-size: 30px;
-    }
-
-
     #logo{
         padding: auto;
         box-sizing: border-box;
@@ -201,13 +258,39 @@ body{
         margin: 0;
 
     }
-
-
-
+    .nav-bar{
+        width: 75%;
+        height: 100%;
+    }
+    .menu li{
+        width: calc(100% / 5);
+    }
+    #btn-abrir-submenu{
+        position: absolute;
+        right: 5px ;
+    }
     .menu .link-menu{font-size: 20px;}
-
-
+    .submenu{
+        padding: 0.5rem 0;
+        top: 45px;
+        left: 0px;
+        width: 119%;    
+        visibility: hidden;
+    }
+    .submenu li{
+        width: 90%;
+        margin: 1rem auto;
+        /* height: 25px; */
+    }
+    .menu li, .submenu li{
+        font-size: 20px;
+    }
+    .menu .link-menu:hover, .menu .link-submenu:hover{
+        font-size: 25px;
+    }
     
+
+    /* Card foto banda */
 }
 
 
@@ -216,24 +299,19 @@ body{
     #icone-close, #icone-menu, .menu-mobile{
         display: none;
     }
-    
+
+    /* Header */
     header{
-        padding: 1rem;
         height: 10vh;
     }
-
+    .icones-header{
+        width: 75%;
+        height: 60px;
+    }
     #logo{
         height: 45px;
         margin: 0;
     }
-
-    .icones-header{
-        width: 75%;
-        height: 60px;
-        margin: 0 auto;
-
-    }
-
     .nav-bar{
         width: 90%;
         height: 65px;
@@ -246,16 +324,30 @@ body{
         text-align: center;
         align-items: center;
     }
-    
-
+    #btn-abrir-submenu{
+        position: absolute;
+        height: 35px;
+        right: 15px ;
+    }
     .menu li{width: calc((100% / 4) - 3rem);}
-
-    .link-menu:hover, .link-submenu:hover{
-        font-size: 30px;
+    .menu .link-menu, .submenu{font-size: 25px;}
+    .submenu{
+        padding: 0.5rem 0;
+        top: 50px;
+        left: -15px;
+        width: 150%;    
+        visibility: hidden;
+    }
+    .submenu li{
+        width: 100%;
+        margin: 1rem auto;
+        /* height: 25px; */
+    }
+    .menu li, .submenu li{
+        font-size: 25px;
     }
 
-    .menu .link-menu{font-size: 25px;}
-
+    /* Card foto banda */
 }
 
 
@@ -266,12 +358,12 @@ body{
 }
 
 .card-foto-banda{
-    width: 60%;
-    height: 450px;
-    margin-left: calc((100vw - 60% )/ 2);
+    /* width: 60%;
+    height: 450px; */
+    /* margin-left: calc((100vw - 60% )/ 2);
     margin-right: calc((100vw - 60% )/ 2);
     margin-top: calc((100vh - 450px )/ 2);
-    margin-bottom: calc((100vh - 450px )/ 2);
+    margin-bottom: calc((100vh - 450px )/ 2); */
     text-align: center;
     align-items: center;
     display: none;
@@ -280,18 +372,21 @@ body{
     border-radius: 10px;
     background-color: #FF7A00;
     position: fixed;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 #icone-close-card-banda{
+    /* width: 50px;
+    height: 55px; */
+    display: flex;
     background-color: transparent;
-    width: 50px;
-    height: 55px;
     text-align: center;
     align-items: center;
+    justify-content: center;
     position: absolute;
-    top: -50px;
-    right: -50px;
+    /* top: -50px;
+    right: -50px; */
     border: 0 solid transparent;
     transition: 0.1s;
 }
@@ -303,36 +398,36 @@ body{
 
 #foto-banda{
     /* width: auto; */
-    height: 70%;
-    margin: auto 0;
+    /* height: 70%; */
+    /* margin: auto 0;
     margin-left: calc(20% / 2);
-    margin-right: calc(5% / 2);
+    margin-right: calc(5% / 2); */
     border-radius: 50%;
     box-sizing: border-box;
-    animation: bounceInLeft;
-    animation-duration: 2s;
+    /* animation: bounceInLeft;
+    animation-duration: 2s; */
 }
 
 .card-foto-banda .card-text{
-    height: auto;
-    width: 40%;
-    margin: auto 0;
-    margin-left: calc(5% / 2);
-    margin-right: calc(20% / 2);
+    /* height: auto;
+    width: 40%; */
+    /* margin: auto 0; */
+    /* margin-left: calc(5% / 2);
+    margin-right: calc(20% / 2); */
     box-sizing: border-box;
     color: white;
-    animation: fadeInUpBig;
-    animation-duration: 1s;
+    /* animation: fadeInUpBig;
+    animation-duration: 1s; */
 }
 
 .card-foto-banda .card-text h3{
-    font-size: 40px;
+    /* font-size: 40px; */
     margin: 1rem;
     font-family: "xilosa";
 }
 
 .card-foto-banda .card-text h5{
-    font-size: 24px;
+    /* font-size: 24px; */
     margin: 1rem;
     font-family: "butler";
     font-stretch: expanded;
@@ -340,13 +435,13 @@ body{
 
 .redes-sociais-card-banda a{
     /* background:#faab61; */
-    margin:1rem;
+    justify-content:space-evenly;
 }
 
-.redes-sociais-card-banda img{
-    width: 40px;
-    height: auto;
-}
+/* .redes-sociais-card-banda img{ */
+    /* width: 40px; */
+    /* height: auto; */
+/* } */
   
 
 
@@ -358,8 +453,9 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    position: sticky;
+    position: fixed;
     z-index: 10;
+    padding: 1rem;
     align-items: center;
     display: inline-flex;
     box-sizing: border-box;
@@ -370,7 +466,6 @@ header{
 
 .icones-header{
     display: flex;
-    float:left;
     box-sizing: border-box;
     align-items: center;
     position: relative;
@@ -407,6 +502,7 @@ header{
     border: 0px transparent;
     position: absolute;
 }
+
 #icone-menu{
     margin: auto 0;
     color: black;
@@ -465,9 +561,8 @@ header{
     align-items:center;
 }
 
-
 .menu li{
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     position: relative;
     height: 35px;
     display: flex;
@@ -476,11 +571,11 @@ header{
     flex-direction: row;
 }
 
-
 #btn-abrir-submenu{
     background: none;
     border: none;
-    height: 35px;
+    height: 100%;
+    /* height: 35px; */
 }
 
 #btn-abrir-submenu:hover, .link-menu:hover, .link-submenu:hover{
@@ -495,7 +590,6 @@ header{
     text-decoration: none;
 }
 
-
 .link-menu:hover, #btn-abrir-menu:hover{
     color: #FF7A00;
 }
@@ -504,42 +598,23 @@ header{
     color: white;
 }
 
-
 .submenu{
-    visibility: hidden;
     position: absolute;
-    padding: 0.5rem;
-    top: 50px;
-    width: 150%;
     border: 1px solid #0e0d0d;
     border-top: 0px;
     box-sizing: border-box;
-    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 2px 5px gray;
+    box-shadow: 0px 2px 2px gray;
     border-radius: 0 0 10px 10px;
     background-color:#ff7b00dc;
-}
-
-.submenu hr{
-    width: 95%;
-    margin: 0;
-    color: #0e0d0d;
-}
-
-.submenu li{
-    width: 90%;
-    margin: 1.5rem;
-    height: 35px;
 }
 
 .submenu, .link-submenu{
     color: black;
     font-family: "xilosa";
-    font-size: 25px;
     text-decoration: none;
 }
 
