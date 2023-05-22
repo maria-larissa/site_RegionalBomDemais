@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <title>Regional Bom Demais</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -40,61 +40,57 @@
                 </a>
             </div>
         </div>
+        
     </div>
    
-    
+     
     <header>
+
+        <button id="icone-menu">
+            <i class="material-symbols-rounded">
+                menu
+            </i>
+        </button>
+
         <div class="icones-header">
-
-            <button id="icone-menu">
-                <i class="material-symbols-rounded">
-                    menu
-                </i>
-            </button>
-
             <img id="logo" src="CSS/imagens/logos/logo.png" alt="Logo Regional Bom Demais">
-            
-            <nav class="nav-bar">
-                <div class="menu-mobile">
+
+                <nav class="menu">
+                    <li><a href="#inicio" class="link-menu">Início</a></li>
+                    <li><a href="#eventos" class="link-menu">Eventos</a></li>
+                    <li><a href="#musicas" class="link-menu">Músicas</a></li>
+                    <li><a href="#galeria" class="link-menu">Galeria</a></li>
+                    <li><a href="#sobre-nos" class="link-menu">Sobre nós</a>
+                    </li>
+                    <nav class="submenu">
+                        <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
+                        <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
+                    </nav>
+                    <!-- podem ser adicionados mais elementos -->
+                    <button id="btn-abrir-submenu">
+                        <i class="material-symbols-rounded">arrow_drop_down</i>
+                    </button>
+                </nav>
+                
+                <nav class="menu-mobile">
                     <button id="icone-close">
                         <i class="material-symbols-rounded">
                             close
                         </i>
                     </button>
-    
-                    <li><a href="#inicio" class="link-menu">Início</a></li>
-                    <hr>
-                    <li><a href="#eventos" class="link-menu">Eventos</a></li>
-                    <hr>
-                    <li><a href="#musicas" class="link-menu">Músicas</a></li>
-                    <hr>
-                    <li><a href="#galeria" class="link-menu">Galeria</a></li>
-                    <hr>
-                    <li><a href="#sobre-nos" class="link-menu" >Sobre nós</a></li>
-                    <hr>
-                    <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
-                    <hr>
-                    <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
-                </div>
 
-                <div class="menu">
-                    <li><a href="#inicio" class="link-menu">Início</a></li>
-                    <li><a href="#eventos" class="link-menu">Eventos</a></li>
-                    <li><a href="#musicas" class="link-menu">Músicas</a></li>
-                    <li><a href="#galeria" class="link-menu">Galeria</a></li>
-                    <li class="menu-secundario"><a href="#sobre-nos" class="link-menu" >Sobre nós</a>
-                        
-                        <nav class="submenu">
-                            <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
-                            <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
-                        </nav>
-                    </li>
-                    <button id="btn-abrir-submenu">
-                        <i class="material-symbols-rounded">arrow_drop_down</i>
-                    </button>
-                </div>
-                    
-            </nav>
+                    <ul>
+
+                        <li><a href="#inicio" class="link-menu">Início</a></li>
+                        <li><a href="#eventos" class="link-menu">Eventos</a></li>
+                        <li><a href="#musicas" class="link-menu">Músicas</a></li>
+                        <li><a href="#galeria" class="link-menu">Galeria</a></li>
+                        <li><a href="#sobre-nos" class="link-menu">Sobre nós</a></li>
+                        <li><a href="#nossa-trajetoria" class="link-submenu">Nossa trajetória</a></li>
+                        <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
+                        <!-- podem ser adicionados mais elementos -->
+                    </ul>
+                </nav>
 
         </div>
     </header>
@@ -155,9 +151,9 @@
             
             
             <!-- EVENTOS -->
-            <section id="eventos">
+            <!-- <section id="eventos">
                 <div  class="card" >
-                    <div class="container"> 
+                    <div class="container">
                         <h3 >Nossos eventos</h3>
                         <div class="carrossel">
                             <input type="radio" name="slides" checked="checked" id="slide-1">
@@ -168,7 +164,8 @@
                             <input type="radio" name="slides" id="slide-6">
                             
                             
-                            <ul class="carrossel-photos"> 
+                            <ul class="carrossel-photos">
+                                
                                 
                                 <li class="carrossel-photo">
                                     <figure>
@@ -355,6 +352,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="downArrow">
                         <button id="btn-descer" type="button">
                             <a href="#">
@@ -364,7 +362,7 @@
                     </div>
                 </div>
                 
-            </section>
+            </section> -->
             
 
             <!-- GALERIA DE FOTOS -->
@@ -372,6 +370,7 @@
                 <div class="card" >
                     <div class="container1">
                         <h3>Galeria</h3>
+                        
                         <div class="pic-ctn">
                             <img src="CSS/imagens/temporarias/foto1.png" alt="foto" class="pic">
                             <img src="CSS/imagens/temporarias/foto2.png" alt="foto" class="pic">
@@ -396,7 +395,7 @@
 
     
             <!-- SOBRE NÓS -->
-            <section id="sobre-nos">
+            <!-- <section id="sobre-nos">
                 <div class="card" >
                     <div class="container1">
                         
@@ -440,10 +439,10 @@
                     </div>
                 </div>
             </section>
-            
+             -->
         
             <!-- NOSSA TRAJETÓRIA -->
-            <section id="nossa-trajetoria">
+            <!-- <section id="nossa-trajetoria">
                 <div class="card" >
                     <div class="container">
                         
@@ -500,11 +499,11 @@
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> -->
         
             
             <!-- INTEGRANTES -->
-            <section id="integrantes">
+            <!-- <section id="integrantes">
                 <div class="card" >
                     <div class="container1">
                         <h3>Integrantes da Regional Bom Demais</h3>
@@ -540,7 +539,7 @@
                     </div>
                 </div>
             </section>
-    
+     -->
 
             
             
@@ -549,11 +548,10 @@
     </main>
         
    
-        
     <footer>
-        <div class="container">
+        <div class="container-footer">
             <div class="row">
-                <div class="sections-footer">
+                <div class="section-footer">
                     <div class="footer-info">
                     <h3>Regional Bom Demais</h3>
                     <p>
@@ -580,7 +578,6 @@
                     </div>
                 </div>
     
-                
                 <div class="footer-links">
                     <h4>Nossos Serviços</h4>
                     <ul>
@@ -595,23 +592,22 @@
                 
                 <div class="form-footer">
                     <h4>Enviar uma mensagem</h4>
-                    <!-- <form action="mailto:larissaandradesilva22@gmail.com?subject=Mensagem enviada do site Regional bom demais" method="post"> -->
+                    
                     <form action="mailto:emaildo regional?subject=Mensagem enviada do site Regional bom demais" method="post">
-                        <div class="campo-input">
-                            <!-- <label for="nome">Nome</label> -->
-                            <!-- <input id="nome" type="text" name="nome" placeholder="Ex: Maria Larissa" autocomplete="off"> -->
-                            <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
-                        </div>
+                    
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
                         
                         <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem aqui" autocomplete="off"></textarea><br>
+                    
                         <input id="btn-enviar" type="submit" value="Enviar" >
+                    
                     </form>
                 </div>
     
             </div>
         </div>
 
-        <div class="container">
+        <div class="container-footer">
             <div class="credits">
                 Designed by <a href="https://www.instagram.com/webdev.larissa/">Web developer Maria Larissa</a>
             </div>
