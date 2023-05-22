@@ -239,7 +239,6 @@ header{
     color: white;
 }
 
-
 .menu-mobile{
     width: 100vw;
     height: 100vh;
@@ -309,7 +308,6 @@ header{
     justify-content: center;
 }
 
-
 .menu-mobile li a{
     color: white;
     text-decoration: none;
@@ -369,19 +367,17 @@ header{
 
 main{
     width: 100vw;
-    margin-top: 10vh;
-    box-sizing: border-box;
     display: block;
     background-image: url(imagens/diversas/textura.jpg);
     background-repeat: repeat;
 }
 
 .card{
-    width: 95%;
+    /* width: 95%; */
     color: black;
     text-align: center;
     box-sizing: border-box;
-    height: 90%;
+    /* height: 90%; */
     margin: 5rem 2rem 2rem 2rem;
     box-sizing: border-box;
 }
@@ -395,67 +391,45 @@ main{
     box-sizing: border-box;
 }
 
-
 /* card abertura */
 #inicio .card{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 .card-apresetacao-texto, .card-apresetacao-foto {
-    margin: auto;
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
-    
-}
-.card-apresetacao-texto{
-    width: 55%;
 }
 
 .card-apresetacao-foto{
-    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .card-apresetacao-texto h1{
-    margin: 0 auto 1rem auto;
-    text-align: center;
     font-family: "xilosa";
-    font-size: 75px;
-    animation: fadeInLeft;
-    animation-duration: 1.5s; 
-}
-
-.card-apresetacao-texto .texto-abertura{
-    height: 50%;
-    margin-top: 2rem;
+    white-space: normal;
+    font-size: clamp(0.5rem + 1vw, 2rem + 2vw, 3rem + 1vw);
+    margin-top: 1rem;
 }
 
 .card-apresetacao-texto h2{
     font-family: 'xilosa';
-    font-size: 30px;
-    margin: 0;
+    font-size: clamp(1rem, 1rem + 1vw, 1rem + 1.2vw);
 }
 
 .verso-apresentacao{
-    width: 60%; 
-    max-height: 200px; 
-    display: inline-block;
-    margin: 1rem;
-    text-align: center;
+    display: none;
 }
-
 
 /* Card foto principal */
 .card-foto-principal{
-    width: 40%;
-    padding: 2rem;
     margin: 1rem;
     box-sizing: border-box;
 }
@@ -463,12 +437,10 @@ main{
 #foto-abertura{
     max-width: 100%;
     width: 450px;
-    height: auto;
 }
 
 section{
     width: 100%;
-    height: 90vh;
     box-sizing: border-box;
     display: inline-block;
     color: black;
@@ -1325,7 +1297,7 @@ footer .credits a {
         display: none;
     }
 
-    
+
     .menu{
         display: inline-flex;
     }
@@ -1423,6 +1395,25 @@ footer .credits a {
         width: 90%;
         box-sizing: border-box;
     }
+
+    .verso-apresentacao{
+        width: 70%;
+        max-width: 80%; 
+        font-size: clamp(1rem, 1rem, 1rem + 0.2vw);
+        display: inline-block;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .card-apresetacao-texto h1{
+        animation: fadeInLeft;
+        animation-duration: 1.5s; 
+    }
+    .texto-abertura{
+        /* animation: fadeInUpBig; */
+        animation: slideInUp;
+        animation-duration: 2s;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1438,5 +1429,10 @@ footer .credits a {
     #logo{
         height: 70px;
         margin: 0;
+    }
+
+    .card-foto-banda{
+        width: 850px;
+        height: 450px;
     }
 }
