@@ -332,9 +332,7 @@ header{
 }
 
 #inicio .downArrow{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    display: none;
 }
 
 #eventos .downArrow, #galeria .downArrow, #musicas .downArrow, #sobre-nos .downArrow, #nossa-trajetoria .downArrow, #integrantes .downArrow{
@@ -382,14 +380,6 @@ main{
     box-sizing: border-box;
 }
 
-.card h3{
-    font-family: 'xilosa';
-    text-align: center;
-    margin: 0 auto 0.3rem auto;
-    padding-top: 1rem;
-    font-size: 28px;
-    box-sizing: border-box;
-}
 
 /* card abertura */
 #inicio .card{
@@ -445,10 +435,17 @@ section{
     display: inline-block;
     color: black;
     position: relative;
-    padding-top: 1rem;
     text-align: center;
 }
 
+.card h3{
+    font-family: 'xilosa';
+    text-align: center;
+    /* margin: 0 auto 0.3rem auto; */
+    /* padding-top: 1rem; */
+    font-size: clamp(1rem, 1rem + 1vw, 1rem + 1.2vw);
+    box-sizing: border-box;
+}
 
 
 
@@ -473,27 +470,28 @@ section{
         bottom: 0;
         width: 100vw;
         height: 100vh;
-    }
+    }clamp(1rem, 1rem + 1vw, 1rem + 1.2vw)
 }
 
 
 
 .container, .container1 {
-    height: 100%;
+    /* height: 100%; */
     /* width: 75vw; */
-    width: 80%;
+    /* width: 80%; */
     margin: 0 auto;
     box-sizing: border-box;
+    padding: 0 2rem;
 }
 
 
 .carrossel {
-    width: 90%;
-    height: 90%;
+    /* width: 90%; */
+    /* height: 90%; */
     display: block;
     text-align: left;
     position: relative;
-    margin: 0 auto 22px auto;
+    /* margin: 0 auto 22px auto; */
     box-sizing: border-box;
 }
 
@@ -525,7 +523,8 @@ section{
 .carrossel-photos {
     position: relative;
     height: 68%;
-    margin: 0 0 1rem 0;
+    /* margin: 0 0 1rem 0; */
+    padding: 0;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
@@ -534,45 +533,64 @@ section{
 
 .carrossel-photo {
     position: relative;
-    display: block;
+    display: flex;
     flex: 1 0 100%;
     width: 100%;
     height: 100%;
     overflow: hidden;
     transition: all 300ms ease-out;
+    /* align-items: center; */
+    justify-content: center;
     box-sizing: border-box;
     white-space: normal;
 }
 
 .carrossel-photo figure {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0 ;
     align-items: center;
 }
 
-.carrossel-photo .foto-principal, .carrossel-photo .text{
+/* .carrossel-photo .foto-principal, .carrossel-photo .text{
     height: 100%;
+} */
+
+.carrossel-photo figure .foto-principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.carrossel-photo figure img {
-    width: 310px;
-    height: 310px;
-    margin: 0  auto;
-    padding: 0;
-    box-sizing: border-box;
+.foto-principal img{
+    max-width: 100%;
+    width: 150px;
 }
-
+/* .carrossel-photo figure img { */
+    /* max-width: 200px; */
+    /* width: 100%; */
+    /* width: 150px; */
+    /* width: 150px; */
+    /* height: 310px; */
+    /* margin: 0  auto; */
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+/* } */
+/* 
 .carrossel-photo img {
     display: block;
     flex: 1 1 auto;
     object-fit: cover;
-}
+} */
 
 .carrossel-photo figure div {
     @include aspect-ratio(3, 2);
-    width: 60%;
+    /* width: 60%; */
     height: 0 auto;
     margin: 0 0 1vh 0
 }
@@ -587,29 +605,29 @@ section{
 
 .carrossel-photo figure .container-colummn {
     @include aspect-ratio(3, 2);
-    width: 70%;
-    height: 320px;
+    /* width: 70%; */
+    /* height: 320px; */
     justify-content: space-between;
     margin: 0;
 }
 
 .carrossel-photo h4{
-    font-size: 20px;
+    font-size: clamp(0.8rem, 0.8rem + 1vw,  0.8rem + 2vw);
     font-family: 'xilosa';
     text-align: center;
-    padding: auto;
-    margin: 1vh auto;
+    margin: 0;
+    /* margin: 1vh auto; */
 }
 
 .carrossel-photo p{
-    margin: 0 auto ;
-    font-size: 16px;
+    font-size: 12px;
+    /* margin: 0 auto ; */
     text-align: justify;
     text-indent: 2rem;
 }
 
 .carrossel-photo figcaption {
-    font-size: 14px;
+    font-size: 10px;
     margin: auto;
     width: 100%;
     box-sizing: border-box;
@@ -637,7 +655,11 @@ section{
     box-sizing: border-box;
 }
 
-.carrossel__thumbnails .carrossel-photos + .carrossel__thumbnails {
+/* .carrossel-photos + .carrossel__thumbnails {
+    margin-top: 1.25rem;
+} */
+
+.carrossel__thumbnails{
     margin-top: 1.25rem;
 }
 
@@ -988,7 +1010,7 @@ footer {
     /* flex: 0 0 auto; */
 }
 
-.container{
+.container-footer{
     max-width: 80%;
     box-sizing: border-box;
     margin: 0 auto 0 auto;
@@ -1323,13 +1345,27 @@ footer .credits a {
     .icones-header{
         height: 65px;
     }
-
     #logo{
         height: 45px;
         margin: 0;
     }
-}
 
+    .foto-principal img{
+        width: 250px;
+    }
+    
+    .carrossel-photo .container-colummn{
+        max-width: 60%;
+    }
+
+    .carrossel-photo p{
+        font-size: 16px;
+    }
+
+    .carrossel-photo figcaption {
+        font-size: 14px;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     .menu-mobile,#icone-menu, #icone-close{
@@ -1396,6 +1432,8 @@ footer .credits a {
         box-sizing: border-box;
     }
 
+
+
     .verso-apresentacao{
         width: 70%;
         max-width: 80%; 
@@ -1404,7 +1442,6 @@ footer .credits a {
         margin: 1rem;
         text-align: center;
     }
-
     .card-apresetacao-texto h1{
         animation: fadeInLeft;
         animation-duration: 1.5s; 
@@ -1414,6 +1451,22 @@ footer .credits a {
         animation: slideInUp;
         animation-duration: 2s;
     }
+    #inicio .downArrow{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+
+
+    .carrossel-photo .container-colummn{
+        max-width: 40%;
+    }
+
+    .foto-principal img{
+        width: 300px;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -1434,5 +1487,9 @@ footer .credits a {
     .card-foto-banda{
         width: 850px;
         height: 450px;
+    }
+
+    .foto-principal img{
+        width: 350px;
     }
 }
