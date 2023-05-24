@@ -585,72 +585,18 @@ section{
 
 /* GALERIA */
 
-@keyframes display {
-    0% {
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    10% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    20% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    30% {
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-}
-
-
-.pic-ctn {
-    position: relative;
+.container-galeira{
     width: 100%;
-    height: 90%;
-    margin-top: 0.9rem;
-    box-sizing: border-box;
-    display: flexcenter;
+    column-count: 3;
+    margin-top: 1rem;
 }
 
-.pic-ctn img {
-    position: absolute;
-    top: 0;
-    padding: auto;
-    width: 150px;
-    /* height: 100px; */
-    /* left: calc(50% - (50% / 2) + 3rem); */
-    left: calc(50% - (150px / 2));
-    opacity: 0;
-    animation: display 10s infinite;
-
+.foto-galeria{
+    width: 100%;
+    border: 1px solid #AB8119;
+    border-radius: 2px;
+    margin-bottom: 2px;
 }
-
-.pic-ctn img:nth-child(2) {
-animation-delay: 2s;
-}
-
-.pic-ctn img:nth-child(3) {
-animation-delay: 4s;
-}
-
-.pic-ctn img:nth-child(4) {
-animation-delay: 6s;
-}
-
-.pic-ctn img:nth-child(5) {
-animation-delay: 8s;
-}
-
-.pic-ctn img:hover, .pic-ctn img:active{
-    animation: none;
-}
-
 
 
 /* SOBRE NÓS */
@@ -1260,6 +1206,17 @@ footer .credits a {
 
 
 
+    .container-galeira{
+        width: 80%;
+        column-count: 4; 
+        margin: 0 auto;
+        margin-top: 1rem; 
+    }
+    .foto-galeria{
+        margin-bottom: 15px;      
+    }
+
+
     .nossa-trajetoria .card-text1, .sobre-nos .card-text1{
         padding: 1rem;
         margin-top: 0;
@@ -1267,6 +1224,7 @@ footer .credits a {
         column-gap: 1.5rem;
         column-rule: 1px solid #AB8119;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -1385,6 +1343,27 @@ footer .credits a {
     .texto-evento{
         max-width: 50%;
         width: 45%;
+    }
+
+
+
+/* 
+    .container-galeira{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1rem;
+    } */
+
+    .foto-galeria{
+        margin-bottom: 0;
+        margin: 15px;
+        opacity: 0.6;
+    }
+
+    .foto-galeria:hover{
+        transform: scale3d(1.1, 1.1, 1.1);
+        opacity: 1;
+        z-index: 15;
     }
 
 
