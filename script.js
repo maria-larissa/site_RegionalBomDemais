@@ -45,7 +45,7 @@ btnFecharCardBanda.onclick = function(){
   
 
 // MENU HAMBURGUER
-const menuNav = document.querySelector(".nav-bar .menu-mobile") 
+const menuNav = document.querySelector('.menu-mobile'); 
 const btnAbrirMenu = document.getElementById("icone-menu");
 const btnFecharMenu = document.getElementById("icone-close");
 

@@ -486,8 +486,9 @@ section{
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 2rem 0;
-    gap: 1.5rem;
-    align-items: center;
+    gap: 1rem;
+    align-items:baseline;
+    position: relative;
 }
 
 
@@ -496,17 +497,28 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    /* width: auto; */
     flex-shrink: 0;
     opacity: 0.6;
     position: relative;
-    transition: all 400ms ease-in-out ;
+    transition: all 400ms ease-in-out;
+
+    background-color: #F5F3A9;
+    border:2px solid #FF7A00;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 10px;
+    /* padding: 1rem; */
 }
 
 .evento img{
     /* width: 150px; */
     height: 150px;
+    /* border: 2px solid #262626; */
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 3px solid #AB8119;
 }
 
 .evento-atual{
@@ -517,8 +529,10 @@ section{
     width: 90%;
     display: inline;
     text-align: justify;
-    margin: 1rem 0;
+    margin: 1rem;
+    padding: 0.2rem;
     box-sizing: border-box;
+    /* background-color: white; */
 }
 
 .texto-evento h4{
@@ -530,7 +544,7 @@ section{
 }
 
 .texto-evento .texto{
-    font-size: clamp(0.8rem, 0.9rem + 0.5vw,  0.9rem + 0.3vw);
+    font-size: clamp(0.8rem, 0.8rem + 0.5vw,  0.9rem + 0.3vw);
     margin: 0.5rem 0;
 }
 
@@ -546,21 +560,26 @@ section{
     top: 50%;
     z-index: 5;
     width: 30px;
+    height: 30px;
     max-width: 40px;
-    color:white;
+    /* color:white; */
+    color:#0e0d0d;
     text-align: center;
     border: none;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .seta-esquerda{
-    background: linear-gradient(to left, transparent 0%, #262626 200%);
-    left: 0;
+    /* background: linear-gradient(to left, transparent 0%, #262626 200%); */
+    background: linear-gradient(to left, transparent 0%, #AB8119 150%);
+    left: 2rem;
 }
 
 .seta-direita{
-    right: 0;
-    background: linear-gradient(to right, transparent 0%, #262626 200%);
+    right: 2rem;
+    /* background: linear-gradient(to right, transparent 0%, #262626 200%); */
+    background: linear-gradient(to right, transparent 0%, #AB8119 150%);
 }
 
 
@@ -724,7 +743,7 @@ animation-delay: 8s;
 footer {
     background: #0e0d0d;
     padding: 0 0 30px 0;
-    color: #fff;
+    color: white;
     font-size: 14px;
     padding: 60px 0 30px 0;
     display: flex;
@@ -758,7 +777,7 @@ footer {
 
 .footer-info {
     background: #191919;
-    color: #fff;
+    color: white;
     border-top: 4px solid #FF7A00;
     text-align: center;
     padding: 30px 20px;
@@ -784,7 +803,7 @@ footer {
 
 .redes-sociais-footer a, .redes-sociais-card-banda a{
     display: inline-flex;
-    color: #fff;
+    color: white;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -805,7 +824,7 @@ footer {
 
 .redes-sociais-footer a:hover {
     background: #FF7A00;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
   
@@ -824,7 +843,7 @@ footer {
 .footer-links h4, .form-footer h4 {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: white;
     position: relative;
     text-align: center;
     font-family: "butler";
@@ -858,7 +877,7 @@ footer {
 .footer-lfooter {
     background: #0e0d0d;
     padding: 0 0 30px 0;
-    color: #fff;
+    color: white;
     font-size: 14px;
     padding: 60px 0 30px 0;
 }
@@ -890,7 +909,7 @@ footer {
 .footer-info {
     width: 90%;
     background: #191919;
-    color: #fff;
+    color: white;
     border-top: 4px solid #FF7A00;
     text-align: center;
     padding: 30px 20px;
@@ -917,7 +936,7 @@ footer {
 
 .redes-sociais-footer a, .redes-sociais-card-banda a{
     display: inline-flex;
-    color: #fff;
+    color: white;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -941,7 +960,7 @@ footer {
 
 .redes-sociais-footer a:hover {
     background: #FF7A00;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
   
@@ -958,7 +977,7 @@ footer {
 .footer-links h4, .form-footer h4 {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: white;
     position: relative;
     padding-bottom: 12px;
     margin-top: 1rem;
@@ -991,7 +1010,7 @@ footer {
 }
   
 .footer-links ul a {
-    color: #fff;
+    color: white;
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
@@ -1044,11 +1063,8 @@ footer {
     padding: 0.5rem;
     margin: auto 0;
     text-align: justify;
-    /* border: 0 none; */
-    /* border-radius: 10px; */
     resize: none;
     color: white;
-    /* background-color: #191919; */
 }
 
 #btn-enviar, .form-footer form input, .form-footer form textarea{
@@ -1060,7 +1076,7 @@ footer {
     padding: 0.3rem;
     margin: 0 auto;
     display: block;
-    color: #fff;
+    color: white;
     border: 0 solid white;
     background-color: black;
     transition: all 0.5s;
@@ -1076,7 +1092,7 @@ footer .credits {
     padding-top: 5px;
     text-align: center;
     font-size: 13px;
-    color: #fff;
+    color: white;
 }
   
 footer .credits a {
@@ -1084,7 +1100,7 @@ footer .credits a {
 }
   
 .footer-links ul a {
-    color: #fff;
+    color: white;
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
@@ -1109,7 +1125,6 @@ footer .credits a {
 
 .form-footer form{
     width: 90%;
-    /* height: auto; */
     margin: 0 0 1rem 0;
     display: flex;
     flex-direction: column;
@@ -1121,10 +1136,10 @@ footer .credits a {
 .form-footer form input{
     color: white;
     padding: 0.3rem;
-    /* box-sizing: border-box; */
 }
 
 .form-footer form input, .form-footer form textarea{
+    min-width: 100px;
     width: 100%;
     box-sizing: border-box;
     border: none;
@@ -1152,7 +1167,7 @@ footer .credits a {
     padding: 0.3rem;
     margin: 0 auto;
     display: block;
-    color: #fff;
+    color: white;
     border: 0 solid white;
     background-color: black;
     transition: all 0.5s;
@@ -1168,7 +1183,7 @@ footer .credits {
     padding-top: 5px;
     text-align: center;
     font-size: 13px;
-    color: #fff;
+    color: white;
 }
   
 footer .credits a {
@@ -1224,17 +1239,18 @@ footer .credits a {
         margin: 0 auto;
     }
     .eventos{
-        width: 75%;
+        width: 70%;
     }
     .evento img{
         /* width: 230px; */
-        height: 230px;
+        height: 210px;
+        margin: 0;
     }
 
     .texto-evento{
         max-width: 45%;
         width: 40%;
-        margin: 1rem 2rem;
+        margin-right: 1rem;
     }
 }
 
@@ -1387,7 +1403,6 @@ footer .credits a {
 
 
     .evento img{
-        /* width: 270px; */
         height: 270px;
     }
 }
