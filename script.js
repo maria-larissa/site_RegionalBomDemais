@@ -89,14 +89,22 @@ btnSubmenu.addEventListener("click", function(){
   console.log(visivel);
   console.log("Clicou no botao do submenu");
   if(!visivel){
-    submenu.style.visibility = "visible"
+    submenu.style.visibility = "visible";
     visivel = true;
   }else{
-    submenu.style.visibility = "hidden"
+    submenu.style.visibility = "hidden";
     visivel = false;
   }
 })
 
+// Caso clique em algum link do submenu esconde o submenu
+const elementosSubmenu = document.querySelectorAll(".link-submenu");
+elementosSubmenu.forEach( element => {
+  element.addEventListener('click',() =>{
+    submenu.style.visibility = "hidden";
+    visivel = false;
+  })
+})
 
 // SCROLL sections do site
 
@@ -169,7 +177,7 @@ menuItens.forEach((link) => {
 
 // carrossel mobile
 const controlesCarrosel = document.querySelectorAll('.controles-carrossel');
-console.log(controlesCarrosel);
+// console.log(controlesCarrosel);
 let elementoAtual = 0;
 
 let eventosCarrossel = document.querySelectorAll('.evento');
