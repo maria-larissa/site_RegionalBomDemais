@@ -11,11 +11,6 @@
     src: url(fontes/Butler_Regular.otf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
@@ -471,7 +466,7 @@ section{
 
 
 .carrossel-eventos {
-    width: 100%;
+    /* width: 90%; */
     /* height: 90%; */
     display: block;
     /* text-align: left; */
@@ -479,72 +474,39 @@ section{
     overflow-x: hidden;
     /* margin: 0 auto 22px auto; */
     box-sizing: border-box;
+    align-items: center;
 }
 
 .eventos{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 2rem 0;
-    gap: 1.5rem;
-    align-items: center;
+    gap: 1rem;
+    /* margin: 0 auto; */
 }
 
+.eventos .evento img{
+    width: 100px;
+    height: 100px;
+}
 
 .evento{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    width: 90%;
     flex-shrink: 0;
     opacity: 0.6;
-    position: relative;
     transition: all 400ms ease-in-out ;
-}
-
-.evento img{
-    /* width: 150px; */
-    height: 150px;
 }
 
 .evento-atual{
     opacity: 1;
 }
 
-.texto-evento{
-    width: 90%;
-    display: inline;
-    text-align: justify;
-    margin: 1rem 0;
-    box-sizing: border-box;
-}
-
-.texto-evento h4{
-    font-family: "xilosa";
-    font-size: clamp(0.9rem, 0.9rem + 0.6vw,  1.1rem + 0.5vw);
-    white-space: pre-wrap;
-    text-align: center;
-    margin: 0.5rem 0;
-}
-
-.texto-evento .texto{
-    font-size: clamp(0.8rem, 0.9rem + 0.5vw,  0.9rem + 0.3vw);
-    margin: 0.5rem 0;
-}
-
-.evento figcaption{
-    width: 100%;
-    font-size: clamp(0.7rem, 0.7rem + 0.3vw,  0.7rem + 0.3vw );
-    margin-top: 1rem;
-    box-sizing: border-box; 
-}
-
 .seta-esquerda, .seta-direita{
     position: absolute;
-    top: 50%;
-    z-index: 5;
+    top: 0;
+    bottom: 0;
     width: 30px;
     max-width: 40px;
     color:white;
@@ -555,11 +517,11 @@ section{
 
 .seta-esquerda{
     background: linear-gradient(to left, transparent 0%, #262626 200%);
-    left: 0;
+    left: 20px;
 }
 
 .seta-direita{
-    right: 0;
+    right: 20px;
     background: linear-gradient(to right, transparent 0%, #262626 200%);
 }
 
@@ -1083,7 +1045,11 @@ footer .credits a {
     color: #FF7A00;
 }
   
-.footer-links ul a {
+@media (max-width: 575px) {
+    .footer-info {
+        margin: -20px 0 30px 0;
+    }
+}inks ul a {
     color: #fff;
     transition: 0.3s;
     display: inline-block;
@@ -1216,25 +1182,20 @@ footer .credits a {
         margin: 0;
     }
 
+    .foto-principal img{
+        width: 250px;
+    }
     
-
-
-    .carrossel-eventos {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .eventos{
-        width: 75%;
-    }
-    .evento img{
-        /* width: 230px; */
-        height: 230px;
+    .carrossel-photo .container-colummn{
+        max-width: 60%;
     }
 
-    .texto-evento{
-        max-width: 45%;
-        width: 40%;
-        margin: 1rem 2rem;
+    .carrossel-photo p{
+        font-size: 16px;
+    }
+
+    .carrossel-photo figcaption {
+        font-size: 14px;
     }
 }
 
@@ -1340,21 +1301,9 @@ footer .credits a {
     .seta-direita:hover, .seta-esquerda:hover{
         opacity: 1;
     }
-    .carrossel-eventos{
-        width: 80%;
-    }
-    .eventos{
-        width: 70%;
-    }
-    .evento img{
-        /* width: 300px; */
-        height: 300px;
-    }
     
-    .texto-evento{
-        max-width: 50%;
-        width: 45%;
-    }
+    
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -1367,27 +1316,17 @@ footer .credits a {
     }
 
 
-
     #logo{
         height: 70px;
         margin: 0;
     }
-
-
 
     .card-foto-banda{
         width: 850px;
         height: 450px;
     }
 
-    
     .foto-principal img{
         width: 350px;
-    }
-
-
-    .evento img{
-        /* width: 270px; */
-        height: 270px;
     }
 }

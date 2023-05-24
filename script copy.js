@@ -168,61 +168,6 @@ menuItens.forEach((link) => {
 
 
 // carrossel mobile
-const controlesCarrosel = document.querySelectorAll('.controles-carrossel');
-console.log(controlesCarrosel);
-let elementoAtual = 0;
-
-let eventosCarrossel = document.querySelectorAll('.evento');
-const quantidadeEventosCarrossel = eventosCarrossel.length;
-
-// sempre que a página estiver carregada o primeiro evento sempre é centralizado
-if(document.readyState == 'loading'){
-  // console.log(document.readyState);
-  eventosCarrossel[0].scrollIntoView({
-    inline: "center",
-    block:    "nearest",
-    behavior: "smooth",
-  })
-}
-
-controlesCarrosel.forEach(controle => {
-  controle.addEventListener('click', () =>{
-    // Saber se o click foi na seta da esquerda
-    const setaesquerda = controle.classList.contains('seta-esquerda');
-    
-    
-    if(setaesquerda){
-      // volta p/ evento anterior
-      elementoAtual -= 1;
-    }
-    else{
-      // passa p/ próximo evento
-      elementoAtual += 1;
-    }
-
-
-    // scroll infinito do carrossel. Chega no final volta pro primeiro, se tiver no primeiro volta pro final
-    if(elementoAtual >= quantidadeEventosCarrossel){
-      elementoAtual = 0;
-    }if(elementoAtual < 0){
-      elementoAtual = quantidadeEventosCarrossel -1 ; 
-    }
-
-    // Retira a classa elemntos atual de todo ao clicar nas setas
-    eventosCarrossel.forEach(evento => evento.classList.remove('evento-atual'));
-
-    // Centraliza o elemnto
-    eventosCarrossel[elementoAtual].scrollIntoView({
-      inline: "center",
-      block:    "nearest",
-      behavior: "smooth",
-    })
-    
-    // Colocar a class elementos atual somente no evento correto
-    eventosCarrossel[elementoAtual].classList.add('evento-atual');
-  })
-})
-
 
 
 
