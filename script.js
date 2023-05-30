@@ -78,6 +78,16 @@ btnFecharMenu.onclick = function() {
   }
 }
 
+// Caso clique em algum link do menu mobile esconde o menu mobile
+const elementosMenuMobile = document.querySelectorAll('.menu-mobile .link-menu');
+elementosMenuMobile.forEach( element => {
+  element.addEventListener('click',() =>{
+    console.log("clicou");
+    menuNav.style.display = "none";
+  })
+})
+
+
 
 
 // botão submenu
@@ -86,8 +96,8 @@ const submenu = document.querySelector(".submenu");
 var visivel = false;
 
 btnSubmenu.addEventListener("click", function(){
-  console.log(visivel);
-  console.log("Clicou no botao do submenu");
+  // console.log(visivel);
+  // console.log("Clicou no botao do submenu");
   if(!visivel){
     submenu.style.visibility = "visible";
     visivel = true;
@@ -162,7 +172,7 @@ function scrollToSection(event){
   
   // Armazenando a section alvo
   const section = document.querySelector(idAlvo);
-  console.log(section);
+  // console.log(section);
   
   var distancia = getDistanciaTop(section) - 75;
 
@@ -232,12 +242,159 @@ controlesCarrosel.forEach(controle => {
 })
 
 
+// player de músicas
+const barraProgresso = document.getElementById("barra-progresso");
+const musica = document.getElementById("musica");
+const btnPlayPause = document.getElementById("btn-play-pause");
+const btnPlayMusica = document.getElementById("btn-play-musica");
+const btnPausarMusica = document.getElementById("btn-pausar-musica");
+const btnMusicaAnterior = document.getElementById("btn-musica-anterior");
+const btnProximaMusica = document.getElementById("btn-proxima-musica");
+let tituloMusica = document.querySelector(".player-musicas h1");
+let artistaMusica = document.querySelector(".player-musicas p");
+let idMusica = 0;
+let listaMusicas = [
+  {
+    titulo: "A Morte do Vaqueiro",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/A Morte do Vaqueiro - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Anunciação",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Anunciação - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Até mais ver",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Até mais ver -Regional bom demais.mp3"
+  },
+  {
+    titulo: "Colo de menina",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Colo de menina - Regional bom demais.mp3"
+  },
+  {
+    titulo: "É Proibido Cochilar",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/É Proibido Cochilar - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Espumas ao vento - Regional bom demais",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Espumas ao vento - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Pagode russo",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Pagode russo - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Pra Todo Mundo",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Pra Todo Mundo - Regional bom demais .mp3"
+  },
+  {
+    titulo: "Respeita Januário",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Respeita Januário - Regional bom demais.mp3"
+  },
+  {
+    titulo: "Xote dos milagres",
+    artista: "Regional bom demais",
+    src: "CSS/musicas/Xote dos milagres - Regional bom demais.mp3"
+  },
+]
+let quantidademusicas = listaMusicas.length;
+console.log(quantidademusicas);
+console.log(tituloMusica);
+console.log(artistaMusica);
+
+
+// Atualiza barra de progesso ao selecionar música
+musica.onloadedmetadata = function(){
+  barraProgresso.max = musica.duration;
+  barraProgresso.value = musica.currentTime;
+  console.log(listaMusicas[idMusica].titulo);
+  console.log(listaMusicas[idMusica].artista);
+  tituloMusica.textContent = listaMusicas[idMusica].titulo;
+  artistaMusica.textContent = listaMusicas[idMusica].artista;
+}
+
+// Atulização da barra de progresso enquanto toca música
+if(musica.play()){
+  setInterval(() => {
+    barraProgresso.value = musica.currentTime;
+  }, 450);
+}
+
+
+
+btnPlayPause.onclick = function(){
+  if(btnPlayPause.classList.contains("play")){
+    musica.play();
+    btnPlayPause.classList.remove("play");
+    btnPlayPause.classList.add("pause");
+    btnPlayMusica.style.display = "none";
+    btnPausarMusica.style.display = "block";
+    
+  }else{
+    musica.pause();
+    btnPlayPause.classList.add("play");
+    btnPlayPause.classList.remove("pause");
+    btnPausarMusica.style.display = "none";
+    btnPlayMusica.style.display = "block";
+  }
+};
+
+
+
+barraProgresso.onchange = function(){
+  musica.play();
+  btnPlayPause.classList.remove("play");
+  btnPlayPause.classList.add("pause");
+  musica.currentTime = barraProgresso.value;
+}
+
+
+btnMusicaAnterior.onclick = function(){
+  btnPlayPause.classList.add("play");
+  btnPlayPause.classList.remove("pause");
+  btnPausarMusica.style.display = "none";
+  btnPlayMusica.style.display = "block";
+  if(idMusica == 0){
+    idMusica = quantidademusicas - 1;
+  }else{
+    idMusica -= 1;
+  }
+  musica.setAttribute("src", listaMusicas[idMusica].src);
+}
+
+btnProximaMusica.onclick = function(){
+  btnPlayPause.classList.add("play");
+  btnPlayPause.classList.remove("pause");
+  btnPausarMusica.style.display = "none";
+  btnPlayMusica.style.display = "block";
+  if(idMusica == quantidademusicas -1){
+    idMusica = 0;
+  }else{
+    idMusica += 1;
+  }
+  musica.setAttribute("src", listaMusicas[idMusica].src);
+}
+
+if(idMusica <= 0){
+  idMusica = quantidademusicas - 1;
+}
+if(idMusica >= quantidademusicas - 1){
+  idMusica = 0;
+}
 
 
 // DownArrow
 const btnDownArrow = document.getElementById("btn-descer");
 btnDownArrow.onclick = function(){
-  console.log("Apertou no botão DownArrow");
+  // console.log("Apertou no botão DownArrow");
   down.style.display = "none";
 }
 // function esconderDownArrow(){

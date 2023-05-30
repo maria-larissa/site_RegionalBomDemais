@@ -6,38 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regional Bom Demais</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
     
     <div class="card-foto-banda">
-        <button id="icone-close-card-banda">
+        <button id="icone-close-card-banda" aria-labelledby="botão fechar">
+            <!-- <img src="CSS/imagens/diversas/icones/close.svg" alt="icone fechar"> -->
             <i class="material-symbols-rounded">
                 close
             </i>
         </button>
         
-        <img id="foto-banda" src="CSS/imagens/fotos oficiais/IMG_6733(cortada).jpg" alt="" loading="eager">
+        <img id="foto-banda" src="CSS/imagens/fotos oficiais/fotocardbanda.webp" alt="Foto dos integrantes da banda" loading="eager">
         <div class="card-text"  >
             <h3>Regional Bom demais e você juntinhos!</h3>
             <h5>Confirar as nossas redes sociais.</h5>
             <div class="redes-sociais-card-banda">
                 <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
                     
-                    <img src="CSS/imagens/logos/instagram2.png" alt="Logo Instagram">
+                    <img src="CSS/imagens/logos/instagram.webp" alt="Logo Instagram">
                 </a>
     
                 <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
                     
-                    <img src="CSS/imagens/logos/whatsapp2.png" alt="Logo WhatsApp">
+                    <img src="CSS/imagens/logos/whatsapp.webp" alt="Logo WhatsApp">
                 </a>
                 
                 <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
                     
-                    <img src="CSS/imagens/logos/youtube2.png" alt="Logo Youtube">
+                    <img src="CSS/imagens/logos/youtube.webp" alt="Logo Youtube">
                 </a>
             </div>
         </div>
@@ -47,14 +47,15 @@
      
     <header>
 
-        <button id="icone-menu">
+        <button id="icone-menu" aria-labelledby="botão abrir menu">
+            <!-- <img src="CSS/imagens/diversas/icones/menu.svg" alt="icone menu"> -->
             <i class="material-symbols-rounded">
                 menu
             </i>
         </button>
 
         <div class="icones-header">
-            <img id="logo" src="CSS/imagens/logos/logo.png" alt="Logo Regional Bom Demais">
+            <img id="logo" src="CSS/imagens/logos/logo.webp" alt="Logo da banda Regional Bom Demais">
 
                 <nav class="menu">
                     <li><a href="#inicio" class="link-menu">Início</a></li>
@@ -68,13 +69,15 @@
                         <li><a href="#integrantes" class="link-submenu">Integrantes da banda</a></li>
                     </nav>
                     <!-- podem ser adicionados mais elementos -->
-                    <button id="btn-abrir-submenu">
+                    <button id="btn-abrir-submenu" aria-labelledby="botão abrir submenu">
+                        <!-- <img src="CSS/imagens/diversas/icones/arrow_drop_down.svg" alt="icone abrir"> -->
                         <i class="material-symbols-rounded">arrow_drop_down</i>
                     </button>
                 </nav>
                 
                 <nav class="menu-mobile">
-                    <button id="icone-close">
+                    <button id="icone-close" aria-labelledby="botão fechar menu">
+                        <!-- <img src="CSS/imagens/diversas/icones/close.svg" alt="icone fechar"> -->
                         <i class="material-symbols-rounded">
                             close
                         </i>
@@ -137,13 +140,13 @@
                     </div>
 
                     <div class="card-apresetacao-foto">
-                        <img id="foto-abertura" src="CSS/imagens/trio.png" alt="">
+                        <img id="foto-abertura" src="CSS/imagens/trio.webp" alt="Foto dos integrantes da banda">
                     </div>
 
                     <div class="downArrow">
-                        <button id="btn-descer" type="button">
+                        <button id="btn-descer" type="button" aria-labelledby="botão ir para a próxima seção">
                             <a href="#eventos">
-                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown.webp" alt=" icone seta dupla para baixo">
                             </a>
                         </button>
                     </div>
@@ -158,13 +161,16 @@
                     <div class="container">
                         <h3 >Nossos eventos</h3>
 
-                        <button class="controles-carrossel seta-esquerda"  >
+                        <button class="controles-carrossel seta-esquerda" aria-labelledby="botão seta a esquerda" >
+                            <!-- <img src="CSS/imagens/diversas/icones/arrow_back_ios.svg" alt="Icone seta à esquerda"> -->
                             <i class="material-symbols-outlined">
                                 arrow_back_ios
                             </i>
                         </button>
-
-                        <button class="controles-carrossel seta-direita"  >
+                        
+                        <button class="controles-carrossel seta-direita" aria-labelledby="botão seta a direita"  >
+                            
+                            <!-- <img src="CSS/imagens/diversas/icones/arrow_forward_ios.svg" alt="Icone seta à direita"> -->
                             <i class="material-symbols-outlined">
                                 arrow_forward_ios
                             </i>
@@ -174,7 +180,7 @@
                             <div class="eventos">
 
                                 <figure class="evento evento-atual">
-                                    <img src="CSS/imagens/temporarias/foto1.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto1.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -191,7 +197,7 @@
                                 </figure>
 
                                 <figure class="evento ">
-                                    <img src="CSS/imagens/temporarias/foto2.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto2.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -208,7 +214,7 @@
                                 </figure>
 
                                 <figure class="evento ">
-                                    <img src="CSS/imagens/temporarias/foto3.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto3.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -225,7 +231,7 @@
                                 </figure>
 
                                 <figure class="evento ">
-                                    <img src="CSS/imagens/temporarias/foto4.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto4.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -242,7 +248,7 @@
                                 </figure>
 
                                 <figure class="evento ">
-                                    <img src="CSS/imagens/temporarias/foto5.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto5.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -259,7 +265,7 @@
                                 </figure>
 
                                 <figure class="evento ">
-                                    <img src="CSS/imagens/temporarias/foto6.png" alt="">
+                                    <img src="CSS/imagens/temporarias/foto6.webp" alt="Foto evento">
 
                                     <div class="texto-evento">
                                         <h4>Título do evento</h4>
@@ -282,9 +288,9 @@
                     </div>
 
                     <div class="downArrow">
-                        <button id="btn-descer" type="button">
+                        <button id="btn-descer" type="button" aria-labelledby="botão ir para a próxima seção">
                             <a href="#musicas">
-                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown.webp" alt="icone seta dupla para baixo">
                             </a>
                         </button>
                     </div>
@@ -292,6 +298,73 @@
                 
             </section>
             
+
+            <!-- Musicas -->
+            <section id="musicas">
+                <div class="card">
+                    <div class="container">
+                        <h3>Músicas</h3>
+
+                        <div class="container-player">
+                            <div class="player-musicas">
+
+                                <nav>
+                                    <div class="circulo">
+                                        <button id="icone-menu-musicas" aria-labelledby="botão abrir menu das músicas">
+                                            <i class="material-symbols-rounded">
+                                                menu
+                                            </i>
+                                        </button>
+                                    </div>
+                                </nav>
+
+                                <img src="CSS/imagens/temporarias/foto6.webp" alt="Imagem capa da música" class="imagem-musica">
+
+                                <h1>A Morte do Vaqueiro</h1>
+                                <p>Regional Bom demais</p>
+
+                                <audio id="musica">
+                                    <source src="CSS/musicas/A Morte do Vaqueiro - Regional bom demais.mp3" type="audio/mpeg">
+                                </audio>
+
+                                <input type="range" value="0" id="barra-progresso">
+
+                                <div class="controles">
+                                    <div>
+                                        <button id="btn-musica-anterior" aria-labelledby="botão música anterior" >
+                                            <i class="material-symbols-rounded">
+                                                skip_previous
+                                            </i>
+                                        </button>
+                                    </div>
+
+                                    <div id="btn-play-pause" class="play">
+                                        <button aria-labelledby="botão tocar música" id="btn-play-musica">
+                                            <i class="material-symbols-rounded">
+                                                play_arrow
+                                            </i>
+                                        </button>
+
+                                        <button aria-labelledby="botão pausar música" id="btn-pausar-musica">
+                                            <i class="material-symbols-rounded">
+                                                pause
+                                            </i>
+                                        </button>
+                                    </div>
+
+                                    <div>
+                                        <button id="btn-proxima-musica" aria-labelledby="botão proxima música"  >
+                                            <i class="material-symbols-rounded">
+                                                skip_next
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- GALERIA DE FOTOS -->
             <section id="galeria">
@@ -302,31 +375,31 @@
                         <div class="container-galeira">
                             <img class="foto-galeria" src="https://images.unsplash.com/photo-1501694159270-7b55f5eb85fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto1.png" alt="foto">
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto1.webp" alt="foto">
 
                             <img class="foto-galeria" src="https://plus.unsplash.com/premium_photo-1682600101311-1121bc732450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="foto">
 
                             <img class="foto-galeria" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto2.png" alt="foto">
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto2.webp" alt="foto">
 
                             <img class="foto-galeria" src="https://source.unsplash.com/random?a=1" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto3.png" alt="foto">
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto3.webp" alt="foto">
                             
                             <img class="foto-galeria" src="https://source.unsplash.com/random?b=1" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto5.png" alt="foto" >
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto5.webp" alt="foto" >
 
                             <img class="foto-galeria" src="https://source.unsplash.com/random?c=1" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto6.png" alt="foto" >
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto6.webp" alt="foto" >
 
                             <img class="foto-galeria" src="https://images.unsplash.com/photo-1637158530431-0e23aa9d27c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNlYXIlQzMlQTF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="foto" >
 
                             <img class="foto-galeria" src="https://source.unsplash.com/random?d=1" alt="foto">
                             
-                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto1.png">
+                            <img class="foto-galeria" src="CSS/imagens/temporarias/foto1.webp">
 
                             <img class="foto-galeria" src="https://source.unsplash.com/random?e=1" alt="foto">
 
@@ -340,9 +413,9 @@
                     </div>
 
                     <div class="downArrow">
-                        <button id="btn-descer" type="button">
+                        <button id="btn-descer" type="button" aria-labelledby="botão ir para a próxima seção">
                             <a href="#sobre-nos">
-                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown.webp" alt="icone seta dupla para baixo">
                             </a>
                         </button>
                     </div>
@@ -384,9 +457,9 @@
                     </div>
 
                     <div class="downArrow">
-                        <button id="btn-descer" type="button">
+                        <button id="btn-descer" type="button" aria-labelledby="botão ir para a próxima seção">
                             <a href="#nossa-trajetoria">
-                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown.webp" alt="icone seta dupla para baixo">
                             </a>
                         </button>
                     </div>
@@ -433,7 +506,7 @@
                                     entre tantos outros grandes cantores e grandes compositores do baião, forró e xoté.
                                 </p>
                                 
-                                <img id="mapa-ceara" src="CSS/imagens/diversas/mapa.png">
+                                <img id="mapa-ceara" src="CSS/imagens/diversas/mapa.png" alt="Mapa do estado do Ceará, Brasil">
                                     
                             </div>
                             
@@ -442,9 +515,9 @@
                     </div>
 
                     <div class="downArrow">
-                        <button id="btn-descer" type="button">
+                        <button id="btn-descer" type="button" aria-labelledby="botão ir para a próxima seção">
                             <a href="#integrantes">
-                                <img src="CSS/imagens/diversas/icones/icone-setaDown2.png" alt="">
+                                <img src="CSS/imagens/diversas/icones/icone-setaDown.webp" alt="icone seta dupla para baixo">
                             </a>
                         </button>
                     </div>
@@ -453,15 +526,15 @@
         
             
             <!-- INTEGRANTES -->
-            <!-- <section id="integrantes">
+            <section id="integrantes">
                 <div class="card" >
                     <div class="container1">
                         <h3>Integrantes da Regional Bom Demais</h3>
                         <div class="integrantes">
                             <div class="integrante">
                                 <figure class="foto-integrante">
-                                    <img src="CSS/imagens/fotos oficiais/messias.jpg">
-                                    <figcaption><b>Messias Mateus</b></figcaption>
+                                    <img src="CSS/imagens/fotos oficiais/messias.webp" alt="Foto do Messias integrante da banda">
+                                    <h4><b>Messias Mateus</b></h4>
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
                                         Se possível colocar como começou a relaçao com o forró pé de serra
                                     </figure>
@@ -469,8 +542,8 @@
                         
                                 <div class="integrante">
                                     <figure class="foto-integrante">
-                                        <img src="CSS/imagens/fotos oficiais/emanuel.jpg">
-                                        <figcaption><b>Emanuel Patrício</b></figcaption>
+                                        <img src="CSS/imagens/fotos oficiais/emanuel.webp" alt="Foto do Emanuel integrante da banda">
+                                        <h4><b>Emanuel Patrício</b></h4>
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
                                         Se possível colocar como começou a relaçao com o forró pé de serra
                                     </figure>
@@ -478,8 +551,8 @@
                                     
                                 <div class="integrante">
                                     <figure class="foto-integrante">
-                                        <img src="CSS/imagens/fotos oficiais/beto.jpg">
-                                        <figcaption><b>Beto Lourinho</b></figcaption>
+                                        <img src="CSS/imagens/fotos oficiais/beto.webp" alt="Foto do Beto integrante da banda">
+                                        <h4><b>Beto Lourinho</b></h4>
                                         
                                         Colocar uma pequena descrição de cada um, resumindo suas características mais fortes
                                         Se possível colocar como começou a relaçao com o forró pé de serra
@@ -489,7 +562,7 @@
                     </div>
                 </div>
             </section>
-     -->
+    
 
             
             
@@ -499,71 +572,75 @@
         
    
     <footer>
-        <div class="container-footer">
-            <div class="row">
-                <div class="section-footer">
-                    <div class="footer-info">
-                    <h3>Regional Bom Demais</h3>
-                    <p>
-                        Rua xxxx xxxx xxx<br>
-                        Fortaleza - Ceará, BR<br><br>
-                        <strong>Email:</strong> info@example.com<br>
-                    </p>
-                    <div class="redes-sociais-footer">
-                            <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
+        <div class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="section-footer">
+                        <div class="footer-info">
+                        <h3>Regional Bom Demais</h3>
+                        <p>
+                            Rua xxxx xxxx xxx<br>
+                            Fortaleza - Ceará, BR<br><br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                        <div class="redes-sociais-footer">
+                                <a href="https://www.instagram.com/regional_bomdemais/" target="_blank" >
+                                    
+                                    <img src="CSS/imagens/logos/instagram.webp" alt="Logo Instagram">
+                                </a>
+                    
+                                <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
+                                    
+                                    <img src="CSS/imagens/logos/whatsapp.webp" alt="Logo WhatsApp">
+                                </a>
                                 
-                                <img src="CSS/imagens/logos/instagram2.png" alt="Logo Instagram">
-                            </a>
-                
-                            <a href="https://api.whatsapp.com/send?phone=5585997012265&" target="_blank">
-                                
-                                <img src="CSS/imagens/logos/whatsapp2.png" alt="Logo WhatsApp">
-                            </a>
-                            
-                            <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
-                                
-                                <img src="CSS/imagens/logos/youtube2.png" alt="Logo Youtube">
-                            </a>
+                                <a href="https://www.youtube.com/@regionalbomdemais958" target="_blank">
+                                    
+                                    <img src="CSS/imagens/logos/youtube.webp" alt="Logo Youtube">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+        
+                    <div class="footer-links">
+                        <h4>Nossos Serviços</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
     
-                <div class="footer-links">
-                    <h4>Nossos Serviços</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
-                
-                <div class="form-footer">
-                    <h4>Enviar uma mensagem</h4>
                     
-                    <form action="mailto:emaildo regional?subject=Mensagem enviada do site Regional bom demais" method="post">
-                    
-                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
+                    <div class="form-footer">
+                        <h4>Enviar uma mensagem</h4>
                         
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem aqui" autocomplete="off"></textarea><br>
-                    
-                        <input id="btn-enviar" type="submit" value="Enviar" >
-                    
-                    </form>
+                        <form action="mailto:emaildo regional?subject=Mensagem enviada do site Regional bom demais" method="post">
+                        
+                            <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
+                            
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem aqui" autocomplete="off"></textarea><br>
+                        
+                            <input id="btn-enviar" type="submit" value="Enviar" >
+                        
+                        </form>
+                    </div>
+        
                 </div>
-    
             </div>
-        </div>
-
-        <div class="container-footer">
-            <div class="credits">
-                Designed by <a href="https://www.instagram.com/webdev.larissa/">Web developer Maria Larissa</a>
+    
+            <div class="container-footer">
+                <div class="credits">
+                    Designed by <a href="https://www.instagram.com/webdev.larissa/">Web developer Maria Larissa</a>
+                </div>
             </div>
         </div>
     </footer>
     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="script.js"></script>
 </body>
 </html>
